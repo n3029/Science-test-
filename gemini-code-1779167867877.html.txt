@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>MCQ Mobile Practice</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --amber-50: #FAEEDA;
+    --amber-100: #FAC775;
+    --amber-200: #EF9F27;
+    --amber-400: #BA7517;
+    --amber-600: #854F0B;
+    --amber-800: #633806;
+    --green-50: #EAF3DE;
+    --green-200: #97C459;
+    --green-600: #3B6D11;
+    --red-50: #FCEBEB;
+    --red-200: #F09595;
+    --red-600: #A32D2D;
+    --gray-50: #F1EFE8;
+    --gray-100: #D3D1C7;
+    --gray-200: #B4B2A9;
+    --gray-600: #5F5E5A;
+    --gray-800: #444441;
+    --gray-900: #2C2C2A;
+    --white: #FFFEF9;
+    --radius: 16px;
+    --radius-sm: 10px;
+    --shadow-card: 0 2px 12px rgba(0,0,0,0.08);
+  }
+
+  html, body {
+    height: 100%;
+    font-family: 'Sora', sans-serif;
+    background: linear-gradient(160deg, #FAEEDA 0%, #FAC775 60%, #EF9F27 100%);
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+
+  .phone-frame {
+    width: 100%;
+    max-width: 390px;
+    min-height: 100vh;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* STATUS BAR */
+  .status-bar {
+    background: var(--amber-400);
+    padding: 12px 20px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white);
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .status-bar .time { font-size: 14px; font-weight: 700; }
+  .status-icons { display: flex; gap: 6px; align-items: center; font-size: 12px; }
+
+  /* HEADER */
+  .quiz-header {
+    background: var(--amber-400);
+    padding: 4px 16px 18px;
+    color: var(--white);
+  }
+  .header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+  }
+  .quiz-title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    opacity: 0.92;
+    text-transform: uppercase;
+  }
+  .header-right { display: flex; align-items: center; gap: 10px; }
+  .score-badge {
+    background: rgba(255,255,255,0.22);
+    border: 1.5px solid rgba(255,255,255,0.4);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+
+  /* THREE DOT BUTTON */
+  .three-dot-btn {
+    background: rgba(255,255,255,0.18);
+    border: 1.5px solid rgba(255,255,255,0.35);
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    flex-shrink: 0;
+    transition: background 0.15s;
+  }
+  .three-dot-btn:active { background: rgba(255,255,255,0.32); }
+  .three-dot-btn svg { width: 18px; height: 18px; fill: white; }
+
+  /* PROGRESS */
+  .progress-row { display: flex; align-items: center; gap: 10px; }
+  .progress-track {
+    flex: 1;
+    height: 6px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 99px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--white);
+    border-radius: 99px;
+    transition: width 0.5s cubic-bezier(0.4,0,0.2,1);
+  }
+  .progress-text {
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0.9;
+    min-width: 42px;
+    text-align: right;
+  }
+
+  /* DRAWER OVERLAY */
+  .drawer-overlay {
+    display: none;
+    position: absolute;
+    inset: 0;
+    background: rgba(44,44,42,0.45);
+    z-index: 100;
+  }
+  .drawer-overlay.open { display: block; animation: fadeO 0.2s ease; }
+  @keyframes fadeO { from { opacity:0; } to { opacity:1; } }
+
+  /* DRAWER PANEL */
+  .drawer {
+    position: absolute;
+    top: 0; right: 0;
+    width: 82%;
+    max-width: 300px;
+    height: 100%;
+    background: var(--white);
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform 0.28s cubic-bezier(0.4,0,0.2,1);
+    border-radius: var(--radius) 0 0 var(--radius);
+    overflow: hidden;
+  }
+  .drawer.open { transform: translateX(0); }
+
+  .drawer-header {
+    background: var(--amber-400);
+    padding: 44px 18px 16px;
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .drawer-title { font-size: 15px; font-weight: 700; }
+  .drawer-close {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    border-radius: 50%;
+    width: 32px; height: 32px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    font-family: 'Sora', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .drawer-close:active { background: rgba(255,255,255,0.35); }
+
+  /* LEGEND */
+  .drawer-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--gray-100);
+  }
+  .legend-item { display: flex; align-items: center; gap: 5px; font-size: 10.5px; color: var(--gray-600); font-weight: 500; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+  .legend-dot.ld-current { background: var(--amber-200); }
+  .legend-dot.ld-correct { background: var(--green-600); }
+  .legend-dot.ld-wrong   { background: var(--red-600); }
+  .legend-dot.ld-skipped { background: var(--gray-200); }
+  .legend-dot.ld-unseen  { background: var(--gray-50); border: 1.5px solid var(--gray-100); }
+
+  /* GRID */
+  .drawer-grid {
+    padding: 12px 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-content: flex-start;
+    overflow-y: auto;
+    flex: 1;
+  }
+  .q-nav-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    border: 1.5px solid var(--gray-100);
+    background: var(--gray-50);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gray-600);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.15s ease;
+    -webkit-tap-highlight-color: transparent;
+    font-family: 'Sora', sans-serif;
+  }
+  .q-nav-btn:active { transform: scale(0.9); }
+  .q-nav-btn.nav-current {
+    background: var(--amber-200);
+    border-color: var(--amber-400);
+    color: var(--amber-800);
+    box-shadow: 0 0 0 3px rgba(239,159,39,0.28);
+  }
+  .q-nav-btn.nav-correct {
+    background: var(--green-600);
+    border-color: var(--green-600);
+    color: #fff;
+  }
+  .q-nav-btn.nav-wrong {
+    background: var(--red-600);
+    border-color: var(--red-600);
+    color: #fff;
+  }
+  .q-nav-btn.nav-skipped {
+    background: var(--gray-100);
+    border-color: var(--gray-200);
+    color: var(--gray-600);
+    opacity: 0.75;
+  }
+
+  /* DRAWER FOOTER STATS */
+  .drawer-footer {
+    padding: 12px 16px;
+    border-top: 1px solid var(--gray-100);
+    display: flex;
+    gap: 8px;
+  }
+  .d-stat {
+    flex: 1;
+    background: var(--gray-50);
+    border-radius: 8px;
+    padding: 8px 4px;
+    text-align: center;
+    border: 1px solid var(--gray-100);
+  }
+  .d-stat .dv { font-size: 18px; font-weight: 700; color: var(--gray-900); }
+  .d-stat .dl { font-size: 10px; color: var(--gray-600); font-weight: 500; margin-top: 1px; }
+  .d-stat.dg .dv { color: var(--green-600); }
+  .d-stat.dr .dv { color: var(--red-600); }
+  .d-stat.da .dv { color: var(--amber-400); }
+
+  /* QUESTION CARD */
+  .question-wrap {
+    padding: 16px 18px 8px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  .question-card {
+    background: var(--white);
+    border: 1.5px solid var(--amber-100);
+    border-radius: var(--radius);
+    padding: 20px 18px 18px;
+    box-shadow: var(--shadow-card);
+    margin-bottom: 14px;
+    animation: slideUp 0.35s cubic-bezier(0.4,0,0.2,1);
+  }
+  @keyframes slideUp {
+    from { opacity:0; transform:translateY(18px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+  .q-num-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--amber-400);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .q-text {
+    font-size: 15.5px;
+    font-weight: 500;
+    color: var(--gray-900);
+    line-height: 1.55;
+    margin-bottom: 6px;
+  }
+  .q-hint {
+    font-size: 12px;
+    color: var(--gray-600);
+    font-family: 'Noto Sans Devanagari', sans-serif;
+    line-height: 1.5;
+  }
+
+  /* OPTIONS */
+  .options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .option-btn {
+    width: 100%;
+    background: var(--white);
+    border: 1.5px solid var(--gray-100);
+    border-radius: var(--radius-sm);
+    padding: 13px 16px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.18s ease;
+    -webkit-tap-highlight-color: transparent;
+    animation: fadeIn 0.3s ease both;
+    font-family: 'Sora', sans-serif;
+  }
+  .option-btn:nth-child(1) { animation-delay: 0.05s; }
+  .option-btn:nth-child(2) { animation-delay: 0.10s; }
+  .option-btn:nth-child(3) { animation-delay: 0.15s; }
+  .option-btn:nth-child(4) { animation-delay: 0.20s; }
+  @keyframes fadeIn {
+    from { opacity:0; transform:translateX(-10px); }
+    to   { opacity:1; transform:translateX(0); }
+  }
+  .option-btn:active:not(:disabled) { transform: scale(0.98); }
+  .option-btn:disabled { cursor: default; }
+
+  .opt-label {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: var(--amber-50);
+    border: 1.5px solid var(--amber-100);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 700;
+    color: var(--amber-600);
+    flex-shrink: 0;
+    transition: all 0.18s ease;
+  }
+  .opt-text {
+    font-size: 14px; font-weight: 500;
+    color: var(--gray-800);
+    line-height: 1.4;
+    flex: 1;
+  }
+  .opt-icon { font-size: 18px; flex-shrink:0; opacity:0; transition: opacity 0.2s; }
+
+  /* Option states */
+  .option-btn.correct  { background: var(--green-50); border-color: var(--green-200); }
+  .option-btn.correct .opt-label { background: var(--green-600); border-color: var(--green-600); color:#fff; }
+  .option-btn.correct .opt-text  { color: var(--green-600); }
+  .option-btn.correct .opt-icon  { opacity:1; color: var(--green-600); }
+
+  .option-btn.wrong { background: var(--red-50); border-color: var(--red-200); }
+  .option-btn.wrong .opt-label { background: var(--red-600); border-color: var(--red-600); color:#fff; }
+  .option-btn.wrong .opt-text  { color: var(--red-600); }
+  .option-btn.wrong .opt-icon  { opacity:1; color: var(--red-600); }
+
+  .option-btn.reveal-correct { background: var(--green-50); border-color: var(--green-200); opacity:0.75; }
+  .option-btn.reveal-correct .opt-label { background: var(--green-600); border-color: var(--green-600); color:#fff; }
+  .option-btn.reveal-correct .opt-icon  { opacity:1; color: var(--green-600); }
+
+  /* EXPLANATION */
+  .explanation-box {
+    background: var(--amber-50);
+    border-left: 3.5px solid var(--amber-200);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 12px 14px;
+    margin-bottom: 4px;
+    display: none;
+    animation: slideUp 0.3s ease;
+  }
+  .explanation-box.show { display: block; }
+  .exp-label { font-size:11px; font-weight:700; color:var(--amber-400); letter-spacing:0.8px; text-transform:uppercase; margin-bottom:5px; }
+  .exp-text  { font-size:13px; color:var(--gray-800); line-height:1.5; }
+  .exp-hindi { font-size:12px; color:var(--gray-600); font-family:'Noto Sans Devanagari',sans-serif; margin-top:5px; line-height:1.5; }
+
+  /* NEXT BUTTON */
+  .next-btn {
+    width: 100%;
+    background: var(--amber-400); color: var(--white);
+    border: none; border-radius: var(--radius-sm);
+    padding: 15px; font-size: 15px; font-weight: 700;
+    font-family: 'Sora', sans-serif;
+    cursor: pointer;
+    display: none; align-items: center; justify-content: center; gap: 8px;
+    margin-top: 6px;
+    transition: background 0.18s, transform 0.15s;
+    -webkit-tap-highlight-color: transparent;
+    letter-spacing: 0.3px;
+  }
+  .next-btn.show { display: flex; animation: slideUp 0.3s ease; }
+  .next-btn:active { transform: scale(0.97); background: var(--amber-600); }
+
+  /* RESULT SCREEN */
+  .result-screen {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 20px 40px;
+    text-align: center;
+    flex: 1;
+  }
+  .result-screen.show { display: flex; animation: slideUp 0.4s ease; }
+  .result-trophy { font-size:64px; margin-bottom:6px; }
+  .result-title  { font-size:22px; font-weight:700; color:var(--gray-900); margin-bottom:4px; }
+  .result-sub    { font-size:13px; color:var(--gray-600); margin-bottom:28px; font-family:'Noto Sans Devanagari',sans-serif; }
+
+  .score-ring { position:relative; width:120px; height:120px; margin:0 auto 28px; }
+  .score-ring svg { transform: rotate(-90deg); }
+  .bg-arc { fill:none; stroke:var(--amber-50); stroke-width:10; }
+  .fg-arc { fill:none; stroke:var(--amber-200); stroke-width:10; stroke-linecap:round; transition: stroke-dashoffset 1.2s cubic-bezier(0.4,0,0.2,1) 0.3s; }
+  .score-center { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+  .sc-num   { font-size:28px; font-weight:700; color:var(--amber-600); }
+  .sc-denom { font-size:13px; color:var(--gray-600); margin-top:-2px; }
+
+  .stats-row { display:flex; gap:12px; width:100%; margin-bottom:28px; }
+  .stat-card { flex:1; background:var(--gray-50); border-radius:var(--radius-sm); padding:14px 10px; border:1px solid var(--gray-100); text-align:center; }
+  .st-val   { font-size:22px; font-weight:700; color:var(--gray-900); }
+  .st-label { font-size:11px; color:var(--gray-600); margin-top:2px; font-weight:500; }
+  .stat-card.green .st-val { color:var(--green-600); }
+  .stat-card.red   .st-val { color:var(--red-600); }
+
+  .restart-btn {
+    width:100%; background:var(--amber-400); color:var(--white);
+    border:none; border-radius:var(--radius-sm);
+    padding:16px; font-size:16px; font-weight:700;
+    font-family:'Sora',sans-serif; cursor:pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .restart-btn:active { background:var(--amber-600); transform:scale(0.97); }
+
+  /* SPLASH */
+  .splash {
+    display:flex; flex-direction:column;
+    align-items:center; justify-content:center;
+    flex:1; padding:32px 24px 40px; text-align:center;
+  }
+  .splash-icon  { font-size:72px; margin-bottom:12px; }
+  .splash-title { font-size:26px; font-weight:700; color:var(--gray-900); margin-bottom:6px; }
+  .splash-sub   { font-size:14px; color:var(--gray-600); line-height:1.6; margin-bottom:32px; font-family:'Noto Sans Devanagari',sans-serif; }
+  .start-btn {
+    width:100%; background:var(--amber-400); color:var(--white);
+    border:none; border-radius:var(--radius-sm);
+    padding:17px; font-size:16px; font-weight:700;
+    font-family:'Sora', sans-serif; cursor:pointer;
+    -webkit-tap-highlight-color:transparent; letter-spacing:0.4px;
+  }
+  .start-btn:active { background:var(--amber-600); }
+  .meta-chips { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-bottom:28px; }
+  .chip { background:var(--amber-50); border:1px solid var(--amber-100); border-radius:99px; padding:6px 14px; font-size:12px; font-weight:600; color:var(--amber-600); }
+</style>
+</head>
+<body>
+<div class="phone-frame" id="app">
+
+  <div class="status-bar">
+    <span class="time" id="clock">9:41</span>
+    <div class="status-icons"><span>●●●</span><span>WiFi</span><span>🔋</span></div>
+  </div>
+
+  <div class="splash" id="splashScreen">
+    <div class="splash-icon">📋</div>
+    <div class="splash-title" id="splashTitle">RRB Group D Science</div>
+    <div class="splash-sub" id="splashSub">Test your knowledge with custom interactive sets.<br>सामान्य जागरूकता प्रश्नोत्तरी</div>
+    <div class="meta-chips">
+      <span class="chip" id="countChip">📝 0 Questions</span>
+      <span class="chip">🏆 Score Tracking</span>
+      <span class="chip">📖 Bilingual</span>
+    </div>
+    <button class="start-btn" onclick="startQuiz()">Start Quiz →</button>
+  </div>
+
+  <div id="quizScreen" style="display:none; flex-direction:column; flex:1;">
+
+    <div class="quiz-header">
+      <div class="header-top">
+        <span class="quiz-title" id="headerTitle">Science Practice</span>
+        <div class="header-right">
+          <span class="score-badge" id="scoreLabel">Score: 0</span>
+          <button class="three-dot-btn" onclick="openDrawer()" aria-label="Question Navigator">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="5"  r="1.8"/>
+              <circle cx="12" cy="12" r="1.8"/>
+              <circle cx="12" cy="19" r="1.8"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div class="progress-row">
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill" style="width:0%"></div>
+        </div>
+        <span class="progress-text" id="progressText">0 / 0</span>
+      </div>
+    </div>
+
+    <div class="question-wrap" id="questionWrap">
+      <div class="question-card" id="questionCard">
+        <div class="q-num-label" id="qNum">Question 1 of 0</div>
+        <div class="q-text" id="qText"></div>
+        <div class="q-hint" id="qHint"></div>
+      </div>
+      <div class="options-list" id="optionsList"></div>
+      <div class="explanation-box" id="explanationBox">
+        <div class="exp-label">✦ Explanation</div>
+        <div class="exp-text"  id="expText"></div>
+        <div class="exp-hindi" id="expHindi"></div>
+      </div>
+      <button class="next-btn" id="nextBtn" onclick="nextQuestion()"></button>
+    </div>
+  </div>
+
+  <div class="result-screen" id="resultScreen">
+    <div class="result-trophy" id="trophyEmoji">🏆</div>
+    <div class="result-title"  id="resultTitle">Outstanding!</div>
+    <div class="result-sub"    id="resultSub">शानदार प्रदर्शन! 🎉</div>
+    <div class="score-ring">
+      <svg width="120" height="120" viewBox="0 0 120 120">
+        <circle class="bg-arc" cx="60" cy="60" r="50"/>
+        <circle class="fg-arc" id="scoreArc" cx="60" cy="60" r="50" stroke-dasharray="314.16" stroke-dashoffset="314.16"/>
+      </svg>
+      <div class="score-center">
+        <span class="sc-num"   id="finalScore">0</span>
+        <span class="sc-denom" id="finalDenom">out of 0</span>
+      </div>
+    </div>
+    <div class="stats-row">
+      <div class="stat-card green"><div class="st-val" id="correctCount">0</div><div class="st-label">✓ Correct</div></div>
+      <div class="stat-card red">  <div class="st-val" id="wrongCount">0</div>  <div class="st-label">✗ Wrong</div></div>
+      <div class="stat-card">      <div class="st-val" id="skippedCount">0</div><div class="st-label">⏭ Skipped</div></div>
+    </div>
+    <button class="restart-btn" onclick="restartQuiz()">🔁 Play Again</button>
+  </div>
+
+  <div class="drawer-overlay" id="drawerOverlay" onclick="closeDrawer()"></div>
+
+  <div class="drawer" id="navDrawer">
+    <div class="drawer-header">
+      <span class="drawer-title">📌 Question Navigator</span>
+      <button class="drawer-close" onclick="closeDrawer()">✕</button>
+    </div>
+
+    <div class="drawer-legend">
+      <div class="legend-item"><div class="legend-dot ld-current"></div>Current</div>
+      <div class="legend-item"><div class="legend-dot ld-correct"></div>Correct</div>
+      <div class="legend-item"><div class="legend-dot ld-wrong"></div>Wrong</div>
+      <div class="legend-item"><div class="legend-dot ld-skipped"></div>Skipped</div>
+      <div class="legend-item"><div class="legend-dot ld-unseen"></div>Not visited</div>
+    </div>
+
+    <div class="drawer-grid" id="drawerGrid"></div>
+
+    <div class="drawer-footer">
+      <div class="d-stat dg"><div class="dv" id="dCorrect">0</div><div class="dl">Correct</div></div>
+      <div class="d-stat dr"><div class="dv" id="dWrong">0</div>  <div class="dl">Wrong</div></div>
+      <div class="d-stat da"><div class="dv" id="dLeft">0</div>  <div class="dl">Remaining</div></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const QUESTIONS = [
+  /* PASTE GENERATED QUESTION OBJECTS HERE */
+];
+
+// 'unseen' | 'correct' | 'wrong' | 'skipped'
+let qStatus = [];
+let current = 0, score = 0, correct = 0, wrong = 0, skipped = 0;
+let answered = false;
+
+function initApp() {
+  document.getElementById('countChip').textContent = `📝 ${QUESTIONS.length} Questions`;
+  document.getElementById('progressText').textContent = `0 / ${QUESTIONS.length}`;
+  document.getElementById('finalDenom').textContent = `out of ${QUESTIONS.length}`;
+}
+
+function updateClock() {
+  const d = new Date();
+  document.getElementById('clock').textContent =
+    d.getHours().toString().padStart(2,'0') + ':' + d.getMinutes().toString().padStart(2,'0');
+}
+updateClock();
+setInterval(updateClock, 10000);
+
+function startQuiz() {
+  if (QUESTIONS.length === 0) {
+    alert("Please inject generated questions inside the QUESTIONS array first!");
+    return;
+  }
+  current = 0; score = 0; correct = 0; wrong = 0; skipped = 0;
+  qStatus = Array(QUESTIONS.length).fill('unseen');
+  document.getElementById('splashScreen').style.display = 'none';
+  document.getElementById('quizScreen').style.display = 'flex';
+  document.getElementById('scoreLabel').textContent = 'Score: 0';
+  loadQuestion();
+}
+
+function loadQuestion() {
+  if (current >= QUESTIONS.length) { showResult(); return; }
+  answered = false;
+  const q = QUESTIONS[current];
+
+  document.getElementById('qNum').textContent  = `Question ${current+1} of ${QUESTIONS.length}`;
+  document.getElementById('qText').textContent = q.text;
+  document.getElementById('qHint').textContent = q.hint;
+
+  document.getElementById('progressFill').style.width = (current / QUESTIONS.length * 100) + '%';
+  document.getElementById('progressText').textContent = `${current} / ${QUESTIONS.length}`;
+
+  document.getElementById('explanationBox').classList.remove('show');
+  document.getElementById('nextBtn').classList.remove('show');
+
+  const list = document.getElementById('optionsList');
+  list.innerHTML = '';
+  ['A','B','C','D'].forEach((lbl, i) => {
+    if(q.options[i]) {
+      const btn = document.createElement('button');
+      btn.className = 'option-btn';
+      btn.innerHTML = `<div class="opt-label">${lbl}</div><div class="opt-text">${q.options[i]}</div><div class="opt-icon"></div>`;
+      btn.onclick = () => selectOption(i, btn);
+      list.appendChild(btn);
+    }
+  });
+
+  const qc = document.getElementById('questionCard');
+  qc.style.animation = 'none'; void qc.offsetWidth; qc.style.animation = '';
+  document.getElementById('questionWrap').scrollTop = 0;
+}
+
+function selectOption(idx, btn) {
+  if (answered) return;
+  answered = true;
+  const q = QUESTIONS[current];
+  const btns = document.querySelectorAll('.option-btn');
+  btns.forEach(b => b.disabled = true);
+
+  if (idx === q.answer) {
+    btn.classList.add('correct');
+    btn.querySelector('.opt-icon').textContent = '✓';
+    score++; correct++;
+    qStatus[current] = 'correct';
+  } else {
+    btn.classList.add('wrong');
+    btn.querySelector('.opt-icon').textContent = '✗';
+    wrong++;
+    qStatus[current] = 'wrong';
+    const cb = btns[q.answer];
+    if(cb) {
+      cb.classList.add('reveal-correct');
+      cb.querySelector('.opt-icon').textContent = '✓';
+      cb.querySelector('.opt-icon').style.opacity = '1';
+      cb.querySelector('.opt-icon').style.color = '#3B6D11';
+    }
+  }
+  document.getElementById('scoreLabel').textContent = `Score: ${score}`;
+  showExplanation();
+}
+
+function showExplanation() {
+  const q = QUESTIONS[current];
+  document.getElementById('expText').textContent  = q.explanation || '';
+  document.getElementById('expHindi').textContent = q.hindi || '';
+  document.getElementById('explanationBox').classList.add('show');
+  const nb = document.getElementById('nextBtn');
+  nb.classList.add('show');
+  nb.innerHTML = (current + 1 >= QUESTIONS.length)
+    ? '🏁 See Results'
+    : `Next Question <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>`;
+}
+
+function nextQuestion() {
+  if (!answered && qStatus[current] === 'unseen') { qStatus[current] = 'skipped'; skipped++; }
+  current++;
+  loadQuestion();
+}
+
+/* ── DRAWER ── */
+function openDrawer() {
+  renderDrawerGrid();
+  document.getElementById('drawerOverlay').classList.add('open');
+  document.getElementById('navDrawer').classList.add('open');
+}
+function closeDrawer() {
+  document.getElementById('drawerOverlay').classList.remove('open');
+  document.getElementById('navDrawer').classList.remove('open');
+}
+function renderDrawerGrid() {
+  const grid = document.getElementById('drawerGrid');
+  grid.innerHTML = '';
+  qStatus.forEach((status, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'q-nav-btn';
+    if (i === current)        btn.classList.add('nav-current');
+    else if (status !== 'unseen') btn.classList.add('nav-' + status);
+    btn.textContent = i + 1;
+    btn.onclick = () => jumpTo(i);
+    grid.appendChild(btn);
+  });
+  const remaining = qStatus.filter(s => s === 'unseen').length;
+  document.getElementById('dCorrect').textContent = correct;
+  document.getElementById('dWrong').textContent   = wrong;
+  document.getElementById('dLeft').textContent    = remaining;
+}
+function jumpTo(idx) {
+  closeDrawer();
+  if (idx === current) return;
+  if (!answered && qStatus[current] === 'unseen') { qStatus[current] = 'skipped'; skipped++; }
+  current = idx;
+  answered = qStatus[idx] !== 'unseen';
+  loadQuestion();
+  if (answered) restoreState();
+}
+function restoreState() {
+  const q = QUESTIONS[current];
+  const status = qStatus[current];
+  const btns = document.querySelectorAll('.option-btn');
+  btns.forEach(b => b.disabled = true);
+  const cb = btns[q.answer];
+  if (cb) {
+    if (status === 'correct') {
+      cb.classList.add('correct');
+      cb.querySelector('.opt-icon').textContent = '✓';
+      cb.querySelector('.opt-icon').style.opacity = '1';
+    } else {
+      cb.classList.add('reveal-correct');
+      cb.querySelector('.opt-icon').textContent = '✓';
+      cb.querySelector('.opt-icon').style.opacity = '1';
+      cb.querySelector('.opt-icon').style.color = '#3B6D11';
+    }
+  }
+  showExplanation();
+}
+
+/* ── RESULT ── */
+function showResult() {
+  document.getElementById('quizScreen').style.display = 'none';
+  document.getElementById('resultScreen').classList.add('show');
+  document.getElementById('finalScore').textContent   = score;
+  document.getElementById('correctCount').textContent = correct;
+  document.getElementById('wrongCount').textContent   = wrong;
+  document.getElementById('skippedCount').textContent = skipped;
+  const pct = score / QUESTIONS.length;
+  let trophy = '🏆', title = 'Outstanding!', sub = 'शानदार प्रदर्शन! 🎉';
+  if (pct < 0.4) { trophy = '📚'; title = 'Keep Practicing'; sub = 'और मेहनत करें — आप कर सकते हैं!'; }
+  else if (pct < 0.7) { trophy = '👍'; title = 'Good Effort!'; sub = 'अच्छा प्रयास! थोड़ा और अभ्यास करें।'; }
+  document.getElementById('trophyEmoji').textContent = trophy;
+  document.getElementById('resultTitle').textContent  = title;
+  document.getElementById('resultSub').textContent    = sub;
+  setTimeout(() => { document.getElementById('scoreArc').style.strokeDashoffset = 314.16 * (1 - pct); }, 100);
+}
+
+function restartQuiz() {
+  document.getElementById('resultScreen').classList.remove('show');
+  startQuiz();
+}
+
+// Automatically update stats on initialization
+initApp();
+</script>
+</body>
+</html>
