@@ -636,6 +636,451 @@
 <script>
 const QUESTIONS = [
   /* PASTE GENERATED QUESTION OBJECTS HERE */
+
+
+
+
+
+
+
+  {
+    text: "According to the sign convention for lenses, all distances are measured from which point?",
+    hint: "लेंसों के लिए चिन्ह परिपाटी में सभी दूरियां किस बिंदु से मापी जाती हैं?",
+    options: ["Focus (फोकस)", "Pole (ध्रुव)", "Optic Center (प्रकाशिक केंद्र)", "Center of Curvature (वक्रता केंद्र)"],
+    answer: 2,
+    explanation: "In lenses, all measurements are taken relative to the optical center. For mirrors, they are measured from the pole.",
+    hindi: "लेंसों में सभी दूरियों की माप उसके प्रकाशिक केंद्र (Optic Center) से ली जाती है, जबकि दर्पणों में ध्रुव (Pole) से।"
+  },
+  {
+    text: "According to the sign convention for mirrors, all distances are measured from which point?",
+    hint: "दर्पणों के लिए चिन्ह परिपाटी में सभी दूरियां किस बिंदु से मापी जाती हैं?",
+    options: ["Optic Center (प्रकाशिक केंद्र)", "Focus (फोकस)", "Pole (ध्रुव)", "Radius (त्रिज्या)"],
+    answer: 2,
+    explanation: "Unlike lenses which use the optic center, all distances for spherical mirrors are measured from the Pole.",
+    hindi: "दर्पणों में सभी दूरियां ध्रुव (Pole) से मापी जाती हैं।"
+  },
+  {
+    text: "Which type of lens is known as a convergent lens?",
+    hint: "किस प्रकार के लेंस को अभिसारी लेंस कहा जाता है?",
+    options: ["Concave Lens (अवतल लेंस)", "Convex Lens (उत्तल लेंस)", "Cylindrical Lens (बेलनाकार लेंस)", "Bifocal Lens (द्विफोकल लेंस)"],
+    answer: 1,
+    explanation: "A convex lens converges the light rays passing through it.",
+    hindi: "उत्तल लेंस प्रकाश को इकट्ठा (अभिसरित) करता है, इसलिए इसे अभिसारी लेंस कहते हैं।"
+  },
+  {
+    text: "Which type of lens is known as a divergent lens?",
+    hint: "किस प्रकार के लेंस को अपसारी लेंस कहा जाता है?",
+    options: ["Convex Lens (उत्तल लेंस)", "Plano-convex Lens (समतलोत्तल लेंस)", "Concave Lens (अवतल लेंस)", "None of these (इनमें से कोई नहीं)"],
+    answer: 2,
+    explanation: "A concave lens spreads light rays out, making it a divergent lens.",
+    hindi: "अवतल लेंस प्रकाश को फैलाता है, इसलिए इसे अपसारी लेंस कहा जाता है।"
+  },
+  {
+    text: "Atomic number of an atom is defined by the total number of which particle present in its nucleus?",
+    hint: "परमाणु संख्या को परमाणु के नाभिक में उपस्थित किस कण की कुल संख्या से परिभाषित किया जाता है?",
+    options: ["Electrons (इलेक्ट्रॉन)", "Neutrons (न्यूट्रॉन)", "Protons (प्रोटॉन)", "Nucleons (न्यूक्लियॉन)"],
+    answer: 2,
+    explanation: "Atomic number (Z) is strictly determined by the total number of protons fixed in the nucleus.",
+    hindi: "परमाणु संख्या (Z) नाभिक में मौजूद स्थिर प्रोटॉनों की संख्या से निर्धारित होती है।"
+  },
+  {
+    text: "The atomic mass of an element is determined by the sum of which particles in the nucleus?",
+    hint: "किसी तत्व का परमाणु द्रव्यमान नाभिक में किन कणों के योग से निर्धारित होता है?",
+    options: ["Protons + Electrons (प्रोटॉन + इलेक्ट्रॉन)", "Protons + Neutrons (प्रोटॉन + न्यूट्रॉन)", "Neutrons + Electrons (न्यूट्रॉन + इलेक्ट्रॉन)", "Only Protons (केवल प्रोटॉन)"],
+    answer: 1,
+    explanation: "Atomic mass (Mass number) equals the sum of protons and neutrons in the nucleus.",
+    hindi: "परमाणु द्रव्यमान (द्रव्यमान संख्या) नाभिक में मौजूद प्रोटॉन और न्यूट्रॉन के योग के बराबर होता है।"
+  },
+  {
+    text: "Which of the following elements is an exception where its atomic number is 4 but its atomic mass is 9?",
+    hint: "निम्नलिखित में से कौन सा तत्व एक अपवाद है जहां इसकी परमाणु संख्या 4 है लेकिन इसका परमाणु द्रव्यमान 9 है?",
+    options: ["Boron (बोरॉन)", "Nitrogen (नाइट्रोजन)", "Beryllium (बेरिलियम)", "Lithium (लिथियम)"],
+    answer: 2,
+    explanation: "Generally, even atomic numbers have double the mass, but Beryllium (Z=4) is an exception with a mass of 9.",
+    hindi: "सामान्यतः सम परमाणु संख्या वाले तत्वों का द्रव्यमान दोगुना होता है, लेकिन बेरिलियम (Z=4) एक अपवाद है जिसका द्रव्यमान 9 होता है।"
+  },
+  {
+    text: "What is the name of the place where bees are kept for commercial honey production?",
+    hint: "उस स्थान का नाम क्या है जहां व्यावसायिक शहद उत्पादन के लिए मधुमक्खियों को रखा जाता है?",
+    options: ["Aquarium (एक्वेरियम)", "Apiary (एपीयरी)", "Aviary (एवियरी)", "Terrarium (टेरारियम)"],
+    answer: 1,
+    explanation: "An apiary is a location where beehives are systematically kept for apiculture.",
+    hindi: "एपीयरी (Apiary) वह स्थान है जहाँ व्यावसायिक स्तर पर मधुमक्खी पालन (Apiculture) के लिए छत्ते रखे जाते हैं।"
+  },
+  {
+    text: "Which species is the exotic Italian honeybee popular for high honey yield?",
+    hint: "कौन सी प्रजाति विदेशी इटालियन मधुमक्खी है जो अधिक शहद उत्पादन के लिए लोकप्रिय है?",
+    options: ["Apis dorsata (एपिस डोरसेटा)", "Apis florea (एपिस फ्लोरी)", "Apis cerana indica (एपिस सेरेना इंडिका)", "Apis mellifera (एपिस मेलिफेरा)"],
+    answer: 3,
+    explanation: "Apis mellifera is the Italian honeybee introduced commercially for high honey production and low stinging.",
+    hindi: "एपिस मेलिफेरा इटालियन मधुमक्खी की प्रजाति है। इसका उपयोग अधिक शहद उत्पादन के लिए होता है।"
+  },
+  {
+    text: "Apis dorsata is commonly known in India as:",
+    hint: "भारत में एपिस डोरसेटा (Apis dorsata) को आमतौर पर किस रूप में जाना जाता है?",
+    options: ["Little Bee (लिटिल मक्खी)", "Rock Bee / Shell Bee (शैल मक्खी)", "Indian Hive Bee (सामान्य भारतीय मक्खी)", "Italian Bee (इटालियन मक्खी)"],
+    answer: 1,
+    explanation: "Apis dorsata is the large rock bee (शैल मक्खी).",
+    hindi: "एपिस डोरसेटा को शैल मक्खी (Rock Bee) कहा जाता है।"
+  },
+  {
+    text: "Which of the following is known as the Indian little bee?",
+    hint: "निम्नलिखित में से किसे भारतीय छोटी मधुमक्खी (लिटिल मक्खी) के रूप में जाना जाता है?",
+    options: ["Apis florea (एपिस फ्लोरी)", "Apis dorsata (एपिस डोरसेटा)", "Apis mellifera (एपिस मेलिफेरा)", "Apis cerana (एपिस सेरेना)"],
+    answer: 0,
+    explanation: "Apis florea is the small little bee.",
+    hindi: "एपिस फ्लोरी सबसे छोटी (लिटिल) मधुमक्खी होती है।"
+  },
+  {
+    text: "According to the teacher's extra information, what type of wax is obtained from beehives?",
+    hint: "शिक्षक की अतिरिक्त जानकारी के अनुसार, मधुमक्खी के छत्ते से किस प्रकार का मोम प्राप्त होता है?",
+    options: ["Paraffin wax (पैराफिन मोम)", "Carnauba wax / Beeswax (कार्नोवा मोम)", "Soy wax (सोया मोम)", "Microcrystalline wax (माइक्रोक्रिस्टलाइन मोम)"],
+    answer: 1,
+    explanation: "The wax extracted from beehives is referred to as carnauba wax / beeswax in the lecture, used widely in medicine and cosmetics.",
+    hindi: "छत्ते से कार्नोवा मोम (Carnauba wax / Beeswax) प्राप्त होता है, जिसका उपयोग औषधि निर्माण में होता है।"
+  },
+  {
+    text: "If 1.5 Coulombs of charge passes and the work done is 30 Joules, calculate the potential difference.",
+    hint: "यदि 1.5 कूलॉम का आवेश गुजरता है और किया गया कार्य 30 जूल है, तो विभवांतर की गणना करें।",
+    options: ["15 Volts", "20 Volts", "45 Volts", "10 Volts"],
+    answer: 1,
+    explanation: "V = W / Q = 30 / 1.5 = 20 Volts.",
+    hindi: "सूत्र V = W / Q का उपयोग करके। V = 30 / 1.5 = 20 वोल्ट।"
+  },
+  {
+    text: "What is essential for sexual reproduction in plants?",
+    hint: "पादपों में लैंगिक जनन हेतु क्या आवश्यक है?",
+    options: ["Only Leaves (केवल पत्तियां)", "Presence of flowers/pollination (पुष्प/परागण की उपस्थिति)", "Roots (जड़ें)", "Absence of pollination (परागण की अनुपस्थिति)"],
+    answer: 1,
+    explanation: "Flowers contain the reproductive organs necessary for pollination and sexual reproduction.",
+    hindi: "लैंगिक जनन के लिए पुष्प और परागण (Pollination) की उपस्थिति आवश्यक है।"
+  },
+  {
+    text: "Which of the following describes the male reproductive parts of a flower (Stamen)?",
+    hint: "निम्नलिखित में से कौन पुष्प के नर जनन अंगों (पुंकेसर) का वर्णन करता है?",
+    options: ["Stigma and Style (वर्तिकाग्र और वर्तिका)", "Anther and Filament (परागकोष और तंतु)", "Ovary and Ovule (अंडाशय और बीजांड)", "Sepals (बाह्यदल)"],
+    answer: 1,
+    explanation: "The stamen consists of the Anther and Filament.",
+    hindi: "पुंकेसर के दो हिस्से होते हैं: परागकोष (Anther) और तंतु (Filament)।"
+  },
+  {
+    text: "Which of the following are the female reproductive parts of a flower (Pistil)?",
+    hint: "निम्नलिखित में से कौन पुष्प के मादा जनन अंग (स्त्रीकेसर) हैं?",
+    options: ["Stigma, Style, Ovary (वर्तिकाग्र, वर्तिका, अंडाशय)", "Anther, Filament (परागकोष, तंतु)", "Calyx, Corolla (बाह्यदलपुंज, दलपुंज)", "Pollen grains (पराग कण)"],
+    answer: 0,
+    explanation: "The pistil/gynoecium consists of Stigma, Style, and Ovary.",
+    hindi: "स्त्रीकेसर (मादा भाग) में वर्तिकाग्र (Stigma), वर्तिका (Style) और अंडाशय (Ovary) शामिल होते हैं।"
+  },
+  {
+    text: "Sound waves traveling through air are classified as:",
+    hint: "हवा में यात्रा करने वाली ध्वनि तरंगों को किस रूप में वर्गीकृत किया जाता है?",
+    options: ["Transverse waves (अनुप्रस्थ तरंगे)", "Electromagnetic waves (विद्युत चुम्बकीय तरंगे)", "Longitudinal waves (अनुदैर्ध्य तरंगे)", "Non-mechanical waves (अयांत्रिक तरंगे)"],
+    answer: 2,
+    explanation: "Sound waves in air are longitudinal because particles vibrate parallel to the wave propagation.",
+    hindi: "ध्वनि तरंगे अनुदैर्ध्य होती हैं क्योंकि माध्यम के कण तरंग संचरण की दिशा के समानांतर कंपन करते हैं।"
+  },
+  {
+    text: "In a longitudinal wave, the regions where particles are crowded together are called:",
+    hint: "अनुदैर्ध्य तरंग में, वे क्षेत्र जहां कण एक साथ पास-पास आ जाते हैं, क्या कहलाते हैं?",
+    options: ["Rarefactions (विरलन)", "Compressions (संपीडन)", "Crests (श्रृंग)", "Troughs (गर्त)"],
+    answer: 1,
+    explanation: "High-pressure crowded regions are Compressions, and low-pressure spread-out regions are Rarefactions.",
+    hindi: "जब कण पास-पास आते हैं तो उसे संपीडन (Compression) कहते हैं और दूर जाने पर विरलन (Rarefaction) कहते हैं।"
+  },
+  {
+    text: "Can sound waves travel without a physical medium?",
+    hint: "क्या ध्वनि तरंगें बिना किसी भौतिक माध्यम के यात्रा कर सकती हैं?",
+    options: ["Yes, easily (हाँ, आसानी से)", "No, they require a medium (नहीं, उन्हें माध्यम की आवश्यकता होती है)", "Only in space (केवल अंतरिक्ष में)", "Only at light speed (केवल प्रकाश की गति से)"],
+    answer: 1,
+    explanation: "Sound waves are mechanical waves and strictly require a material medium (solid, liquid, or gas) to travel.",
+    hindi: "ध्वनि तरंगें यांत्रिक तरंगें हैं, इसलिए उन्हें यात्रा करने के लिए किसी न किसी माध्यम (ठोस, द्रव या गैस) की आवश्यकता होती है।"
+  },
+  {
+    text: "The metal reactivity series is structured in which order?",
+    hint: "धातु सक्रियता श्रेणी किस क्रम में व्यवस्थित होती है?",
+    options: ["Ascending order (आरोही क्रम)", "Descending order (अवरोही क्रम)", "Random order (यादृच्छिक क्रम)", "Based on atomic number (परमाणु संख्या के आधार पर)"],
+    answer: 1,
+    explanation: "It is arranged in descending order of reactivity, with highly reactive metals at the top.",
+    hindi: "यह घटती हुई सक्रियता (अवरोही क्रम / Descending Order) में व्यवस्थित होती है।"
+  },
+  {
+    text: "Which of the following metals is at the top of the reactivity series (most reactive)?",
+    hint: "सक्रियता श्रेणी में सबसे ऊपर (सबसे अधिक प्रतिक्रियाशील) कौन सी धातु है?",
+    options: ["Gold (सोना)", "Zinc (जिंक)", "Iron (लोहा)", "Potassium (पोटैशियम)"],
+    answer: 3,
+    explanation: "Potassium (K) and Sodium (Na) are at the very top of the reactivity series.",
+    hindi: "पोटैशियम (K) सक्रियता श्रेणी में सबसे ऊपर होता है, जो इसे सबसे अधिक प्रतिक्रियाशील बनाता है।"
+  },
+  {
+    text: "Which of the following is an unsaturated hydrocarbon?",
+    hint: "निम्नलिखित में से कौन एक असंतृप्त हाइड्रोकार्बन है?",
+    options: ["Butane (ब्यूटेन)", "Propane (प्रोपेन)", "Butene (ब्यूटीन)", "Methane (मीथेन)"],
+    answer: 2,
+    explanation: "Compounds with '-ene' (double bonds) or '-yne' (triple bonds) are unsaturated.",
+    hindi: "ब्यूटीन (Butene) में डबल बॉन्ड होता है, इसलिए यह असंतृप्त (Unsaturated) है।"
+  },
+  {
+    text: "What type of flame is generally produced by unsaturated carbon compounds?",
+    hint: "असंतृप्त कार्बन यौगिकों द्वारा सामान्यतः किस प्रकार की ज्वाला उत्पन्न होती है?",
+    options: ["Clean blue flame (स्वच्छ नीली ज्वाला)", "Yellow sooty flame (काले धुएं वाली पीली ज्वाला)", "Invisible flame (अदृश्य ज्वाला)", "Green flame (हरी ज्वाला)"],
+    answer: 1,
+    explanation: "Unsaturated compounds burn with a yellow sooty flame due to incomplete combustion.",
+    hindi: "असंतृप्त हाइड्रोकार्बन अत्यधिक काले धुएं वाली पीली ज्वाला (Sooty Yellow Flame) के साथ जलते हैं।"
+  },
+  {
+    text: "What type of flame is generally produced by saturated hydrocarbons?",
+    hint: "संतृप्त हाइड्रोकार्बन द्वारा सामान्यतः किस प्रकार की ज्वाला उत्पन्न होती है?",
+    options: ["Clean blue flame (स्वच्छ नीली ज्वाला)", "Yellow sooty flame (काले धुएं वाली पीली ज्वाला)", "Red flame (लाल ज्वाला)", "Orange flame (नारंगी ज्वाला)"],
+    answer: 0,
+    explanation: "Saturated hydrocarbons generally undergo complete combustion, producing a clean blue flame.",
+    hindi: "संतृप्त हाइड्रोकार्बन पूर्ण दहन के कारण स्वच्छ नीली ज्वाला (Clean blue flame) देते हैं।"
+  },
+  {
+    text: "What is the atomic mass of the Carbon-13 isotope?",
+    hint: "कार्बन-13 समस्थानिक का परमाणु द्रव्यमान कितना है?",
+    options: ["12 u", "14 u", "13 u", "6 u"],
+    answer: 2,
+    explanation: "The mass number of an isotope denotes its atomic mass in unified mass units (u). Thus, Carbon-13 has a mass of 13 u.",
+    hindi: "कार्बन-13 समस्थानिक का द्रव्यमान 13 u होता है।"
+  }, // <-- COMMA INCLUDED HERE SO YOU CAN PASTE BOX 2 RIGHT BELOW IT!
+    {
+    text: "What is the chemical formula of Lactic acid produced during anaerobic respiration in muscles?",
+    hint: "मांसपेशियों में अनॉक्सी श्वसन के दौरान उत्पन्न लैक्टिक अम्ल का रासायनिक सूत्र क्या है?",
+    options: ["C6H12O6", "C2H5OH", "C3H6O3", "CO2"],
+    answer: 2,
+    explanation: "Glucose (C6H12O6) breaks down into Lactic acid (C3H6O3) in the absence of oxygen in muscle cells.",
+    hindi: "ऑक्सीजन की कमी में ग्लूकोज टूटकर मांसपेशियों में लैक्टिक अम्ल (C3H6O3) बनाता है।"
+  },
+  {
+    text: "What is the end-product of anaerobic respiration in animal muscle cells?",
+    hint: "जंतु की मांसपेशियों की कोशिकाओं में अनॉक्सी श्वसन का अंतिम उत्पाद क्या होता है?",
+    options: ["Ethanol + CO2 (एथेनॉल + कार्बन डाइऑक्साइड)", "Lactic Acid (लैक्टिक अम्ल)", "Water + CO2 (जल + कार्बन डाइऑक्साइड)", "Pyruvic Acid (पाइरुविक अम्ल)"],
+    answer: 1,
+    explanation: "Lack of oxygen in muscles converts pyruvate into Lactic Acid, causing cramps.",
+    hindi: "ऑक्सीजन की कमी के कारण मांसपेशियों में लैक्टिक अम्ल (Lactic Acid) बनता है।"
+  },
+  {
+    text: "What is the end-product of anaerobic respiration in yeast (fermentation)?",
+    hint: "यीस्ट में अनॉक्सी श्वसन (किण्वन) का अंतिम उत्पाद क्या है?",
+    options: ["Lactic Acid (लैक्टिक अम्ल)", "Ethanol + CO2 (एथेनॉल + CO2)", "Only CO2 (केवल CO2)", "Glucose (ग्लूकोज)"],
+    answer: 1,
+    explanation: "In yeast, absence of oxygen leads to the formation of Ethanol and Carbon Dioxide.",
+    hindi: "यीस्ट में ऑक्सीजन की अनुपस्थिति में एथेनॉल और कार्बन डाइऑक्साइड बनते हैं।"
+  },
+  {
+    text: "Approximately how much energy is released during aerobic respiration (presence of oxygen)?",
+    hint: "ऑक्सी श्वसन (ऑक्सीजन की उपस्थिति) के दौरान लगभग कितनी ऊर्जा जारी होती है?",
+    options: ["70 kcal", "670-686 kcal", "10 kcal", "2 kcal"],
+    answer: 1,
+    explanation: "Aerobic respiration generates significantly more energy (670-686 kcal) compared to anaerobic respiration (only about 70 kcal).",
+    hindi: "ऑक्सी श्वसन में बहुत अधिक ऊर्जा (670-686 kcal) उत्पन्न होती है, जबकि अनॉक्सी श्वसन में केवल 70 kcal ऊर्जा बनती है।"
+  },
+  {
+    text: "Aerobic respiration primarily takes place in which cell organelle?",
+    hint: "ऑक्सी श्वसन मुख्य रूप से किस कोशिका अंगक में होता है?",
+    options: ["Nucleus (नाभिक)", "Ribosome (राइबोसोम)", "Mitochondria (माइटोकांड्रिया)", "Golgi body (गॉल्जी काय)"],
+    answer: 2,
+    explanation: "Aerobic respiration occurs in Mitochondria, generating CO2, Water, and maximum ATP energy.",
+    hindi: "ऑक्सीजन की उपस्थिति में श्वसन माइटोकांड्रिया में होता है।"
+  },
+  {
+    text: "In certain reptiles, what environmental factor determines the sex of the fertilized egg?",
+    hint: "कुछ सरीसृपों में, कौन सा पर्यावरणीय कारक निषेचित अंडे का लिंग निर्धारित करता है?",
+    options: ["Humidity (आर्द्रता)", "Incubation Temperature (ऊष्मायन तापमान)", "Light (प्रकाश)", "Atmospheric pressure (वायुमंडलीय दबाव)"],
+    answer: 1,
+    explanation: "Sex determination in some reptiles relies heavily on environmental incubation temperatures.",
+    hindi: "सरीसृपों में अंडे के ऊष्मायन ताप (Temperature) पर लिंग निर्भर करता है।"
+  },
+  {
+    text: "Which gas is released when dilute Hydrochloric acid reacts with Sodium Carbonate?",
+    hint: "जब तनु हाइड्रोक्लोरिक अम्ल सोडियम कार्बोनेट के साथ अभिक्रिया करता है, तो कौन सी गैस निकलती है?",
+    options: ["Hydrogen (हाइड्रोजन)", "Oxygen (ऑक्सीजन)", "Carbon Dioxide (कार्बन डाइऑक्साइड)", "Chlorine (क्लोरीन)"],
+    answer: 2,
+    explanation: "Acids react with metal carbonates to produce salt, water, and Carbon Dioxide gas.",
+    hindi: "अम्ल धातु कार्बोनेट के साथ क्रिया करके कार्बन डाइऑक्साइड (CO2) गैस उत्सर्जित करते हैं।"
+  },
+  {
+    text: "When an object falls freely from a height, its potential energy converts into:",
+    hint: "जब कोई पिंड ऊंचाई से स्वतंत्र रूप से गिरता है, तो उसकी स्थितिज ऊर्जा किसमें परिवर्तित होती है?",
+    options: ["Heat energy (ऊष्मीय ऊर्जा)", "Kinetic energy (गतिज ऊर्जा)", "Chemical energy (रासायनिक ऊर्जा)", "Electrical energy (विद्युत ऊर्जा)"],
+    answer: 1,
+    explanation: "As it drops, Potential Energy decreases and Kinetic Energy increases.",
+    hindi: "जैसे-जैसे पिंड नीचे गिरता है, स्थितिज ऊर्जा घटती है और गतिज ऊर्जा (Kinetic Energy) में बदल जाती है।"
+  },
+  {
+    text: "At the maximum height of a falling object, what is its kinetic energy?",
+    hint: "गिरने वाली वस्तु की अधिकतम ऊंचाई पर, उसकी गतिज ऊर्जा क्या होती है?",
+    options: ["Maximum (अधिकतम)", "Equal to potential energy (स्थितिज ऊर्जा के बराबर)", "Zero (शून्य)", "Negative (नकारात्मक)"],
+    answer: 2,
+    explanation: "At the highest point before falling, velocity is zero, so Kinetic Energy is zero, and Potential Energy is at its maximum.",
+    hindi: "अधिकतम ऊंचाई पर वस्तु का वेग शून्य होता है, इसलिए गतिज ऊर्जा शून्य (Zero) होती है।"
+  },
+  {
+    text: "Which law states that mass can neither be created nor destroyed in a chemical reaction?",
+    hint: "कौन सा नियम कहता है कि रासायनिक अभिक्रिया में द्रव्यमान का न तो निर्माण हो सकता है न विनाश?",
+    options: ["Law of Constant Proportions (स्थिर अनुपात का नियम)", "Law of Conservation of Mass (द्रव्यमान संरक्षण का नियम)", "Newton's Third Law (न्यूटन का तीसरा नियम)", "Law of Multiple Proportions (गुणित अनुपात का नियम)"],
+    answer: 1,
+    explanation: "The Law of Conservation of Mass was established by Antoine Lavoisier.",
+    hindi: "यह द्रव्यमान संरक्षण का नियम (Law of Conservation of Mass) है।"
+  },
+  {
+    text: "Who formulated the Law of Constant Proportions?",
+    hint: "स्थिर अनुपात का नियम किसने प्रतिपादित किया था?",
+    options: ["Antoine Lavoisier (एंटोनी लेवाइशियर)", "John Dalton (जॉन डाल्टन)", "Joseph Proust (जोसेफ प्राउस्ट)", "J.J. Thomson (जे.जे. थॉमसन)"],
+    answer: 2,
+    explanation: "Joseph Proust formulated the Law of Constant Proportions.",
+    hindi: "स्थिर अनुपात का नियम जोसेफ प्राउस्ट (Joseph Proust) द्वारा दिया गया था।"
+  },
+  {
+    text: "The magnetic field produced at the center of a current-carrying loop is directly proportional to:",
+    hint: "धारावाही वृत्ताकार लूप के केंद्र पर उत्पन्न चुंबकीय क्षेत्र किसके अनुक्रमानुपाती होता है?",
+    options: ["Distance from wire (तार से दूरी)", "Current flowing through the loop (लूप से प्रवाहित विद्युत धारा)", "Radius of loop (लूप की त्रिज्या)", "Resistance (प्रतिरोध)"],
+    answer: 1,
+    explanation: "Magnetic field (B) is directly proportional to the electric current (I).",
+    hindi: "चुंबकीय क्षेत्र प्रवाहित होने वाली विद्युत धारा (Current) के सीधे अनुक्रमानुपाती होता है।"
+  },
+  {
+    text: "Why is Mitochondria known as a strange organelle?",
+    hint: "माइटोकांड्रिया को एक अद्भुत/अजीब अंगक क्यों माना जाता है?",
+    options: ["It has no membrane (इसकी कोई झिल्ली नहीं होती)", "It produces oxygen (यह ऑक्सीजन बनाता है)", "It has its own DNA and Ribosomes (इसका अपना डीएनए और राइबोसोम होता है)", "It digests the cell (यह कोशिका को पचाता है)"],
+    answer: 2,
+    explanation: "Mitochondria possess their own DNA and Ribosomes.",
+    hindi: "इसके पास खुद का डीएनए (DNA) तथा राइबोसोम होते हैं।"
+  },
+  {
+    text: "What is the function of the highly folded inner membrane of Mitochondria?",
+    hint: "माइटोकांड्रिया की अत्यधिक मुड़ी हुई आंतरिक झिल्ली का क्या कार्य है?",
+    options: ["To protect the DNA (डीएनए की रक्षा करना)", "To increase surface area for ATP-generating chemical reactions (ATP निर्माण के लिए सतह क्षेत्र बढ़ाना)", "To store water (जल जमा करना)", "To transport proteins (प्रोटीन परिवहन करना)"],
+    answer: 1,
+    explanation: "The folds (cristae) provide a larger surface area to maximize ATP production.",
+    hindi: "यह मुड़ी हुई झिल्ली ATP निर्माण की रासायनिक प्रतिक्रियाओं के लिए बड़ा सतह क्षेत्र (Surface Area) प्रदान करती है।"
+  },
+  {
+    text: "If the thrust is constant but the contact area decreases, what happens to the pressure?",
+    hint: "यदि प्रणोद स्थिर है लेकिन संपर्क क्षेत्र घटता है, तो दाब पर क्या प्रभाव पड़ता है?",
+    options: ["Decreases (घटता है)", "Remains same (समान रहता है)", "Increases (बढ़ता है)", "Becomes zero (शून्य हो जाता है)"],
+    answer: 2,
+    explanation: "Pressure = Force / Area. Decreasing the area increases the pressure.",
+    hindi: "दाब क्षेत्रफल के व्युत्क्रमानुपाती होता है, इसलिए क्षेत्रफल घटने पर दाब बढ़ता है।"
+  },
+  {
+    text: "Which of the following is a popular marine fish variety in India?",
+    hint: "निम्नलिखित में से कौन भारत में एक लोकप्रिय समुद्री मछली किस्म है?",
+    options: ["Rohu (रोहू)", "Catla (कतला)", "Pomfret (पॉम्फ्रेट)", "Mrigal (मृगल)"],
+    answer: 2,
+    explanation: "Pomfret, Mackerel, and Tuna are popular marine fishes. Rohu and Catla are freshwater.",
+    hindi: "पॉम्फ्रेट (Pomfret) एक लोकप्रिय समुद्री मछली है, जबकि रोहू और कतला मीठे पानी की हैं।"
+  },
+  {
+    text: "Which marine organism is commercially cultured to obtain pearls?",
+    hint: "मोती प्राप्त करने के लिए किस समुद्री जीव का व्यावसायिक संवर्धन किया जाता है?",
+    options: ["Prawns (झींगा)", "Mullet (मुलेट)", "Oyster (ऑस्टर / सीप)", "Mussels (मसल)"],
+    answer: 2,
+    explanation: "Oysters are cultivated specifically for producing pearls.",
+    hindi: "सीप या ऑस्टर (Oyster) का संवर्धन सच्चे मोती प्राप्त करने के लिए किया जाता है।"
+  },
+  {
+    text: "How are the cells of connective tissues arranged?",
+    hint: "संयोजी ऊतकों की कोशिकाएं कैसे व्यवस्थित होती हैं?",
+    options: ["Tightly packed (कसकर बंधी हुई)", "Loosely packed in a matrix (आधात्री में ढीली बंधी हुई)", "No intercellular space (बिना अंतरकोशिकीय स्थान के)", "Fused together (एक साथ जुड़ी हुई)"],
+    answer: 1,
+    explanation: "Connective tissue cells are loosely spaced and embedded in an intercellular matrix.",
+    hindi: "संयोजी ऊतक की कोशिकाएं आपस में कम जुड़ी होती हैं (Loosely packed) और मैट्रिक्स में धंसी होती हैं।"
+  },
+  {
+    text: "Which organism reproduces through the method of binary fission?",
+    hint: "कौन सा जीव द्विखंडन (Binary fission) विधि द्वारा प्रजनन करता है?",
+    options: ["Hydra (हाइड्रा)", "Plasmodium (प्लाज्मोडियम)", "Amoeba / Leishmania (अमीबा / लीशमैनिया)", "Planaria (प्लैनेरिया)"],
+    answer: 2,
+    explanation: "Amoeba and Leishmania reproduce by splitting into two equal halves (binary fission).",
+    hindi: "अमीबा और लीशमैनिया द्विखंडन (Binary fission) द्वारा प्रजनन करते हैं।"
+  },
+  {
+    text: "The backward jerk (recoil) of a gun when a bullet is fired is an example of:",
+    hint: "गोली चलने पर बंदूक का पीछे की ओर धक्का मारना (रिकॉइल) किसका उदाहरण है?",
+    options: ["Law of Inertia (जड़त्व का नियम)", "Newton's Second Law (न्यूटन का दूसरा नियम)", "Action-Reaction Law / Newton's 3rd Law (क्रिया-प्रतिक्रिया नियम)", "Law of Conservation of Mass (द्रव्यमान संरक्षण का नियम)"],
+    answer: 2,
+    explanation: "The recoil of a gun is explained by Newton's Third Law (Action and Reaction).",
+    hindi: "यह न्यूटन के तीसरे नियम (क्रिया-प्रतिक्रिया) का उदाहरण है।"
+  },
+  {
+    text: "Why does Zinc displace Copper from Copper Sulphate solution?",
+    hint: "जिंक, कॉपर सल्फेट के विलयन से कॉपर को विस्थापित क्यों कर देता है?",
+    options: ["Copper is more reactive (कॉपर अधिक प्रतिक्रियाशील है)", "Zinc is more reactive than Copper (जिंक, कॉपर से अधिक प्रतिक्रियाशील है)", "Both have equal reactivity (दोनों की प्रतिक्रियाशीलता समान है)", "Zinc is heavier (जिंक भारी है)"],
+    answer: 1,
+    explanation: "According to the reactivity series, Zinc is placed above Copper, making it more reactive.",
+    hindi: "सक्रियता श्रेणी में जिंक, कॉपर से ऊपर है, इसलिए जिंक अधिक प्रतिक्रियाशील (Reactive) है।"
+  },
+  {
+    text: "A train goes 100 km at 50 km/h and returns the same route in 1 hour. Average speed in m/s is?",
+    hint: "एक ट्रेन 50 किमी/घंटा से 100 किमी जाती है और 1 घंटे में वापस आती है। मीटर/सेकंड में औसत चाल क्या है?",
+    options: ["15.43 m/s", "18.52 m/s", "25 m/s", "20.22 m/s"],
+    answer: 1,
+    explanation: "Total Dist=200km. Total Time= 2h(going) + 1h(return) = 3h. Avg speed = 200/3 km/h * (5/18) = 18.52 m/s.",
+    hindi: "कुल दूरी=200km, कुल समय=3h. औसत चाल = 200/3 * 5/18 = 18.52 m/s."
+  },
+  {
+    text: "Rivers falling into the Arabian Sea (like Narmada and Tapti) generally form which geographical feature?",
+    hint: "अरब सागर में गिरने वाली नदियां (जैसे नर्मदा और ताप्ती) सामान्यतः कौन सी भौगोलिक संरचना बनाती हैं?",
+    options: ["Delta (डेल्टा)", "Estuary (ज्वारनदमुख)", "Lagoon (लैगून)", "Oxbow lake (गोखुर झील)"],
+    answer: 1,
+    explanation: "West-flowing rivers in India form estuaries where river water meets the rapid tidal seawater.",
+    hindi: "पश्चिमी घाट (अरब सागर) में गिरने वाली नदियां (जैसे नर्मदा) डेल्टा नहीं, बल्कि ज्वारनदमुख (Estuary) बनाती हैं।"
+  },
+  {
+    text: "Rivers flowing eastwards into the Bay of Bengal (like Ganga, Godavari) typically form which geographical feature?",
+    hint: "बंगाल की खाड़ी में पूर्व की ओर बहने वाली नदियां (जैसे गंगा, गोदावरी) आमतौर पर कौन सी भौगोलिक संरचना बनाती हैं?",
+    options: ["Estuary (ज्वारनदमुख)", "Delta (डेल्टा)", "Strait (जलडमरूमध्य)", "Glacier (हिमनद)"],
+    answer: 1,
+    explanation: "East-flowing rivers deposit large amounts of silt at their mouths, forming large deltas before entering the sea.",
+    hindi: "पूर्व की ओर (बंगाल की खाड़ी में) गिरने वाली नदियां भारी मात्रा में गाद जमा करती हैं और डेल्टा (Delta) का निर्माण करती हैं।"
+  },
+  {
+    text: "Which of the following is NOT an east-flowing river forming a delta?",
+    hint: "निम्नलिखित में से कौन सी पूर्व की ओर बहने वाली और डेल्टा बनाने वाली नदी नहीं है?",
+    options: ["Mahanadi (महानदी)", "Godavari (गोदावरी)", "Narmada (नर्मदा)", "Krishna (कृष्णा)"],
+    answer: 2,
+    explanation: "Narmada is a west-flowing river that falls into the Arabian Sea and forms an estuary, not a delta.",
+    hindi: "नर्मदा नदी पश्चिम की ओर बहती है और अरब सागर में गिरकर ज्वारनदमुख (Estuary) बनाती है।"
+  }
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 ];
 
 // 'unseen' | 'correct' | 'wrong' | 'skipped'
