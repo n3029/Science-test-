@@ -426,6 +426,38 @@
   .next-btn.show { display: flex; animation: slideUp 0.3s ease; }
   .next-btn:active { transform: scale(0.97); background: var(--amber-600); }
 
+/* PREV / NEXT NAV BUTTONS */
+.nav-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.prev-btn, .skip-next-btn {
+  flex: 1;
+  padding: 13px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Sora', sans-serif;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.15s, transform 0.15s;
+}
+.prev-btn {
+  background: var(--gray-50);
+  color: var(--gray-600);
+  border: 1.5px solid var(--gray-100);
+}
+.prev-btn:active  { transform: scale(0.97); background: var(--gray-100); }
+.skip-next-btn {
+  background: var(--amber-200);
+  color: var(--amber-800);
+  border: none;
+}
+.skip-next-btn:active { transform: scale(0.97); background: var(--amber-400); color: var(--white); }
+.prev-btn:disabled, .skip-next-btn:disabled { opacity: 0.38; cursor: default; pointer-events: none; }
+
+ 
   /* RESULT SCREEN */
   .result-screen {
     display: none;
@@ -535,6 +567,10 @@
         <div class="q-text" id="qText"></div>
         <div class="q-hint" id="qHint"></div>
       </div>
+     <div class="nav-row">
+  <button class="prev-btn" id="prevBtn" onclick="prevQuestion()">← Previous</button>
+  <button class="skip-next-btn" id="skipNextBtn" onclick="nextQuestion()">Skip →</button>
+     </div>
       <div class="options-list" id="optionsList"></div>
       <div class="explanation-box" id="explanationBox">
         <div class="exp-label">✦ Explanation</div>
@@ -1195,6 +1231,15 @@ function jumpTo(idx) {
   loadQuestion();
   if (answered) restoreState();
 }
+
+ function prevQuestion() {
+  if (current <= 0) return;
+  if (!answered && qStatus[current] === 'unseen') { qStatus[current] = 'skipped'; skipped++; }
+  current--;
+  answered = qStatus[current] !== 'unseen';
+  loadQuestion();
+  if (answered) restoreState();
+ }
 function restoreState() {
   const q = QUESTIONS[current];
   const status = qStatus[current];
