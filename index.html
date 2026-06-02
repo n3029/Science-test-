@@ -643,6 +643,332 @@ const QUESTIONS = [
 
 
 
+
+
+
+
+ 
+  {
+    text: "Which of the following metals reacts most vigorously with water?",
+    hint: "निम्नलिखित में से कौन सी धातु जल के साथ बहुत तेजी से अभिक्रिया करती है?",
+    options: ["Iron (लोहा)", "Zinc (जिंक)", "Sodium (सोडियम)", "Copper (तांबा)"],
+    answer: 2,
+    explanation: "Sodium is highly reactive. It reacts vigorously with water to form sodium hydroxide and hydrogen gas, releasing a large amount of heat.",
+    hindi: "सोडियम बहुत अधिक प्रतिक्रियाशील धातु है। यह पानी के साथ तेजी से अभिक्रिया करके सोडियम हाइड्रोक्साइड और हाइड्रोजन गैस बनाता है।"
+  },
+  {
+    text: "When Sodium reacts with water, why does it catch fire?",
+    hint: "जब सोडियम पानी के साथ प्रतिक्रिया करता है, तो उसमें आग क्यों लग जाती है?",
+    options: ["Sodium is flammable by itself", "The reaction produces oxygen which burns", "The reaction is highly exothermic and ignites the evolved Hydrogen gas (अभिक्रिया अत्यधिक ऊष्माक्षेपी है और उत्पन्न हाइड्रोजन गैस को जला देती है)", "Sodium absorbs heat from water"],
+    answer: 2,
+    explanation: "The reaction between sodium and water is highly exothermic (releases high heat). This heat instantly ignites the highly flammable hydrogen gas produced.",
+    hindi: "यह अभिक्रिया अत्यधिक ऊष्माक्षेपी (Exothermic) होती है, जिससे निकलने वाली ऊष्मा उत्पन्न हुई हाइड्रोजन गैस को तुरंत जला देती है।"
+  },
+  {
+    text: "Which of the following methods is a simple and common way to prevent the corrosion of iron?",
+    hint: "लोहे के संक्षारण (Corrosion) को रोकने के लिए निम्नलिखित में से कौन सा एक सरल और सामान्य तरीका है?",
+    options: ["Painting or oiling the surface (पेंटिंग या तेल लगाना)", "Heating the iron repeatedly (लोहे को बार-बार गर्म करना)", "Dipping it in water (इसे पानी में डुबोना)", "Keeping it in the open air (इसे खुले में रखना)"],
+    answer: 0,
+    explanation: "Painting or oiling creates a protective barrier over the iron surface, preventing oxygen and moisture from reacting with it.",
+    hindi: "पेंट या तेल लगाने से लोहे की सतह पर एक परत बन जाती है, जो ऑक्सीजन और नमी को लोहे तक पहुंचने से रोकती है।"
+  },
+  {
+    text: "Which metal oxide can be reduced to its metal just by heating it?",
+    hint: "किस धातु ऑक्साइड को केवल गर्म करके उसकी धातु में अपचयित (Reduced) किया जा सकता है?",
+    options: ["Zinc Oxide", "Magnesium Oxide", "Mercuric Oxide (मरक्यूरिक ऑक्साइड)", "Aluminum Oxide"],
+    answer: 2,
+    explanation: "Mercury is a less reactive metal. Its oxide, Mercuric Oxide (HgO), can be easily reduced to mercury metal just by heating.",
+    hindi: "पारा (Mercury) कम प्रतिक्रियाशील होता है, इसलिए मरक्यूरिक ऑक्साइड (HgO) को केवल गर्म करने से ही ऑक्सीजन अलग हो जाती है।"
+  },
+  {
+    text: "Which of the following is NOT a method of contraception?",
+    hint: "निम्नलिखित में से कौन सा गर्भनिरोधक (Contraception) का तरीका नहीं है?",
+    options: ["Using condoms (कंडोम का उपयोग)", "Abortion (गर्भपात)", "Using Copper-T (कॉपर-टी का उपयोग)", "Oral pills (मौखिक गोलियां)"],
+    answer: 1,
+    explanation: "Condoms, Copper-T, and oral pills are preventive contraceptive methods. Abortion is the termination of a pregnancy, not a contraceptive method.",
+    hindi: "कंडोम, कॉपर-टी और गोलियां गर्भधारण रोकने के तरीके हैं। गर्भपात (Abortion) एक मौजूदा गर्भावस्था को समाप्त करना है, गर्भनिरोधक नहीं।"
+  },
+  {
+    text: "How does a Copper-T device prevent pregnancy?",
+    hint: "कॉपर-टी (Copper-T) उपकरण गर्भावस्था को कैसे रोकता है?",
+    options: ["It stops the release of eggs completely", "It releases copper ions that reduce the motility and fertilizing capacity of sperms (यह कॉपर आयन छोड़ता है जो शुक्राणुओं की गतिशीलता और निषेचन क्षमता को कम करते हैं)", "It kills the egg", "It physically blocks the vagina"],
+    answer: 1,
+    explanation: "Copper-T is inserted into the uterus where it releases copper ions that suppress sperm motility, preventing them from reaching the egg.",
+    hindi: "कॉपर-टी गर्भाशय में लगाया जाता है। यह कॉपर आयन छोड़ता है जो शुक्राणुओं की ताकत और गति को कम कर देते हैं।"
+  },
+  {
+    text: "When solid Lead Nitrate is heated, it produces a yellow precipitate of Lead Oxide along with which two gases?",
+    hint: "जब ठोस लेड नाइट्रेट को गर्म किया जाता है, तो यह लेड ऑक्साइड के पीले अवक्षेप के साथ कौन सी दो गैसें पैदा करता है?",
+    options: ["Carbon dioxide and Hydrogen", "Nitrogen dioxide and Oxygen (नाइट्रोजन डाइऑक्साइड और ऑक्सीजन)", "Nitric oxide and Hydrogen", "Sulphur dioxide and Oxygen"],
+    answer: 1,
+    explanation: "Heating Lead Nitrate results in thermal decomposition, yielding Lead Oxide (yellow solid), Nitrogen dioxide (brown gas), and Oxygen gas.",
+    hindi: "लेड नाइट्रेट को गर्म करने पर लेड ऑक्साइड (पीला), नाइट्रोजन डाइऑक्साइड (NO2) और ऑक्सीजन (O2) गैस बनती है।"
+  },
+  {
+    text: "What is the SI unit of Pressure?",
+    hint: "दबाव (Pressure) की SI इकाई क्या है?",
+    options: ["Newton (न्यूटन)", "Joule (जूल)", "Pascal (पास्कल)", "Watt (वाट)"],
+    answer: 2,
+    explanation: "Pressure is defined as force per unit area. Its SI unit is the Pascal (Pa). Force is measured in Newtons.",
+    hindi: "दबाव को पास्कल (Pascal) में मापा जाता है, जबकि बल (Force) का मात्रक न्यूटन होता है।"
+  },
+  {
+    text: "When Mendel crossed a pure tall pea plant (TT) with a pure dwarf pea plant (tt), what were the traits of the plants in the F1 generation?",
+    hint: "जब मेंडल ने एक शुद्ध लंबे मटर के पौधे (TT) को शुद्ध बौने पौधे (tt) के साथ संकरित (Cross) किया, तो F1 पीढ़ी में पौधों के लक्षण क्या थे?",
+    options: ["All dwarf plants (सभी बौने पौधे)", "Medium height plants (मध्यम ऊंचाई वाले पौधे)", "All tall plants (सभी लंबे पौधे)", "Half tall and half dwarf (आधे लंबे और आधे बौने)"],
+    answer: 2,
+    explanation: "In the F1 generation, the dominant trait (Tall - T) masks the recessive trait (dwarf - t), resulting in all tall plants (Tt).",
+    hindi: "F1 पीढ़ी में प्रभावी लक्षण (Dominant trait - लंबापन) ही दिखाई देता है, इसलिए सभी पौधे लंबे होते हैं।"
+  },
+  {
+    text: "In genetics, traits that are expressed in the F1 generation and represented by capital letters are known as:",
+    hint: "आनुवंशिकी में, जो लक्षण F1 पीढ़ी में व्यक्त होते हैं और कैपिटल अक्षरों द्वारा दर्शाए जाते हैं, उन्हें क्या कहा जाता है?",
+    options: ["Recessive traits (अप्रभावी लक्षण)", "Dominant traits (प्रभावी लक्षण)", "Mutated traits (उत्परिवर्तित लक्षण)", "Neutral traits (उदासीन लक्षण)"],
+    answer: 1,
+    explanation: "Dominant traits express themselves even when only one copy of the allele is present (e.g., 'T' in Tt makes the plant tall).",
+    hindi: "जो लक्षण खुद को व्यक्त कर पाते हैं, उन्हें प्रभावी लक्षण (Dominant traits) कहते हैं।"
+  },
+  {
+    text: "What is the nature of the pressure exerted by a fluid at a specific given depth inside a container?",
+    hint: "किसी बर्तन के अंदर एक निश्चित गहराई पर तरल द्वारा लगाए गए दबाव की प्रकृति क्या होती है?",
+    options: ["It is greater downwards", "It exerts equal pressure in all directions (यह सभी दिशाओं में समान दबाव डालता है)", "It is greater upwards", "It exerts pressure only on the walls"],
+    answer: 1,
+    explanation: "At any given depth within a stationary fluid, the pressure acts equally in all directions.",
+    hindi: "एक समान ऊंचाई (गहराई) पर, तरल सभी दिशाओं में बराबर दबाव (Equal pressure) डालता है।"
+  },
+  {
+    text: "Under which condition is the work done by a force considered positive?",
+    hint: "किस स्थिति में किसी बल द्वारा किया गया कार्य धनात्मक (Positive) माना जाता है?",
+    options: ["When the angle between force and displacement is 90°", "When the force opposes the motion (angle is 180°)", "When the displacement is zero", "When a component of the force is in the direction of displacement (जब बल का एक घटक विस्थापन की दिशा में हो)"],
+    answer: 3,
+    explanation: "Work = F × s × cos(θ). If the angle θ is between 0° and 90°, cos(θ) is positive, resulting in positive work done.",
+    hindi: "जब बल और विस्थापन के बीच का कोण 0° से 90° के बीच होता है, तो cos(θ) धनात्मक होता है और किया गया कार्य पॉजिटिव होता है।"
+  },
+  {
+    text: "If the angle between the applied force and the displacement is exactly 90 degrees, what is the work done?",
+    hint: "यदि लगाए गए बल और विस्थापन के बीच का कोण ठीक 90 डिग्री है, तो किया गया कार्य क्या होगा?",
+    options: ["Maximum", "Negative", "Zero (शून्य)", "Infinite"],
+    answer: 2,
+    explanation: "Since cos(90°) = 0, the equation W = Fscos(θ) becomes 0. No work is done in the direction of the force.",
+    hindi: "cos(90°) का मान 0 होता है, इसलिए जब बल विस्थापन के लंबवत हो, तो कार्य शून्य (Zero) होता है।"
+  },
+  {
+    text: "How is the molecular mass of a compound calculated?",
+    hint: "किसी यौगिक के आणविक द्रव्यमान (Molecular mass) की गणना कैसे की जाती है?",
+    options: ["By multiplying the masses of its atoms", "By taking the sum of the atomic masses of all the atoms present in the molecule (अणु में उपस्थित सभी परमाणुओं के परमाणु द्रव्यमानों का योग लेकर)", "By finding the difference in atomic masses", "By dividing the masses by the number of atoms"],
+    answer: 1,
+    explanation: "Molecular mass is simply the total sum of the atomic masses of every single atom contained in the chemical formula.",
+    hindi: "एक अणु में मौजूद सभी परमाणुओं के द्रव्यमान को जोड़ने से आणविक द्रव्यमान प्राप्त होता है।"
+  },
+  {
+    text: "Which method is commonly used to separate colloidal particles, such as extracting fat from milk?",
+    hint: "कोलाइडल कणों को अलग करने के लिए आमतौर पर किस विधि का उपयोग किया जाता है, जैसे दूध से वसा (Fat) निकालना?",
+    options: ["Evaporation (वाष्पीकरण)", "Filtration (निस्पंदन)", "Centrifugation (अपकेंद्रण)", "Distillation (आसवन)"],
+    answer: 2,
+    explanation: "Centrifugation involves spinning the mixture at high speeds, forcing the denser particles to the bottom and lighter particles (like cream/fat) to the top.",
+    hindi: "अपकेंद्रण (Centrifugation) विधि में तेजी से घुमाने पर भारी कण नीचे बैठ जाते हैं और हल्के कण (जैसे दूध की क्रीम) ऊपर आ जाते हैं।"
+  },
+  {
+    text: "Which of the following statements about spherical mirrors is FALSE?",
+    hint: "गोलीय दर्पणों के बारे में निम्नलिखित में से कौन सा कथन असत्य (FALSE) है?",
+    options: ["The principal axis is an imaginary straight line passing through the pole and center of curvature", "The focus of a spherical mirror does not lie on its principal axis (गोलीय दर्पण का फोकस उसके मुख्य अक्ष पर स्थित नहीं होता है)", "A ray parallel to the principal axis passes through the focus after reflection in a concave mirror", "The pole is the center of the reflecting surface"],
+    answer: 1,
+    explanation: "The focus (F) of a spherical mirror absolutely lies on the principal axis, exactly halfway between the pole and the center of curvature.",
+    hindi: "गोलीय दर्पण का फोकस (Focus) हमेशा मुख्य अक्ष (Principal axis) पर ही स्थित होता है। इसलिए दिया गया कथन गलत है।"
+  },
+  {
+    text: "Which medical instrument relies on the principle of multiple reflections of sound to work?",
+    hint: "कौन सा चिकित्सा उपकरण काम करने के लिए ध्वनि के बहु-परावर्तन (Multiple reflections) के सिद्धांत पर निर्भर करता है?",
+    options: ["Thermometer", "Microscope", "Stethoscope (स्टेथोस्कोप)", "Endoscope"],
+    answer: 2,
+    explanation: "A stethoscope channels the sound of a heartbeat through a tube via multiple reflections until it reaches the doctor's ears.",
+    hindi: "स्टेथोस्कोप में ध्वनि नली की दीवारों से बार-बार टकराकर (बहु-परावर्तन) डॉक्टर के कानों तक पहुँचती है।"
+  },
+  {
+    text: "What is the primary purpose of a plug key or a switch in an electric circuit?",
+    hint: "विद्युत परिपथ में प्लग कुंजी (Plug key) या स्विच का प्राथमिक उद्देश्य क्या है?",
+    options: ["To increase the voltage", "To measure the current", "To connect or break the circuit (परिपथ को जोड़ने या तोड़ने के लिए)", "To generate electricity"],
+    answer: 2,
+    explanation: "A switch or plug key safely opens (breaks) or closes (completes) the electrical circuit, controlling the flow of current.",
+    hindi: "प्लग कुंजी या स्विच का मुख्य काम सर्किट को चालू (On) या बंद (Off) करना है, जिससे करंट का प्रवाह नियंत्रित होता है।"
+  },
+  {
+    text: "In circuit diagrams, what does an 'open switch' symbol indicate?",
+    hint: "सर्किट आरेखों में, 'ओपन स्विच' (खुला परिपथ) प्रतीक क्या दर्शाता है?",
+    options: ["High current is flowing", "The circuit is complete", "The circuit is broken and no current is flowing (परिपथ टूटा हुआ है और कोई धारा प्रवाहित नहीं हो रही है)", "The battery is dead"],
+    answer: 2,
+    explanation: "An open switch means the continuous path is broken, hence electricity cannot flow through the circuit.",
+    hindi: "ओपन (खुला) स्विच का मतलब है कि तार का संपर्क टूटा हुआ है और करंट आगे नहीं जा रहा है।"
+  },
+  {
+    text: "What defines the 'displacement' of a moving object?",
+    hint: "किसी गतिमान वस्तु का 'विस्थापन' (Displacement) किसे परिभाषित करता है?",
+    options: ["The total path length covered", "The shortest straight-line distance between the initial and final positions (प्रारंभिक और अंतिम स्थिति के बीच की सबसे छोटी सीधी दूरी)", "The speed of the object multiplied by time", "The circular path taken"],
+    answer: 1,
+    explanation: "Displacement is a vector quantity referring to the shortest direct distance from the starting point to the ending point.",
+    hindi: "शुरुआती बिंदु और अंतिम बिंदु के बीच की सबसे छोटी (शॉर्टकट) दूरी को विस्थापन (Displacement) कहते हैं।"
+  },
+
+  {
+    text: "Which layer in the upper atmosphere significantly protects the Earth's surface from harmful Ultraviolet (UV) radiation?",
+    hint: "ऊपरी वायुमंडल की कौन सी परत पृथ्वी की सतह को हानिकारक पराबैंगनी (UV) विकिरण से बचाती है?",
+    options: ["Troposphere", "Nitrogen layer", "Ozone layer (ओजोन परत)", "Carbon dioxide layer"],
+    answer: 2,
+    explanation: "The ozone (O3) layer absorbs the majority of the sun's harmful ultraviolet radiation, protecting life on Earth.",
+    hindi: "ओजोन गैस की परत सूर्य से आने वाली हानिकारक पराबैंगनी (UV) किरणों को रोककर हमारी रक्षा करती है।"
+  },
+  {
+    text: "The depletion of the ozone layer is most directly linked to an increase in cases of:",
+    hint: "ओजोन परत का क्षरण सबसे सीधे तौर पर किन मामलों में वृद्धि से जुड़ा है?",
+    options: ["Lung cancer", "Skin cancer (त्वचा कैंसर)", "Diabetes", "Heart disease"],
+    answer: 1,
+    explanation: "Without the ozone layer, more UV radiation reaches the surface, which damages skin cell DNA and causes skin cancer.",
+    hindi: "ओजोन के पतले होने से UV किरणें सीधे हमारी त्वचा पर पड़ती हैं, जिससे त्वचा का कैंसर (Skin cancer) होने का खतरा बढ़ जाता है।"
+  },
+  {
+    text: "What primarily determines the size and shape of a cell in an organism?",
+    hint: "किसी जीव में कोशिका का आकार और रूप मुख्य रूप से किससे निर्धारित होता है?",
+    options: ["The size of the organism", "The number of nuclei", "The specific function it performs (उसका विशिष्ट कार्य)", "Its age"],
+    answer: 2,
+    explanation: "Cells adapt their shapes and sizes to best perform their specific biological functions (e.g., long neurons for transmitting signals).",
+    hindi: "कोशिका का आकार इस बात पर निर्भर करता है कि वह शरीर में क्या काम (Function) कर रही है, जैसे संदेश भेजने के लिए न्यूरॉन लंबे होते हैं।"
+  },
+  {
+    text: "Why are nerve cells (neurons) structured to be uniquely long and branched?",
+    hint: "तंत्रिका कोशिकाओं (न्यूरॉन्स) की संरचना विशिष्ट रूप से लंबी और शाखित क्यों होती है?",
+    options: ["To store large amounts of fat", "To rapidly transmit electrical messages over long distances in the body (शरीर में लंबी दूरी तक विद्युत संदेशों को तेजी से प्रसारित करने के लिए)", "To produce blood cells", "To absorb maximum oxygen"],
+    answer: 1,
+    explanation: "The elongated axon of a neuron allows it to carry electrical impulses quickly from the brain to distant body parts.",
+    hindi: "न्यूरॉन लंबे इसलिए होते हैं ताकि वे मस्तिष्क के संदेशों को शरीर के दूर के हिस्सों तक आसानी से और जल्दी पहुंचा सकें।"
+  },
+  {
+    text: "Match the bee correctly: Which of the following is commonly known as the 'Italian bee' and is famous for high honey production?",
+    hint: "मधुमक्खी का सही मिलान करें: निम्नलिखित में से किसे सामान्यतः 'इटालियन मधुमक्खी' कहा जाता है और यह उच्च शहद उत्पादन के लिए प्रसिद्ध है?",
+    options: ["Apis dorsata", "Apis florea", "Apis cerana indica", "Apis mellifera (एपिस मेलिफेरा)"],
+    answer: 3,
+    explanation: "Apis mellifera is the Italian bee species used globally in apiculture because it yields copious amounts of honey and stings less.",
+    hindi: "एपिस मेलिफेरा इटली की प्रजाति है जो सबसे ज्यादा शहद देती है और डंक भी कम मारती है।"
+  },
+  {
+    text: "Which of the following bees is widely recognized as the 'Rock bee'?",
+    hint: "निम्नलिखित में से किस मधुमक्खी को व्यापक रूप से 'रॉक बी' (शैल मक्खी) के रूप में जाना जाता है?",
+    options: ["Apis dorsata (एपिस डोरसेटा)", "Apis florea", "Apis cerana", "Apis mellifera"],
+    answer: 0,
+    explanation: "Apis dorsata is a giant, aggressive honey bee species native to South Asia, known as the rock bee.",
+    hindi: "एपिस डोरसेटा आकार में बड़ी होती है और इसे रॉक बी (शैल मक्खी) कहा जाता है।"
+  },
+  {
+    text: "How do you calculate the potential difference between two points in an electric circuit?",
+    hint: "विद्युत परिपथ में दो बिंदुओं के बीच विभवांतर (Potential difference) की गणना कैसे की जाती है?",
+    options: ["Charge / Work done", "Work done × Charge", "Work done / Charge (किया गया कार्य / आवेश)", "Current × Time"],
+    answer: 2,
+    explanation: "Potential difference (V) is the amount of work done (W) to move a unit charge (Q) from one point to another. V = W / Q.",
+    hindi: "विभवांतर (V) निकालने के लिए किए गए कार्य (W) में आवेश (Q) का भाग दिया जाता है।"
+  },
+  {
+    text: "Which cell organelle is famously known as the 'Suicidal Bag' of the cell?",
+    hint: "किस कोशिका अंगक (Organelle) को कोशिका की 'आत्मघाती थैली' (Suicidal Bag) के रूप में जाना जाता है?",
+    options: ["Mitochondria", "Ribosome", "Nucleus", "Lysosome (लाइसोसोम)"],
+    answer: 3,
+    explanation: "Lysosomes contain powerful digestive enzymes. If the cell is severely damaged, the lysosome bursts and its enzymes digest the cell itself.",
+    hindi: "लाइसोसोम में खतरनाक एंजाइम होते हैं। कोशिका के खराब होने पर यह फट जाता है और अपनी ही कोशिका को नष्ट कर देता है।"
+  },
+  {
+    text: "What makes the Lysosome capable of destroying its own cell?",
+    hint: "लाइसोसोम अपनी ही कोशिका को नष्ट करने में कैसे सक्षम होता है?",
+    options: ["It contains high voltage electricity", "It contains powerful hydrolytic enzymes (इसमें शक्तिशाली हाइड्रोलाइटिक एंजाइम होते हैं)", "It creates extreme heat", "It completely removes oxygen"],
+    answer: 1,
+    explanation: "Lysosomes are filled with strong hydrolytic (digestive) enzymes capable of breaking down all types of biological polymers.",
+    hindi: "इसमें शक्तिशाली पाचक (हाइड्रोलाइटिक) एंजाइम भरे होते हैं जो कोशिका के सभी हिस्सों को पचा सकते हैं।"
+  },
+  {
+    text: "A person pushes a heavy stationary object with force F, but it does not move. What is the net force acting on the object?",
+    hint: "एक व्यक्ति एक भारी स्थिर वस्तु को F बल से धकेलता है, लेकिन वह हिलती नहीं है। वस्तु पर लगने वाला कुल बल (Net force) क्या है?",
+    options: ["F", "2F", "Zero (शून्य)", "F/2"],
+    answer: 2,
+    explanation: "Since the object remains stationary, its acceleration is zero. According to Newton's laws, the net force must be zero. The applied force is balanced by static friction.",
+    hindi: "चूंकि वस्तु गति नहीं कर रही है, इसका मतलब है कि धकेलने वाले बल को घर्षण बल ने पूरी तरह काट दिया है, इसलिए कुल बल शून्य (Zero) है।"
+  },
+  {
+    text: "When you push a heavy stationary box and it doesn't move, which specific force perfectly cancels out your pushing force?",
+    hint: "जब आप किसी भारी स्थिर बक्से को धक्का देते हैं और वह नहीं हिलता है, तो कौन सा विशिष्ट बल आपके धकेलने वाले बल को पूरी तरह से रद्द कर देता है?",
+    options: ["Kinetic friction", "Static friction (स्थैतिक घर्षण)", "Gravitational force", "Magnetic force"],
+    answer: 1,
+    explanation: "Static friction is the resistive force that keeps an object at rest. It matches the applied force exactly until its maximum limit is reached.",
+    hindi: "रुकी हुई वस्तु पर लगने वाले घर्षण को स्थैतिक घर्षण (Static friction) कहते हैं, जो आपके लगाए गए बल के बराबर और विपरीत होता है।"
+  },
+  {
+    text: "What is a major advantage of vegetative propagation in plants?",
+    hint: "पौधों में कायिक प्रवर्धन (Vegetative propagation) का एक प्रमुख लाभ क्या है?",
+    options: ["The plants grow extremely slowly", "The plants bear flowers and fruits earlier than those grown from seeds (बीज से उगाए गए पौधों की तुलना में इन पौधों में फूल और फल जल्दी आते हैं)", "The plants lose their green color", "The plants completely stop needing water"],
+    answer: 1,
+    explanation: "Plants grown via vegetative propagation (using stems, roots, or leaves) bypass the lengthy seed germination phase, allowing them to mature and fruit much faster.",
+    hindi: "कायिक प्रवर्धन (जैसे टहनी काटकर लगाना) से उगे पौधों में बीज वाले पौधों की तुलना में फूल और फल बहुत जल्दी आ जाते हैं।"
+  },
+  {
+    text: "When a light ray passes through a rectangular glass slab, what is the geometric relationship between the incident ray and the emergent ray?",
+    hint: "जब प्रकाश की किरण एक आयताकार कांच की पट्टी से होकर गुजरती है, तो आपतित किरण (Incident ray) और निर्गत किरण (Emergent ray) के बीच क्या ज्यामितीय संबंध होता है?",
+    options: ["They intersect each other at 90 degrees", "They are parallel but laterally displaced (वे समानांतर हैं लेकिन पार्श्व रूप से विस्थापित हैं)", "They travel in exactly opposite directions", "They form a V shape"],
+    answer: 1,
+    explanation: "Due to refraction occurring twice at parallel surfaces, the final emergent ray is parallel to the original incident ray but shifted sideways (lateral displacement).",
+    hindi: "कांच की पट्टी में दो बार मुड़ने के कारण बाहर निकलने वाली किरण मूल किरण के बिल्कुल समानांतर (Parallel) होती है, बस थोड़ी खिसक जाती है।"
+  },
+  {
+    text: "Which type of meristematic tissue is primarily responsible for increasing the length of stems and roots?",
+    hint: "किस प्रकार का विभज्योतक ऊतक (Meristematic tissue) मुख्य रूप से तनों और जड़ों की लंबाई बढ़ाने के लिए जिम्मेदार है?",
+    options: ["Lateral meristem", "Intercalary meristem", "Apical meristem (शीर्षस्थ विभज्योतक)", "Permanent tissue"],
+    answer: 2,
+    explanation: "Apical meristems are located at the growing tips of shoots and roots. Their active division causes the plant to grow taller/longer.",
+    hindi: "तने और जड़ों के सिरों (Tips) पर शीर्षस्थ विभज्योतक (Apical meristem) पाया जाता है, जो उनकी लंबाई बढ़ाता है।"
+  },
+  {
+    text: "The Chlor-alkali process is the electrolysis of aqueous Sodium Chloride (brine). What are the main products of this process?",
+    hint: "क्लोर-अल्कली प्रक्रिया जलीय सोडियम क्लोराइड (ब्राइन) का विद्युत अपघटन है। इस प्रक्रिया के मुख्य उत्पाद क्या हैं?",
+    options: ["Sodium metal and Chlorine gas", "Sodium Hydroxide, Chlorine gas, and Hydrogen gas (सोडियम हाइड्रोक्साइड, क्लोरीन गैस और हाइड्रोजन गैस)", "Sodium Carbonate and Water", "Hydrochloric acid and Oxygen"],
+    answer: 1,
+    explanation: "Electrolysis of brine (NaCl + H2O) yields Sodium Hydroxide (NaOH - an alkali), Chlorine gas (Cl2), and Hydrogen gas (H2).",
+    hindi: "इस प्रक्रिया में नमक के पानी में बिजली प्रवाहित की जाती है, जिससे सोडियम हाइड्रोक्साइड (NaOH), क्लोरीन गैस और हाइड्रोजन गैस बनती है।"
+  },
+  {
+    text: "Which bee species is commonly known as the 'Indian bee'?",
+    hint: "किस मधुमक्खी प्रजाति को सामान्यतः 'भारतीय मधुमक्खी' के रूप में जाना जाता है?",
+    options: ["Apis dorsata", "Apis florea", "Apis mellifera", "Apis cerana indica (एपिस सेरेना इंडिका)"],
+    answer: 3,
+    explanation: "Apis cerana indica is the localized species commonly referred to as the Indian hive bee.",
+    hindi: "एपिस सेरेना इंडिका को सामान्य भारतीय मधुमक्खी कहा जाता है।"
+  },
+  {
+    text: "Which bee species is commonly known as the 'Little bee'?",
+    hint: "किस मधुमक्खी प्रजाति को सामान्यतः 'लिटिल बी' (छोटी मधुमक्खी) के रूप में जाना जाता है?",
+    options: ["Apis florea (एपिस फ्लोरी)", "Apis dorsata", "Apis cerana", "Apis mellifera"],
+    answer: 0,
+    explanation: "Apis florea is a very small species of honey bee, commonly called the little bee.",
+    hindi: "एपिस फ्लोरी आकार में सबसे छोटी होती है, इसलिए इसे लिटिल बी कहा जाता है।"
+  },
+  {
+    text: "What is the SI unit of Force?",
+    hint: "बल (Force) की SI इकाई क्या है?",
+    options: ["Joule", "Pascal", "Newton (न्यूटन)", "Watt"],
+    answer: 2,
+    explanation: "The SI unit of force is the Newton (N), named after Sir Isaac Newton.",
+    hindi: "बल की SI इकाई न्यूटन (Newton) है।"
+  },
+  {
+    text: "What defines an exothermic chemical reaction?",
+    hint: "ऊष्माक्षेपी (Exothermic) रासायनिक अभिक्रिया किसे परिभाषित करती है?",
+    options: ["A reaction that absorbs heat", "A reaction that releases heat to its surroundings (एक अभिक्रिया जो गर्मी को अपने परिवेश में छोड़ती है)", "A reaction that produces cold air", "A reaction that only occurs in the dark"],
+    answer: 1,
+    explanation: "Exothermic reactions release energy, usually in the form of heat, making the surroundings warmer (e.g., Sodium reacting with water).",
+    hindi: "ऊष्माक्षेपी अभिक्रिया वह है जिसमें अत्यधिक गर्मी (Heat) बाहर निकलती है।"
+  },
+  {
+    text: "In Mendel's experiments, what does a recessive trait mean?",
+    hint: "मेंडल के प्रयोगों में, अप्रभावी लक्षण (Recessive trait) का क्या अर्थ है?",
+    options: ["A trait that is always visible", "A trait that is completely lost forever", "A trait that is hidden in the F1 generation and only appears when both alleles are recessive (एक लक्षण जो F1 पीढ़ी में छिपा रहता है और तभी प्रकट होता है जब दोनों युग्मविकल्पी अप्रभावी हों)", "A trait that changes randomly"],
+    answer: 2,
+    explanation: "A recessive trait (like 'dwarfness' represented by 't') gets masked by a dominant trait ('T') and won't show unless the organism inherits two recessive alleles ('tt').",
+    hindi: "अप्रभावी लक्षण वह है जो पहली पीढ़ी में छिप जाता है (जैसे बौनापन) और केवल तभी दिखता है जब दोनों जीन अप्रभावी हों।"
+   },
   {
     text: "According to the sign convention for lenses, all distances are measured from which point?",
     hint: "लेंसों के लिए चिन्ह परिपाटी में सभी दूरियां किस बिंदु से मापी जाती हैं?",
