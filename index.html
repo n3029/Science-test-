@@ -646,9 +646,376 @@ const QUESTIONS = [
 
 
 
-
- 
   {
+    text: "Which of the following metals reacts most vigorously with water?",
+    hint: "निम्नलिखित में से कौन सी धातु जल के साथ बहुत तेजी से अभिक्रिया करती है?",
+    options: ["Iron (लोहा)", "Zinc (जिंक)", "Sodium (सोडियम)", "Copper (तांबा)"],
+    answer: 2,
+    explanation: "Sodium is highly reactive. It reacts vigorously with water to form sodium hydroxide and hydrogen gas, releasing a large amount of heat.",
+    hindi: "सोडियम बहुत अधिक प्रतिक्रियाशील धातु है। यह पानी के साथ तेजी से अभिक्रिया करके सोडियम हाइड्रोक्साइड और हाइड्रोजन गैस बनाता है।"
+  },
+  {
+    text: "When Sodium reacts with water, why does it catch fire?",
+    hint: "जब सोडियम पानी के साथ प्रतिक्रिया करता है, तो उसमें आग क्यों लग जाती है?",
+    options: ["Sodium is flammable by itself", "The reaction produces oxygen which burns", "The reaction is highly exothermic and ignites the evolved Hydrogen gas (अभिक्रिया अत्यधिक ऊष्माक्षेपी है और उत्पन्न हाइड्रोजन गैस को जला देती है)", "Sodium absorbs heat from water"],
+    answer: 2,
+    explanation: "The reaction between sodium and water is highly exothermic (releases high heat). This heat instantly ignites the highly flammable hydrogen gas produced.",
+    hindi: "यह अभिक्रिया अत्यधिक ऊष्माक्षेपी (Exothermic) होती है, जिससे निकलने वाली ऊष्मा उत्पन्न हुई हाइड्रोजन गैस को तुरंत जला देती है।"
+  },
+  {
+    text: "Which of the following methods is a simple and common way to prevent the corrosion of iron?",
+    hint: "लोहे के संक्षारण (Corrosion) को रोकने के लिए निम्नलिखित में से कौन सा एक सरल और सामान्य तरीका है?",
+    options: ["Painting or oiling the surface (पेंटिंग या तेल लगाना)", "Heating the iron repeatedly (लोहे को बार-बार गर्म करना)", "Dipping it in water (इसे पानी में डुबोना)", "Keeping it in the open air (इसे खुले में रखना)"],
+    answer: 0,
+    explanation: "Painting or oiling creates a protective barrier over the iron surface, preventing oxygen and moisture from reacting with it.",
+    hindi: "पेंट या तेल लगाने से लोहे की सतह पर एक परत बन जाती है, जो ऑक्सीजन और नमी को लोहे तक पहुंचने से रोकती है।"
+  },
+  {
+    text: "Which metal oxide can be reduced to its metal just by heating it?",
+    hint: "किस धातु ऑक्साइड को केवल गर्म करके उसकी धातु में अपचयित (Reduced) किया जा सकता है?",
+    options: ["Zinc Oxide", "Magnesium Oxide", "Mercuric Oxide (मरक्यूरिक ऑक्साइड)", "Aluminum Oxide"],
+    answer: 2,
+    explanation: "Mercury is a less reactive metal. Its oxide, Mercuric Oxide (HgO), can be easily reduced to mercury metal just by heating.",
+    hindi: "पारा (Mercury) कम प्रतिक्रियाशील होता है, इसलिए मरक्यूरिक ऑक्साइड (HgO) को केवल गर्म करने से ही ऑक्सीजन अलग हो जाती है।"
+  },
+  {
+    text: "Which of the following is NOT a method of contraception?",
+    hint: "निम्नलिखित में से कौन सा गर्भनिरोधक (Contraception) का तरीका नहीं है?",
+    options: ["Using condoms (कंडोम का उपयोग)", "Abortion (गर्भपात)", "Using Copper-T (कॉपर-टी का उपयोग)", "Oral pills (मौखिक गोलियां)"],
+    answer: 1,
+    explanation: "Condoms, Copper-T, and oral pills are preventive contraceptive methods. Abortion is the termination of a pregnancy, not a contraceptive method.",
+    hindi: "कंडोम, कॉपर-टी और गोलियां गर्भधारण रोकने के तरीके हैं। गर्भपात (Abortion) एक मौजूदा गर्भावस्था को समाप्त करना है, गर्भनिरोधक नहीं।"
+  },
+  {
+    text: "How does a Copper-T device prevent pregnancy?",
+    hint: "कॉपर-टी (Copper-T) उपकरण गर्भावस्था को कैसे रोकता है?",
+    options: ["It stops the release of eggs completely", "It releases copper ions that reduce the motility and fertilizing capacity of sperms (यह कॉपर आयन छोड़ता है जो शुक्राणुओं की गतिशीलता और निषेचन क्षमता को कम करते हैं)", "It kills the egg", "It physically blocks the vagina"],
+    answer: 1,
+    explanation: "Copper-T is inserted into the uterus where it releases copper ions that suppress sperm motility, preventing them from reaching the egg.",
+    hindi: "कॉपर-टी गर्भाशय में लगाया जाता है। यह कॉपर आयन छोड़ता है जो शुक्राणुओं की ताकत और गति को कम कर देते हैं।"
+  },
+  {
+    text: "When solid Lead Nitrate is heated, it produces a yellow precipitate of Lead Oxide along with which two gases?",
+    hint: "जब ठोस लेड नाइट्रेट को गर्म किया जाता है, तो यह लेड ऑक्साइड के पीले अवक्षेप के साथ कौन सी दो गैसें पैदा करता है?",
+    options: ["Carbon dioxide and Hydrogen", "Nitrogen dioxide and Oxygen (नाइट्रोजन डाइऑक्साइड और ऑक्सीजन)", "Nitric oxide and Hydrogen", "Sulphur dioxide and Oxygen"],
+    answer: 1,
+    explanation: "Heating Lead Nitrate results in thermal decomposition, yielding Lead Oxide (yellow solid), Nitrogen dioxide (brown gas), and Oxygen gas.",
+    hindi: "लेड नाइट्रेट को गर्म करने पर लेड ऑक्साइड (पीला), नाइट्रोजन डाइऑक्साइड (NO2) और ऑक्सीजन (O2) गैस बनती है।"
+  },
+  {
+    text: "What is the SI unit of Pressure?",
+    hint: "दबाव (Pressure) की SI इकाई क्या है?",
+    options: ["Newton (न्यूटन)", "Joule (जूल)", "Pascal (पास्कल)", "Watt (वाट)"],
+    answer: 2,
+    explanation: "Pressure is defined as force per unit area. Its SI unit is the Pascal (Pa). Force is measured in Newtons.",
+    hindi: "दबाव को पास्कल (Pascal) में मापा जाता है, जबकि बल (Force) का मात्रक न्यूटन होता है।"
+  },
+  {
+    text: "When Mendel crossed a pure tall pea plant (TT) with a pure dwarf pea plant (tt), what were the traits of the plants in the F1 generation?",
+    hint: "जब मेंडल ने एक शुद्ध लंबे मटर के पौधे (TT) को शुद्ध बौने पौधे (tt) के साथ संकरित (Cross) किया, तो F1 पीढ़ी में पौधों के लक्षण क्या थे?",
+    options: ["All dwarf plants (सभी बौने पौधे)", "Medium height plants (मध्यम ऊंचाई वाले पौधे)", "All tall plants (सभी लंबे पौधे)", "Half tall and half dwarf (आधे लंबे और आधे बौने)"],
+    answer: 2,
+    explanation: "In the F1 generation, the dominant trait (Tall - T) masks the recessive trait (dwarf - t), resulting in all tall plants (Tt).",
+    hindi: "F1 पीढ़ी में प्रभावी लक्षण (Dominant trait - लंबापन) ही दिखाई देता है, इसलिए सभी पौधे लंबे होते हैं।"
+  },
+  {
+    text: "In genetics, traits that are expressed in the F1 generation and represented by capital letters are known as:",
+    hint: "आनुवंशिकी में, जो लक्षण F1 पीढ़ी में व्यक्त होते हैं और कैपिटल अक्षरों द्वारा दर्शाए जाते हैं, उन्हें क्या कहा जाता है?",
+    options: ["Recessive traits (अप्रभावी लक्षण)", "Dominant traits (प्रभावी लक्षण)", "Mutated traits (उत्परिवर्तित लक्षण)", "Neutral traits (उदासीन लक्षण)"],
+    answer: 1,
+    explanation: "Dominant traits express themselves even when only one copy of the allele is present (e.g., 'T' in Tt makes the plant tall).",
+    hindi: "जो लक्षण खुद को व्यक्त कर पाते हैं, उन्हें प्रभावी लक्षण (Dominant traits) कहते हैं।"
+  },
+  {
+    text: "What is the nature of the pressure exerted by a fluid at a specific given depth inside a container?",
+    hint: "किसी बर्तन के अंदर एक निश्चित गहराई पर तरल द्वारा लगाए गए दबाव की प्रकृति क्या होती है?",
+    options: ["It is greater downwards", "It exerts equal pressure in all directions (यह सभी दिशाओं में समान दबाव डालता है)", "It is greater upwards", "It exerts pressure only on the walls"],
+    answer: 1,
+    explanation: "At any given depth within a stationary fluid, the pressure acts equally in all directions.",
+    hindi: "एक समान ऊंचाई (गहराई) पर, तरल सभी दिशाओं में बराबर दबाव (Equal pressure) डालता है।"
+  },
+  {
+    text: "Under which condition is the work done by a force considered positive?",
+    hint: "किस स्थिति में किसी बल द्वारा किया गया कार्य धनात्मक (Positive) माना जाता है?",
+    options: ["When the angle between force and displacement is 90°", "When the force opposes the motion (angle is 180°)", "When the displacement is zero", "When a component of the force is in the direction of displacement (जब बल का एक घटक विस्थापन की दिशा में हो)"],
+    answer: 3,
+    explanation: "Work = F × s × cos(θ). If the angle θ is between 0° and 90°, cos(θ) is positive, resulting in positive work done.",
+    hindi: "जब बल और विस्थापन के बीच का कोण 0° से 90° के बीच होता है, तो cos(θ) धनात्मक होता है और किया गया कार्य पॉजिटिव होता है।"
+  },
+  {
+    text: "If the angle between the applied force and the displacement is exactly 90 degrees, what is the work done?",
+    hint: "यदि लगाए गए बल और विस्थापन के बीच का कोण ठीक 90 डिग्री है, तो किया गया कार्य क्या होगा?",
+    options: ["Maximum", "Negative", "Zero (शून्य)", "Infinite"],
+    answer: 2,
+    explanation: "Since cos(90°) = 0, the equation W = Fscos(θ) becomes 0. No work is done in the direction of the force.",
+    hindi: "cos(90°) का मान 0 होता है, इसलिए जब बल विस्थापन के लंबवत हो, तो कार्य शून्य (Zero) होता है।"
+  },
+  {
+    text: "How is the molecular mass of a compound calculated?",
+    hint: "किसी यौगिक के आणविक द्रव्यमान (Molecular mass) की गणना कैसे की जाती है?",
+    options: ["By multiplying the masses of its atoms", "By taking the sum of the atomic masses of all the atoms present in the molecule (अणु में उपस्थित सभी परमाणुओं के परमाणु द्रव्यमानों का योग लेकर)", "By finding the difference in atomic masses", "By dividing the masses by the number of atoms"],
+    answer: 1,
+    explanation: "Molecular mass is simply the total sum of the atomic masses of every single atom contained in the chemical formula.",
+    hindi: "एक अणु में मौजूद सभी परमाणुओं के द्रव्यमान को जोड़ने से आणविक द्रव्यमान प्राप्त होता है।"
+  },
+  {
+    text: "Which method is commonly used to separate colloidal particles, such as extracting fat from milk?",
+    hint: "कोलाइडल कणों को अलग करने के लिए आमतौर पर किस विधि का उपयोग किया जाता है, जैसे दूध से वसा (Fat) निकालना?",
+    options: ["Evaporation (वाष्पीकरण)", "Filtration (निस्पंदन)", "Centrifugation (अपकेंद्रण)", "Distillation (आसवन)"],
+    answer: 2,
+    explanation: "Centrifugation involves spinning the mixture at high speeds, forcing the denser particles to the bottom and lighter particles (like cream/fat) to the top.",
+    hindi: "अपकेंद्रण (Centrifugation) विधि में तेजी से घुमाने पर भारी कण नीचे बैठ जाते हैं और हल्के कण (जैसे दूध की क्रीम) ऊपर आ जाते हैं।"
+  },
+  {
+    text: "Which of the following statements about spherical mirrors is FALSE?",
+    hint: "गोलीय दर्पणों के बारे में निम्नलिखित में से कौन सा कथन असत्य (FALSE) है?",
+    options: ["The principal axis is an imaginary straight line passing through the pole and center of curvature", "The focus of a spherical mirror does not lie on its principal axis (गोलीय दर्पण का फोकस उसके मुख्य अक्ष पर स्थित नहीं होता है)", "A ray parallel to the principal axis passes through the focus after reflection in a concave mirror", "The pole is the center of the reflecting surface"],
+    answer: 1,
+    explanation: "The focus (F) of a spherical mirror absolutely lies on the principal axis, exactly halfway between the pole and the center of curvature.",
+    hindi: "गोलीय दर्पण का फोकस (Focus) हमेशा मुख्य अक्ष (Principal axis) पर ही स्थित होता है। इसलिए दिया गया कथन गलत है।"
+  },
+  {
+    text: "Which medical instrument relies on the principle of multiple reflections of sound to work?",
+    hint: "कौन सा चिकित्सा उपकरण काम करने के लिए ध्वनि के बहु-परावर्तन (Multiple reflections) के सिद्धांत पर निर्भर करता है?",
+    options: ["Thermometer", "Microscope", "Stethoscope (स्टेथोस्कोप)", "Endoscope"],
+    answer: 2,
+    explanation: "A stethoscope channels the sound of a heartbeat through a tube via multiple reflections until it reaches the doctor's ears.",
+    hindi: "स्टेथोस्कोप में ध्वनि नली की दीवारों से बार-बार टकराकर (बहु-परावर्तन) डॉक्टर के कानों तक पहुँचती है।"
+  },
+  {
+    text: "What is the primary purpose of a plug key or a switch in an electric circuit?",
+    hint: "विद्युत परिपथ में प्लग कुंजी (Plug key) या स्विच का प्राथमिक उद्देश्य क्या है?",
+    options: ["To increase the voltage", "To measure the current", "To connect or break the circuit (परिपथ को जोड़ने या तोड़ने के लिए)", "To generate electricity"],
+    answer: 2,
+    explanation: "A switch or plug key safely opens (breaks) or closes (completes) the electrical circuit, controlling the flow of current.",
+    hindi: "प्लग कुंजी या स्विच का मुख्य काम सर्किट को चालू (On) या बंद (Off) करना है, जिससे करंट का प्रवाह नियंत्रित होता है।"
+  },
+  {
+    text: "In circuit diagrams, what does an 'open switch' symbol indicate?",
+    hint: "सर्किट आरेखों में, 'ओपन स्विच' (खुला परिपथ) प्रतीक क्या दर्शाता है?",
+    options: ["High current is flowing", "The circuit is complete", "The circuit is broken and no current is flowing (परिपथ टूटा हुआ है और कोई धारा प्रवाहित नहीं हो रही है)", "The battery is dead"],
+    answer: 2,
+    explanation: "An open switch means the continuous path is broken, hence electricity cannot flow through the circuit.",
+    hindi: "ओपन (खुला) स्विच का मतलब है कि तार का संपर्क टूटा हुआ है और करंट आगे नहीं जा रहा है।"
+  },
+  {
+    text: "What defines the 'displacement' of a moving object?",
+    hint: "किसी गतिमान वस्तु का 'विस्थापन' (Displacement) किसे परिभाषित करता है?",
+    options: ["The total path length covered", "The shortest straight-line distance between the initial and final positions (प्रारंभिक और अंतिम स्थिति के बीच की सबसे छोटी सीधी दूरी)", "The speed of the object multiplied by time", "The circular path taken"],
+    answer: 1,
+    explanation: "Displacement is a vector quantity referring to the shortest direct distance from the starting point to the ending point.",
+    hindi: "शुरुआती बिंदु और अंतिम बिंदु के बीच की सबसे छोटी (शॉर्टकट) दूरी को विस्थापन (Displacement) कहते हैं।"
+  },
+  {
+    text: "Two copper wires have the same length but their cross-sectional areas are in the ratio 1:4. What is the ratio of their electrical resistances?",
+    hint: "तांबे के दो तारों की लंबाई समान है लेकिन उनके अनुप्रस्थ काट क्षेत्रफल का अनुपात 1:4 है। उनके विद्युत प्रतिरोध का अनुपात क्या है?",
+    options: ["1:4", "4:1", "1:2", "2:1"],
+    answer: 1,
+    explanation: "Resistance is inversely proportional to the cross-sectional area (R ∝ 1/A). If A1:A2 is 1:4, then R1:R2 is A2:A1, which is 4:1.",
+    hindi: "प्रतिरोध क्षेत्रफल के व्युत्क्रमानुपाती होता है। यदि क्षेत्रफल का अनुपात 1:4 है, तो प्रतिरोध का अनुपात 4:1 होगा।"
+  },
+  {
+    text: "An atom contains 11 protons, 11 electrons, and 12 neutrons. What is its mass number?",
+    hint: "एक परमाणु में 11 प्रोटॉन, 11 इलेक्ट्रॉन और 12 न्यूट्रॉन होते हैं। इसकी द्रव्यमान संख्या क्या है?",
+    options: ["11", "12", "22", "23"],
+    answer: 3,
+    explanation: "Mass number = Number of Protons + Number of Neutrons = 11 + 12 = 23.",
+    hindi: "द्रव्यमान संख्या = प्रोटॉन की संख्या + न्यूट्रॉन की संख्या = 11 + 12 = 23।"
+  },
+  {
+    text: "What is the chemical formula of Formic Acid, commonly found in red ants?",
+    hint: "लाल चींटियों में आमतौर पर पाए जाने वाले फॉर्मिक अम्ल का रासायनिक सूत्र क्या है?",
+    options: ["CH3COOH", "HCOOH", "C2H5OH", "HCl"],
+    answer: 1,
+    explanation: "Formic acid, also known as Methanoic acid, has the chemical formula HCOOH.",
+    hindi: "फॉर्मिक अम्ल (Methanoic acid) का रासायनिक सूत्र HCOOH होता है।"
+  },
+
+  {
+    text: "What is the official IUPAC name of Formic Acid?",
+    hint: "फॉर्मिक अम्ल का आधिकारिक IUPAC नाम क्या है?",
+    options: ["Ethanoic acid", "Methanoic acid", "Propanoic acid", "Butanoic acid"],
+    answer: 1,
+    explanation: "The IUPAC name for Formic acid (HCOOH) is Methanoic acid because it contains a single carbon atom.",
+    hindi: "फॉर्मिक अम्ल में एक कार्बन होता है, इसलिए इसका आधिकारिक IUPAC नाम मेथेनोइक अम्ल (Methanoic acid) है।"
+  },
+  {
+    text: "In the human male reproductive system, what is the primary function of the Vas Deferens?",
+    hint: "मानव पुरुष प्रजनन तंत्र में, शुक्रवाहिका (Vas Deferens) का प्राथमिक कार्य क्या है?",
+    options: ["Produces sperm", "Stores sperm temporarily", "Transports sperm from the epididymis towards the urethra", "Produces testosterone"],
+    answer: 2,
+    explanation: "The Vas Deferens is a muscular tube that transports sperm from the epididymis to the urethra in preparation for ejaculation.",
+    hindi: "शुक्रवाहिका (Vas Deferens) वह नली है जो शुक्राणुओं को अधिवृषण (Epididymis) से मूत्रमार्ग (Urethra) तक ले जाती है।"
+  },
+  {
+    text: "In the human male body, where are sperms (शुक्राणु) originally produced?",
+    hint: "मानव पुरुष के शरीर में शुक्राणु (Sperms) मूल रूप से कहाँ उत्पन्न होते हैं?",
+    options: ["Epididymis", "Vas Deferens", "Testes (वृषण)", "Prostate gland"],
+    answer: 2,
+    explanation: "Sperms are produced in the testes (वृषण), which are located in the scrotum.",
+    hindi: "शुक्राणुओं का निर्माण वृषण (Testes) में होता है।"
+  },
+  {
+    text: "Where are the sperms temporarily stored and matured before they are released?",
+    hint: "शुक्राणुओं के निकलने से पहले उन्हें अस्थायी रूप से कहाँ संग्रहित और परिपक्व किया जाता है?",
+    options: ["Urethra", "Epididymis (अधिवृषण)", "Scrotum", "Urinary bladder"],
+    answer: 1,
+    explanation: "The epididymis stores the newly produced sperms until they mature and gain motility.",
+    hindi: "शुक्राणु अधिवृषण (Epididymis) में परिपक्व होने तक अस्थायी रूप से संग्रहित रहते हैं।"
+  },
+  {
+    text: "A concave mirror has a focal length of 15 cm. If an object is placed 30 cm in front of it, at what distance will the image be formed?",
+    hint: "एक अवतल दर्पण की फोकस दूरी 15 सेमी है। यदि कोई वस्तु उसके सामने 30 सेमी की दूरी पर रखी जाए, तो प्रतिबिंब कितनी दूरी पर बनेगा?",
+    options: ["-15 cm", "+15 cm", "-30 cm", "+30 cm"],
+    answer: 2,
+    explanation: "Radius of curvature = 2 × 15 = 30 cm. Since the object is at the center of curvature (C), the image is also formed at C, which is -30 cm according to sign convention.",
+    hindi: "चूंकि वस्तु वक्रता केंद्र (C) पर है (R = 2f = 30 cm), इसलिए प्रतिबिंब भी वहीं बनेगा, जो चिन्ह परिपाटी के अनुसार -30 cm होगा।"
+  },
+  {
+    text: "When an object is placed exactly at the center of curvature of a concave mirror, what is the nature of the image formed?",
+    hint: "जब किसी वस्तु को अवतल दर्पण के वक्रता केंद्र पर ठीक रखा जाता है, तो बनने वाले प्रतिबिंब की प्रकृति क्या होती है?",
+    options: ["Virtual, erect, and enlarged", "Real, inverted, and same size (वास्तविक, उल्टा और समान आकार)", "Real, inverted, and diminished", "Virtual, erect, and same size"],
+    answer: 1,
+    explanation: "An object at the center of curvature of a concave mirror produces a real, inverted image that is exactly the same size as the object.",
+    hindi: "वक्रता केंद्र (C) पर रखी वस्तु का प्रतिबिंब वास्तविक, उल्टा और वस्तु के बिल्कुल समान आकार का बनता है।"
+  },
+  {
+    text: "Which process ensures maximum genetic variation in sexually reproducing animals?",
+    hint: "कौन सी प्रक्रिया लैंगिक प्रजनन करने वाले जंतुओं में अधिकतम आनुवंशिक विविधता सुनिश्चित करती है?",
+    options: ["Asexual reproduction", "Binary fission", "Sexual reproduction (लैंगिक प्रजनन)", "Budding"],
+    answer: 2,
+    explanation: "Sexual reproduction involves the mixing of genes from two different parents, creating genetic variation in the offspring.",
+    hindi: "लैंगिक प्रजनन में दो जनकों (माता-पिता) के जीन मिलते हैं, जिससे संतानों में अधिक आनुवंशिक विविधता (Variation) आती है।"
+  },
+  {
+    text: "Which of the following statements about a glass prism is INCORRECT?",
+    hint: "कांच के प्रिज्म के बारे में निम्नलिखित में से कौन सा कथन गलत (INCORRECT) है?",
+    options: ["It causes dispersion of white light into seven colors", "The incident ray and the emergent ray are always parallel to each other (आपतित किरण और निर्गत किरण हमेशा एक दूसरे के समानांतर होती हैं)", "Violet light deviates the most", "Red light deviates the least"],
+    answer: 1,
+    explanation: "In a glass prism, the emergent ray is NOT parallel to the incident ray; it bends at an angle of deviation. The parallel shift occurs in a rectangular glass slab.",
+    hindi: "प्रिज्म में निर्गत किरण आपतित किरण के समानांतर नहीं होती; यह कुछ कोण पर मुड़ जाती है। समानांतर विस्थापन कांच की पट्टी (Slab) में होता है।"
+  },
+  {
+    text: "In which optical component are the incident ray and the final emergent ray perfectly parallel but laterally displaced?",
+    hint: "किस प्रकाशीय घटक में आपतित किरण और अंतिम निर्गत किरण पूर्णतः समानांतर होती हैं लेकिन पार्श्व रूप से विस्थापित होती हैं?",
+    options: ["Triangular Prism", "Convex Lens", "Concave Mirror", "Rectangular Glass Slab (आयताकार कांच की पट्टी)"],
+    answer: 3,
+    explanation: "A rectangular glass slab causes the emergent ray to be parallel to the incident ray, but shifted laterally due to two opposite refractions.",
+    hindi: "आयताकार कांच की पट्टी (Slab) में दोनों समानांतर सतहों के कारण निर्गत किरण आपतित किरण के समानांतर रहती है।"
+  },
+  {
+    text: "If a machine performs 'W' Joules of work in 't' seconds, what is the formula to calculate its Power (P)?",
+    hint: "यदि कोई मशीन 't' सेकंड में 'W' जूल कार्य करती है, तो उसकी शक्ति (P) की गणना करने का सूत्र क्या है?",
+    options: ["P = W × t", "P = W / t", "P = t / W", "P = W + t"],
+    answer: 1,
+    explanation: "Power is defined as the rate of doing work. Power (P) = Work done (W) / time (t).",
+    hindi: "शक्ति (Power) कार्य करने की दर है, इसलिए P = W / t।"
+  },
+  {
+    text: "Which of the following gases is primarily responsible for the Greenhouse Effect?",
+    hint: "निम्नलिखित में से कौन सी गैस मुख्य रूप से ग्रीनहाउस प्रभाव के लिए जिम्मेदार है?",
+    options: ["Oxygen (O2)", "Nitrogen (N2)", "Carbon dioxide (CO2)", "Hydrogen (H2)"],
+    answer: 2,
+    explanation: "Carbon dioxide (CO2) traps infrared heat from the Earth's surface, causing the Greenhouse Effect.",
+    hindi: "कार्बन डाइऑक्साइड (CO2) ऊष्मा (Heat) को फँसा लेती है और ग्रीनहाउस प्रभाव (Greenhouse Effect) पैदा करती है।"
+  },
+  {
+    text: "Why are gases like N2, O2, and H2 NOT considered greenhouse gases?",
+    hint: "N2, O2 और H2 जैसी गैसों को ग्रीनहाउस गैस क्यों नहीं माना जाता है?",
+    options: ["They are noble gases", "They are highly toxic", "Monoatomic and diatomic gases generally do not trap infrared radiation (एकपरमाण्विक और द्विपरमाण्विक गैसें आमतौर पर अवरक्त विकिरण को नहीं फंसाती हैं)", "They are too heavy"],
+    answer: 2,
+    explanation: "Simple diatomic gases (like N2 and O2) are transparent to infrared radiation and do not trap heat, unlike more complex molecules like CO2 and Methane.",
+    hindi: "द्विपरमाण्विक गैसें (जैसे N2, O2) पृथ्वी से निकलने वाले अवरक्त विकिरण (Infrared) को नहीं रोकती हैं।"
+  },
+  {
+    text: "According to Bohr's atomic model, electrons revolve around the nucleus in:",
+    hint: "बोर के परमाणु मॉडल के अनुसार, इलेक्ट्रॉन नाभिक के चारों ओर किसमें परिक्रमा करते हैं?",
+    options: ["Random zig-zag paths", "Fixed circular orbits with discrete energy levels (निश्चित ऊर्जा स्तरों वाली नियत वृत्ताकार कक्षाएं)", "Inside the nucleus", "Only in straight lines"],
+    answer: 1,
+    explanation: "Bohr proposed that electrons move in specific, fixed circular orbits (shells) around the nucleus without losing energy.",
+    hindi: "बोर के अनुसार, इलेक्ट्रॉन नाभिक के चारों ओर कुछ निश्चित वृत्ताकार कक्षाओं (Orbits) में ही घूमते हैं।"
+  },
+  {
+    text: "A horizontal force of 20 N is applied to a stationary block of 4 kg for 5 seconds. What will be its final velocity?",
+    hint: "4 किलोग्राम के स्थिर ब्लॉक पर 5 सेकंड के लिए 20 N का क्षैतिज बल लगाया जाता है। इसका अंतिम वेग क्या होगा?",
+    options: ["10 m/s", "15 m/s", "25 m/s", "20 m/s"],
+    answer: 2,
+    explanation: "Acceleration (a) = F/m = 20/4 = 5 m/s². Using v = u + at, where initial velocity u = 0, v = 0 + (5 × 5) = 25 m/s.",
+    hindi: "त्वरण a = F/m = 20/4 = 5 m/s²। v = u + at के अनुसार, v = 0 + (5 × 5) = 25 m/s।"
+  },
+  {
+    text: "Which of the following correctly defines the 'Amplitude' of a wave?",
+    hint: "निम्नलिखित में से कौन तरंग के 'आयाम' (Amplitude) को सही रूप से परिभाषित करता है?",
+    options: ["The distance between two consecutive crests", "The number of cycles per second", "The maximum displacement of a particle from its mean position (माध्य स्थिति से कण का अधिकतम विस्थापन)", "The speed of the wave"],
+    answer: 2,
+    explanation: "Amplitude is the maximum distance a particle vibrates from its rest (mean) position.",
+    hindi: "कण का अपनी माध्य (स्थिर) स्थिति से अधिकतम विस्थापन ही आयाम (Amplitude) कहलाता है।"
+  },
+  {
+    text: "Which of the following statements about Uniform Motion is INCORRECT?",
+    hint: "एकसमान गति (Uniform Motion) के बारे में निम्नलिखित में से कौन सा कथन गलत (INCORRECT) है?",
+    options: ["The object travels in a straight line", "The speed remains constant", "Acceleration is zero", "Velocity changes continuously with time (वेग समय के साथ लगातार बदलता है)"],
+    answer: 3,
+    explanation: "In uniform motion, velocity is constant (both speed and direction are unchanging). Therefore, velocity does not change with time.",
+    hindi: "एकसमान गति में वेग (Velocity) अपरिवर्तित रहता है। इसलिए वेग का लगातार बदलना गलत कथन है।"
+  },
+  {
+    text: "Which statement about magnetic field lines of a bar magnet is TRUE?",
+    hint: "छड़ चुंबक की चुंबकीय क्षेत्र रेखाओं के बारे में कौन सा कथन सत्य (TRUE) है?",
+    options: ["They originate from the South pole outside the magnet", "Outside the magnet, they run from North pole to South pole (चुंबक के बाहर, वे उत्तरी ध्रुव से दक्षिणी ध्रुव की ओर जाती हैं)", "They constantly intersect each other", "Inside the magnet, they run from North to South"],
+    answer: 1,
+    explanation: "Magnetic field lines emerge from the North pole and merge at the South pole outside the magnet. Inside, they run from South to North.",
+    hindi: "चुंबक के बाहर चुंबकीय रेखाएँ हमेशा उत्तरी ध्रुव (North) से निकलकर दक्षिणी ध्रुव (South) की ओर जाती हैं।"
+  },
+  {
+    text: "What is the direction of magnetic field lines INSIDE a bar magnet?",
+    hint: "छड़ चुंबक के अंदर (INSIDE) चुंबकीय क्षेत्र रेखाओं की दिशा क्या होती है?",
+    options: ["North to South", "South to North (दक्षिण से उत्तर)", "Center to poles", "They do not exist inside"],
+    answer: 1,
+    explanation: "To form continuous closed loops, magnetic field lines travel from the South pole to the North pole inside the magnet.",
+    hindi: "चुंबक के अंदर चुंबकीय रेखाएँ दक्षिणी ध्रुव से उत्तरी ध्रुव (South to North) की ओर जाती हैं, ताकि एक बंद लूप बन सके।"
+  },
+  {
+    text: "Which of the following carbon compounds burns with a clean, smokeless blue flame?",
+    hint: "निम्नलिखित में से कौन सा कार्बन यौगिक धुएं रहित, स्वच्छ नीली ज्वाला के साथ जलता है?",
+    options: ["Benzene", "Naphthalene", "Ethanol (एथेनॉल)", "Coal"],
+    answer: 2,
+    explanation: "Ethanol is a saturated-like compound containing oxygen, which allows it to combust completely, yielding a clean blue flame.",
+    hindi: "एथेनॉल (Ethanol) का पूर्ण दहन होता है, जिससे यह बिना धुएं के नीली ज्वाला (Blue flame) के साथ जलता है।"
+  },
+  {
+    text: "What is the primary function of lysosomes in a cell?",
+    hint: "कोशिका में लाइसोसोम (Lysosome) का प्राथमिक कार्य क्या है?",
+    options: ["Protein synthesis", "Energy production", "Digesting foreign materials and cellular waste (बाहरी पदार्थों और सेलुलर कचरे का पाचन)", "Lipid synthesis"],
+    answer: 2,
+    explanation: "Lysosomes act as the waste disposal system of the cell, digesting unwanted materials and old cell parts.",
+    hindi: "लाइसोसोम कोशिका के कचरा निपटान तंत्र के रूप में कार्य करता है, बाहरी पदार्थों और पुराने अंगों को पचाता है।"
+  },
+  {
+    text: "Which of the following is NOT classified as an organic compound, despite containing carbon?",
+    hint: "कार्बन होने के बावजूद, निम्नलिखित में से किसे कार्बनिक यौगिक (Organic compound) के रूप में वर्गीकृत नहीं किया जाता है?",
+    options: ["Methane (CH4)", "Ethanol (C2H5OH)", "Sodium Carbonate (Na2CO3)", "Acetic Acid (CH3COOH)"],
+    answer: 2,
+    explanation: "Standard chemistry classifies carbonates (like Na2CO3), carbides, and oxides of carbon as inorganic carbon compounds.",
+    hindi: "कार्बोनेट (जैसे सोडियम कार्बोनेट Na2CO3), कार्बाइड और कार्बन के ऑक्साइड को अकार्बनिक (Inorganic) माना जाता है।"
+  },
+  {
+    text: "During the electrolytic refining of metals like copper, what happens to the impure metal?",
+    hint: "तांबे जैसी धातुओं के विद्युत अपघटनी शोधन (Electrolytic refining) के दौरान अशुद्ध धातु का क्या होता है?",
+    options: ["It is made the Cathode", "It dissolves from the Anode and enters the electrolyte (यह एनोड से घुलकर इलेक्ट्रोलाइट में चला जाता है)", "It evaporates into the air", "It settles on top of the solution"],
+    answer: 1,
+    explanation: "The impure metal is made the anode. Upon passing current, it dissolves into the electrolyte before pure metal deposits on the cathode.",
+    hindi: "अशुद्ध धातु को एनोड (Anode) बनाया जाता है, जो धारा प्रवाहित करने पर घुलकर इलेक्ट्रोलाइट (घोल) में मिल जाती है।"
+  },
+  {
+    text: "What color does Phenolphthalein exhibit when placed in an acidic solution?",
+    hint: "अम्लीय विलयन में डालने पर फिनोलफ्थेलिन (Phenolphthalein) कौन सा रंग प्रदर्शित करता है?",
+    options: ["Pink", "Red", "Colorless (रंगहीन)", "Yellow"],
+    answer: 2,
+    explanation: "Phenolphthalein remains colorless in acidic and neutral solutions, but turns pink in basic (alkaline) solutions.",
+    hindi: "फिनोलफ्थेलिन अम्लीय (Acidic) माध्यम में रंगहीन (Colorless) रहता है।"
+     },
+ {
     text: "Which of the following metals reacts most vigorously with water?",
     hint: "निम्नलिखित में से कौन सी धातु जल के साथ बहुत तेजी से अभिक्रिया करती है?",
     options: ["Iron (लोहा)", "Zinc (जिंक)", "Sodium (सोडियम)", "Copper (तांबा)"],
