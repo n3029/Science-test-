@@ -645,7 +645,410 @@ const QUESTIONS = [
 
 
 
+  {
+    text: "Which of the following is NOT a part of the human male reproductive system?",
+    hint: "निम्नलिखित में से कौन मानव पुरुष प्रजनन तंत्र का हिस्सा नहीं है?",
+    options: ["Testes (वृषण)", "Vas deferens (शुक्रवाहिका)", "Prostate gland (प्रोस्टेट ग्रंथि)", "Vagina (योनि)"],
+    answer: 3,
+    explanation: "The vagina is a part of the female reproductive system, whereas testes, vas deferens, and prostate gland belong to the male reproductive system.",
+    hindi: "योनि (Vagina) महिला प्रजनन तंत्र का हिस्सा है, जबकि वृषण, शुक्रवाहिका और प्रोस्टेट ग्रंथि पुरुष प्रजनन तंत्र के अंग हैं।"
+  },
+  {
+    text: "The band of seven colors obtained during the dispersion of white light is called?",
+    hint: "श्वेत प्रकाश के वर्ण विक्षेपण (dispersion) के दौरान प्राप्त सात रंगों की पट्टी को क्या कहा जाता है?",
+    options: ["Spectrum (स्पेक्ट्रम)", "Rainbow (इंद्रधनुष)", "Prism (प्रिज्म)", "Reflection (परावर्तन)"],
+    answer: 0,
+    explanation: "When white light passes through a prism, it splits into seven colors. This continuous band of colors is called a spectrum.",
+    hindi: "जब श्वेत प्रकाश प्रिज्म से गुजरता है, तो यह सात रंगों में विभाजित हो जाता है। रंगों की इस पट्टी को स्पेक्ट्रम कहा जाता है।"
+  },
+  {
+    text: "When a hydrocarbon is completely burnt in an excess amount of air (oxygen), what are the products formed?",
+    hint: "जब किसी हाइड्रोकार्बन को अधिक मात्रा में हवा (ऑक्सीजन) में पूरी तरह जलाया जाता है, तो क्या उत्पाद बनते हैं?",
+    options: ["Carbon monoxide and Water", "Carbon dioxide and Water (कार्बन डाइऑक्साइड और पानी)", "Carbon dioxide and Hydrogen", "Only Carbon dioxide"],
+    answer: 1,
+    explanation: "Complete combustion of a hydrocarbon in the presence of sufficient oxygen always yields carbon dioxide and water.",
+    hindi: "पर्याप्त ऑक्सीजन की उपस्थिति में हाइड्रोकार्बन का पूर्ण दहन हमेशा कार्बन डाइऑक्साइड और पानी पैदा करता है।"
+  },
+  {
+    text: "What is the primary cause of dispersion of white light when it passes through a glass prism?",
+    hint: "कांच के प्रिज्म से गुजरने पर श्वेत प्रकाश के वर्ण विक्षेपण का प्राथमिक कारण क्या है?",
+    options: ["Different colors of light have different intensities", "Different colors of light travel at different speeds in the prism (विभिन्न रंगों का प्रकाश प्रिज्म में अलग-अलग गति से यात्रा करता है)", "The prism absorbs some colors", "Total internal reflection"],
+    answer: 1,
+    explanation: "Dispersion occurs because different colors (wavelengths) of light travel at different speeds through the glass, causing them to bend at different angles.",
+    hindi: "वर्ण विक्षेपण इसलिए होता है क्योंकि कांच में प्रकाश के विभिन्न रंग अलग-अलग गति से यात्रा करते हैं, जिससे वे अलग-अलग कोणों पर मुड़ जाते हैं।"
+  },
+  {
+    text: "When a swimmer pushes the water backward, which force propels the swimmer forward?",
+    hint: "जब कोई तैराक पानी को पीछे धकेलता है, तो कौन सा बल तैराक को आगे बढ़ाता है?",
+    options: ["Gravitational force", "Frictional force of water", "The reaction force exerted by the water on the swimmer in the forward direction (पानी द्वारा तैराक पर आगे की दिशा में लगाया गया प्रतिक्रिया बल)", "Buoyant force"],
+    answer: 2,
+    explanation: "According to Newton's Third Law of Motion, every action has an equal and opposite reaction. Pushing water backward (action) results in the water pushing the swimmer forward (reaction).",
+    hindi: "न्यूटन के गति के तीसरे नियम के अनुसार, पानी को पीछे धकेलना (क्रिया) पानी द्वारा तैराक को आगे धकेलने (प्रतिक्रिया) का कारण बनता है।"
+  },
+  {
+    text: "Which of the following statements is correct regarding the mass and weight of an object?",
+    hint: "किसी वस्तु के द्रव्यमान और भार के संबंध में कौन सा कथन सही है?",
+    options: ["Both mass and weight are constant everywhere", "Mass is variable, while weight is constant", "Weight is variable, while mass is constant everywhere (भार परिवर्तनीय है, जबकि द्रव्यमान हर जगह स्थिर रहता है)", "Both mass and weight are zero in space"],
+    answer: 2,
+    explanation: "Mass is the amount of matter in an object and remains constant. Weight depends on gravity (W = mg), so it varies depending on location (e.g., Earth vs. Moon).",
+    hindi: "द्रव्यमान वस्तु में पदार्थ की मात्रा है और स्थिर रहता है। भार गुरुत्वाकर्षण (W = mg) पर निर्भर करता है, इसलिए यह स्थान के अनुसार बदलता है।"
+  },
+  {
+    text: "If the velocity of a moving object is doubled, what happens to its kinetic energy?",
+    hint: "यदि किसी गतिमान वस्तु का वेग दोगुना कर दिया जाए, तो उसकी गतिज ऊर्जा का क्या होता है?",
+    options: ["It remains the same", "It is doubled", "It becomes four times (यह चार गुना हो जाती है)", "It becomes half"],
+    answer: 2,
+    explanation: "Kinetic Energy = 1/2 * m * v^2. If velocity (v) is doubled (2v), the kinetic energy becomes (2)^2 = 4 times the original value.",
+    hindi: "गतिज ऊर्जा = 1/2 * m * v^2। यदि वेग (v) दोगुना (2v) हो जाता है, तो गतिज ऊर्जा (2)^2 = 4 गुना हो जाती है।"
+  },
+  {
+    text: "The chemical reaction between an acid and a base to form salt and water is known as?",
+    hint: "नमक और पानी बनाने के लिए अम्ल और क्षार के बीच होने वाली रासायनिक प्रतिक्रिया को क्या कहा जाता है?",
+    options: ["Oxidation reaction", "Neutralization reaction (उदासीनीकरण अभिक्रिया)", "Displacement reaction", "Decomposition reaction"],
+    answer: 1,
+    explanation: "When an acid reacts with a base, they neutralize each other's properties to form salt and water. This is called a neutralization reaction.",
+    hindi: "जब कोई अम्ल किसी क्षार के साथ प्रतिक्रिया करता है, तो वे एक-दूसरे के गुणों को बेअसर करके नमक और पानी बनाते हैं। इसे उदासीनीकरण अभिक्रिया कहते हैं।"
+  },
+  {
+    text: "Why is genetic variation important in a population of organisms?",
+    hint: "जीवों की आबादी में आनुवंशिक विविधता (variation) क्यों महत्वपूर्ण है?",
+    options: ["It guarantees that all organisms will look identical", "It increases the chances of survival under changing environmental conditions (यह बदलती पर्यावरणीय परिस्थितियों में जीवित रहने की संभावनाओं को बढ़ाता है)", "It prevents reproduction", "It decreases the lifespan of organisms"],
+    answer: 1,
+    explanation: "Variation allows some individuals in a population to possess traits that may help them survive extreme environmental changes, ensuring the survival of the species.",
+    hindi: "विविधता कुछ जीवों को ऐसे लक्षण प्रदान करती है जो उन्हें अत्यधिक पर्यावरणीय परिवर्तनों से बचने में मदद कर सकते हैं, जिससे प्रजातियों का अस्तित्व सुनिश्चित होता है।"
+  },
+  {
+    text: "Nucleons are the sub-atomic particles found inside the nucleus of an atom. Which particles make up the nucleons?",
+    hint: "न्यूक्लियॉन परमाणु के नाभिक के अंदर पाए जाने वाले उप-परमाणु कण हैं। कौन से कण न्यूक्लियॉन बनाते हैं?",
+    options: ["Electrons and Protons", "Only Neutrons", "Protons and Neutrons (प्रोटॉन और न्यूट्रॉन)", "Electrons and Neutrons"],
+    answer: 2,
+    explanation: "The nucleus of an atom contains protons and neutrons. Together, these particles are collectively called nucleons.",
+    hindi: "परमाणु के नाभिक में प्रोटॉन और न्यूट्रॉन होते हैं। इन कणों को सामूहिक रूप से न्यूक्लियॉन कहा जाता है।"
+  },
+  {
+    text: "How is the 'Formula Unit Mass' of an ionic compound calculated?",
+    hint: "किसी आयनिक यौगिक के 'सूत्र इकाई द्रव्यमान' (Formula Unit Mass) की गणना कैसे की जाती है?",
+    options: ["By multiplying the atomic numbers", "By adding the atomic masses of all atoms present in a formula unit of the compound (यौगिक की एक सूत्र इकाई में उपस्थित सभी परमाणुओं के परमाणु द्रव्यमानों को जोड़कर)", "By subtracting the mass of the non-metal from the metal", "By dividing the total mass by Avogadro's number"],
+    answer: 1,
+    explanation: "The formula unit mass is calculated similarly to molecular mass, by adding the atomic masses of all the atoms in the empirical formula of the compound.",
+    hindi: "सूत्र इकाई द्रव्यमान की गणना आणविक द्रव्यमान के समान ही की जाती है, यौगिक के मूलानुपाती सूत्र में सभी परमाणुओं के परमाणु द्रव्यमान को जोड़कर।"
+  },
+  {
+    text: "Where are the kidneys located in the human body?",
+    hint: "मानव शरीर में गुर्दे (kidneys) कहाँ स्थित होते हैं?",
+    options: ["In the chest cavity, near the heart", "In the abdomen, on both sides of the backbone (उदर में, रीढ़ की हड्डी के दोनों ओर)", "In the pelvic region, below the bladder", "Inside the rib cage, behind the lungs"],
+    answer: 1,
+    explanation: "The kidneys are located in the abdominal cavity, towards the back, with one kidney on each side of the spine (backbone).",
+    hindi: "गुर्दे उदर गुहा में पीछे की ओर स्थित होते हैं, रीढ़ की हड्डी के दोनों ओर एक-एक गुर्दा होता है।"
+  },
+  {
+    text: "Growing two or more crops simultaneously on the same field in a definite row pattern is known as?",
+    hint: "एक ही खेत में एक निश्चित कतार पैटर्न में एक साथ दो या अधिक फसलें उगाने को क्या कहा जाता है?",
+    options: ["Crop rotation", "Mixed cropping", "Intercropping (अंतर्फसल)", "Monoculture"],
+    answer: 2,
+    explanation: "Intercropping is the practice of growing two or more crops in proximity in a definite pattern (e.g., 2 rows of crop A, 1 row of crop B).",
+    hindi: "अंतर्फसल (Intercropping) एक निश्चित पैटर्न (जैसे, फसल A की 2 कतारें, फसल B की 1 कतार) में दो या दो से अधिक फसलों को एक साथ उगाने की प्रथा है।"
+  },
+  {
+    text: "Due to the presence of which particle does the Rough Endoplasmic Reticulum (RER) appear rough under a microscope?",
+    hint: "किस कण की उपस्थिति के कारण खुरदरा एंडोप्लाज्मिक रेटिकुलम (RER) माइक्रोस्कोप के नीचे खुरदरा दिखाई देता है?",
+    options: ["Lysosome", "Mitochondria", "Ribosome (राइबोसोम)", "Golgi apparatus"],
+    answer: 2,
+    explanation: "The Rough Endoplasmic Reticulum is studded with ribosomes on its surface, which gives it a rough or granular appearance and aids in protein synthesis.",
+    hindi: "खुरदरे एंडोप्लाज्मिक रेटिकुलम की सतह पर राइबोसोम होते हैं, जो इसे खुरदरा रूप देते हैं और प्रोटीन संश्लेषण में मदद करते हैं।"
+  },
+  {
+    text: "Under what condition is a mixture considered a 'stable solution'?",
+    hint: "किस परिस्थिति में किसी मिश्रण को 'स्थिर विलयन' (stable solution) माना जाता है?",
+    options: ["When solute particles settle down quickly", "When solute particles do not settle down when left undisturbed (जब विलेय के कण बिना छेड़े छोड़े जाने पर नीचे नहीं बैठते हैं)", "When it scatters light", "When it can be separated by normal filtration"],
+    answer: 1,
+    explanation: "A true solution is highly stable, meaning its solute particles (like salt in water) remain evenly distributed and do not settle at the bottom over time.",
+    hindi: "एक वास्तविक विलयन अत्यधिक स्थिर होता है, जिसका अर्थ है कि इसके विलेय कण (जैसे पानी में नमक) समान रूप से वितरित रहते हैं और समय के साथ नीचे नहीं बैठते हैं।"
+  },
+  {
+    text: "Removing which of the following unwanted plants (weeds) from an agricultural field is highly beneficial for farmers?",
+    hint: "कृषि क्षेत्र से निम्नलिखित में से किस अवांछित पौधे (खरपतवार) को हटाना किसानों के लिए अत्यधिक लाभकारी है?",
+    options: ["Wheat", "Parthenium / Xanthium (पार्थेनियम / जैंथियम)", "Rice", "Sugarcane"],
+    answer: 1,
+    explanation: "Parthenium (Carrot grass) and Xanthium (Gokhru) are notorious weeds that compete with crops for nutrients, space, and water.",
+    hindi: "पार्थेनियम (गाजर घास) और जैंथियम (गोखरू) कुख्यात खरपतवार हैं जो पोषक तत्वों, स्थान और पानी के लिए मुख्य फसलों के साथ प्रतिस्पर्धा करते हैं।"
+  },
+  {
+    text: "Fleming's Left-Hand Rule is primarily used in electric motors to determine what?",
+    hint: "इलेक्ट्रिक मोटर में फ्लेमिंग के बाएं हाथ के नियम का उपयोग मुख्य रूप से क्या निर्धारित करने के लिए किया जाता है?",
+    options: ["The direction of the magnetic field", "The direction of the induced current", "The direction of the magnetic force or motion on the conductor (चालक पर चुंबकीय बल या गति की दिशा)", "The amount of voltage produced"],
+    answer: 2,
+    explanation: "In an electric motor, a current-carrying conductor is placed in a magnetic field. Fleming's Left-Hand Rule helps find the direction of the force (and resulting motion) acting on it.",
+    hindi: "इलेक्ट्रिक मोटर में, फ्लेमिंग का बाएं हाथ का नियम चालक पर लगने वाले बल (और परिणामी गति) की दिशा खोजने में मदद करता है।"
+  },
+  {
+    text: "Compared to a faint sound of the same frequency, what is the key characteristic of a louder sound wave?",
+    hint: "समान आवृत्ति की धीमी ध्वनि की तुलना में, अधिक तेज ध्वनि तरंग की प्रमुख विशेषता क्या है?",
+    options: ["It has a lower wavelength", "It has a higher amplitude (इसका आयाम अधिक होता है)", "It has a lower speed", "It has a different pitch"],
+    answer: 1,
+    explanation: "The loudness of a sound is directly proportional to the square of its amplitude. A louder sound means the particles of the medium vibrate with a larger amplitude.",
+    hindi: "ध्वनि की प्रबलता उसके आयाम के वर्ग के सीधे आनुपातिक होती है। तेज ध्वनि का अर्थ है कि माध्यम के कण बड़े आयाम के साथ कंपन करते हैं।"
+  },
+  {
+    text: "Which plant is well-known for reproducing asexually through buds developed on its leaf margins?",
+    hint: "कौन सा पौधा अपनी पत्तियों के किनारों पर विकसित कलियों के माध्यम से अलैंगिक प्रजनन करने के लिए जाना जाता है?",
+    options: ["Potato", "Sweet potato", "Bryophyllum (ब्रायोफाइलम)", "Rose"],
+    answer: 2,
+    explanation: "Bryophyllum reproduces through vegetative propagation where small plantlets (buds) grow on the edges of its leaves and fall off to become new plants.",
+    hindi: "ब्रायोफाइलम (पत्थरचट्टा) पत्तियों के किनारों पर उगने वाली कलियों के माध्यम से वानस्पतिक प्रजनन (vegetative propagation) करता है।"
+  },
+  {
+    text: "When a moving bus stops suddenly, a standing passenger tends to fall forward. Which law of physics explains this phenomenon?",
+    hint: "जब एक चलती बस अचानक रुकती है, तो खड़ा यात्री आगे की ओर गिरता है। भौतिकी का कौन सा नियम इस घटना की व्याख्या करता है?",
+    options: ["Newton's Third Law", "Newton's Second Law", "Newton's First Law of Motion / Law of Inertia (न्यूटन का गति का पहला नियम / जड़त्व का नियम)", "Law of Conservation of Momentum"],
+    answer: 2,
+    explanation: "Due to inertia of motion, the passenger's upper body tends to remain in motion even when the lower body (in contact with the bus) comes to a sudden halt.",
+    hindi: "गति के जड़त्व के कारण, यात्री के शरीर का ऊपरी हिस्सा गति में ही रहना चाहता है, भले ही बस के संपर्क वाला निचला हिस्सा अचानक रुक जाए।"
+  },
+  {
+    text: "In a water molecule (H2O), what is the ratio by mass of Hydrogen to Oxygen?",
+    hint: "पानी के अणु (H2O) में हाइड्रोजन और ऑक्सीजन के द्रव्यमान का अनुपात क्या है?",
+    options: ["2:1", "1:8 (1:8)", "8:1", "1:16"],
+    answer: 1,
+    explanation: "Water contains 2 hydrogen atoms (mass = 2 amu) and 1 oxygen atom (mass = 16 amu). The ratio by mass is 2:16, which simplifies to 1:8.",
+    hindi: "पानी में 2 हाइड्रोजन परमाणु (द्रव्यमान = 2 amu) और 1 ऑक्सीजन परमाणु (द्रव्यमान = 16 amu) होते हैं। द्रव्यमान का अनुपात 2:16 है, जो 1:8 हो जाता है।"
+  },
+  {
+    text: "Which of the following is NOT considered a part of the basic cell structure?",
+    hint: "निम्नलिखित में से किसे मूल कोशिका संरचना का हिस्सा नहीं माना जाता है?",
+    options: ["Cell Wall (कोशिका भित्ति)", "Cytoplasm (कोशिका द्रव्य)", "Mitochondria (माइटोकॉन्ड्रिया)", "Heart (हृदय)"],
+    answer: 3,
+    explanation: "The heart is an entire organ made up of billions of cells. It is not a component found inside a single cell like a cell wall or cytoplasm.",
+    hindi: "हृदय एक संपूर्ण अंग है जो अरबों कोशिकाओं से बना है। यह कोशिका भित्ति या कोशिका द्रव्य की तरह एक एकल कोशिका के अंदर पाया जाने वाला घटक नहीं है।"
+  },
+  {
+    text: "An electric heater of resistance 20 ohms is connected to a 220 V source. What is the heat energy developed in 10 minutes?",
+    hint: "20 ओम प्रतिरोध वाला एक इलेक्ट्रिक हीटर 220 V स्रोत से जुड़ा है। 10 मिनट में कितनी ऊष्मा ऊर्जा उत्पन्न होगी?",
+    options: ["1.45 x 10^5 Joules", "1.45 x 10^6 Joules (1.45 x 10^6 जूल)", "2.42 x 10^4 Joules", "14.5 Joules"],
+    answer: 1,
+    explanation: "Heat (H) = (V^2 / R) * t = (220^2 / 20) * (10 * 60 seconds) = (48400 / 20) * 600 = 2420 * 600 = 1,452,000 Joules = 1.452 * 10^6 J.",
+    hindi: "ऊष्मा (H) = (V^2 / R) * t = (220^2 / 20) * (10 * 60 सेकंड) = 1452000 जूल या 1.45 x 10^6 जूल।"
+  },
+  {
+    text: "Incomplete combustion of a hydrocarbon in an insufficient supply of oxygen primarily produces which harmful gas?",
+    hint: "ऑक्सीजन की अपर्याप्त आपूर्ति में हाइड्रोकार्बन के अपूर्ण दहन से मुख्य रूप से कौन सी हानिकारक गैस उत्पन्न होती है?",
+    options: ["Carbon dioxide", "Carbon monoxide (कार्बन मोनोऑक्साइड)", "Sulfur dioxide", "Nitrous oxide"],
+    answer: 1,
+    explanation: "When oxygen is limited, carbon cannot fully oxidize to CO2. Instead, it forms Carbon Monoxide (CO), which is a highly toxic gas.",
+    hindi: "जब ऑक्सीजन सीमित होती है, तो कार्बन पूरी तरह से CO2 में ऑक्सीकृत नहीं हो पाता है, और अत्यधिक विषैली कार्बन मोनोऑक्साइड (CO) गैस बनाता है।"
+  },
+  {
+    text: "When white light is dispersed by a prism, which color of light travels the fastest through the glass?",
+    hint: "जब प्रिज्म द्वारा श्वेत प्रकाश का वर्ण विक्षेपण होता है, तो कांच में प्रकाश का कौन सा रंग सबसे तेज यात्रा करता है?",
+    options: ["Violet", "Green", "Yellow", "Red (लाल)"],
+    answer: 3,
+    explanation: "Red light bends the least because it has the longest wavelength and travels the fastest among the visible colors through a denser medium like glass.",
+    hindi: "लाल प्रकाश सबसे कम मुड़ता है क्योंकि इसकी तरंगदैर्ध्य सबसे लंबी होती है और यह कांच जैसे सघन माध्यम में दृश्य रंगों में सबसे तेज यात्रा करता है।"
+  },
 
+  {
+    text: "What type of chemical bond is formed by the complete transfer of electrons from a metal to a non-metal?",
+    hint: "एक धातु से अधातु में इलेक्ट्रॉनों के पूर्ण हस्तांतरण से किस प्रकार का रासायनिक बंधन बनता है?",
+    options: ["Covalent bond", "Ionic bond (आयनिक बंध)", "Metallic bond", "Hydrogen bond"],
+    answer: 1,
+    explanation: "An ionic bond is formed when a metal atom loses one or more electrons (becoming a positive ion) and a non-metal gains them (becoming a negative ion).",
+    hindi: "आयनिक बंध तब बनता है जब एक धातु परमाणु इलेक्ट्रॉन खो देता है (धनात्मक आयन) और अधातु उन्हें ग्रहण कर लेता है (ऋणात्मक आयन)।"
+  },
+  {
+    text: "What is the standard electronic configuration of a Sodium (Na) atom?",
+    hint: "सोडियम (Na) परमाणु का मानक इलेक्ट्रॉनिक विन्यास क्या है?",
+    options: ["2, 8, 2", "2, 8, 1 (2, 8, 1)", "2, 8, 8", "2, 8"],
+    answer: 1,
+    explanation: "Sodium has an atomic number of 11. Its electrons are arranged in shells as 2 (K), 8 (L), and 1 (M) valence electron.",
+    hindi: "सोडियम की परमाणु संख्या 11 है। इसके इलेक्ट्रॉन 2 (K), 8 (L), और 1 (M) संयोजी इलेक्ट्रॉन के रूप में व्यवस्थित होते हैं।"
+  },
+  {
+    text: "When a Chlorine (Cl) atom gains an electron to achieve a stable octet, what charge does the resulting ion acquire?",
+    hint: "जब क्लोरीन (Cl) परमाणु एक स्थिर अष्टक प्राप्त करने के लिए एक इलेक्ट्रॉन ग्रहण करता है, तो परिणामी आयन पर कौन सा आवेश आ जाता है?",
+    options: ["Positive charge (+1)", "No charge (Neutral)", "Negative charge (-1) (ऋणात्मक आवेश -1)", "Double positive charge (+2)"],
+    answer: 2,
+    explanation: "Electrons are negatively charged. Gaining one extra electron gives the Chlorine atom a net -1 charge, forming a chloride ion (Cl-).",
+    hindi: "इलेक्ट्रॉन ऋणात्मक होते हैं। एक अतिरिक्त इलेक्ट्रॉन प्राप्त करने से क्लोरीन परमाणु पर शुद्ध -1 आवेश आ जाता है (क्लोराइड आयन Cl-)।"
+  },
+  {
+    text: "In a saltwater solution, what role does the water play?",
+    hint: "खारे पानी के घोल (solution) में, पानी क्या भूमिका निभाता है?",
+    options: ["Solute (विलेय)", "Solvent (विलायक)", "Precipitate", "Residue"],
+    answer: 1,
+    explanation: "In a solution, the substance present in a larger amount that dissolves the other substance is called the solvent. Here, water is the solvent.",
+    hindi: "घोल में वह पदार्थ जो बड़ी मात्रा में मौजूद होता है और दूसरे पदार्थ को घोलता है, विलायक (Solvent) कहलाता है। यहाँ पानी विलायक है।"
+  },
+  {
+    text: "What is the common local name for the weed 'Xanthium' in India?",
+    hint: "भारत में 'जैंथियम' खरपतवार का सामान्य स्थानीय नाम क्या है?",
+    options: ["Gajar Ghas", "Gokhru (गोखरू)", "Bathua", "Jangli palak"],
+    answer: 1,
+    explanation: "Xanthium is a common agricultural weed widely known as 'Gokhru' in India, known for its spiky burs that stick to animal fur.",
+    hindi: "जैंथियम एक आम कृषि खरपतवार है जिसे भारत में 'गोखरू' के नाम से जाना जाता है।"
+  },
+  {
+    text: "What is the common local name for the weed 'Parthenium'?",
+    hint: "'पार्थेनियम' खरपतवार का सामान्य स्थानीय नाम क्या है?",
+    options: ["Gajar ghas / Carrot grass (गाजर घास)", "Gokhru", "Motha", "Doob grass"],
+    answer: 0,
+    explanation: "Parthenium hysterophorus is highly invasive and commonly referred to as Gajar Ghas or Carrot grass due to its leaf shape.",
+    hindi: "पार्थेनियम बहुत आक्रामक खरपतवार है और पत्तियों के आकार के कारण इसे गाजर घास (Carrot grass) कहा जाता है।"
+  },
+  {
+    text: "In Fleming's Left-Hand Rule, what does the central (middle) finger represent?",
+    hint: "फ्लेमिंग के बाएं हाथ के नियम में मध्यमा उंगली (middle finger) क्या दर्शाती है?",
+    options: ["Direction of magnetic field", "Direction of motion/force", "Direction of current (विद्युत धारा की दिशा)", "Direction of voltage"],
+    answer: 2,
+    explanation: "In Fleming's Left-Hand Rule, the Thumb represents Force, the Index finger represents Magnetic Field, and the Middle finger represents Current (FBI rule).",
+    hindi: "इस नियम में, अंगूठा बल (Force), तर्जनी चुंबकीय क्षेत्र (Magnetic field), और मध्यमा उंगली विद्युत धारा (Current) को दर्शाती है।"
+  },
+  {
+    text: "In Fleming's Left-Hand Rule, what does the index (forefinger) represent?",
+    hint: "फ्लेमिंग के बाएं हाथ के नियम में तर्जनी उंगली (index finger) क्या दर्शाती है?",
+    options: ["Direction of current", "Direction of the magnetic field (चुंबकीय क्षेत्र की दिशा)", "Direction of force", "Direction of gravity"],
+    answer: 1,
+    explanation: "The index finger is pointed in the direction of the magnetic field (from North to South) in Fleming's Left-Hand Rule.",
+    hindi: "फ्लेमिंग के बाएं हाथ के नियम में तर्जनी उंगली को चुंबकीय क्षेत्र की दिशा (उत्तर से दक्षिण) में इंगित किया जाता है।"
+  },
+  {
+    text: "Which part of the sweet potato plant is naturally modified for vegetative propagation?",
+    hint: "शकरकंद के पौधे का कौन सा भाग वानस्पतिक प्रजनन (vegetative propagation) के लिए प्राकृतिक रूप से संशोधित होता है?",
+    options: ["Stem", "Leaf", "Root (जड़)", "Flower"],
+    answer: 2,
+    explanation: "A sweet potato is a modified adventitious root (tuberous root) that can sprout new buds and grow into a complete new plant.",
+    hindi: "शकरकंद एक संशोधित जड़ है जो नए अंकुर निकाल सकती है और एक पूर्ण नए पौधे के रूप में विकसित हो सकती है।"
+  },
+  {
+    text: "In Carbon Dioxide (CO2), what is the precise ratio by mass of Carbon to Oxygen?",
+    hint: "कार्बन डाइऑक्साइड (CO2) में, कार्बन और ऑक्सीजन के द्रव्यमान का सटीक अनुपात क्या है?",
+    options: ["1:2", "3:8 (3:8)", "12:16", "8:3"],
+    answer: 1,
+    explanation: "Carbon mass = 12 amu. Oxygen mass (2 atoms) = 2 * 16 = 32 amu. Ratio = 12:32, which simplifies to 3:8.",
+    hindi: "कार्बन का द्रव्यमान = 12 amu। ऑक्सीजन (2 परमाणु) = 32 amu। अनुपात = 12:32, जो 3:8 हो जाता है।"
+  },
+  {
+    text: "In Ammonia (NH3), what is the ratio by mass of Nitrogen to Hydrogen?",
+    hint: "अमोनिया (NH3) में, नाइट्रोजन और हाइड्रोजन के द्रव्यमान का अनुपात क्या है?",
+    options: ["1:3", "14:1", "14:3 (14:3)", "7:3"],
+    answer: 2,
+    explanation: "Nitrogen atomic mass = 14 amu. Hydrogen mass (3 atoms) = 3 * 1 = 3 amu. The ratio is naturally 14:3.",
+    hindi: "नाइट्रोजन का द्रव्यमान = 14 amu। हाइड्रोजन (3 परमाणु) = 3 amu। अनुपात 14:3 है।"
+  },
+  {
+    text: "Which of the following organisms completely lacks a cell wall?",
+    hint: "निम्नलिखित में से किस जीव में कोशिका भित्ति (cell wall) पूरी तरह से अनुपस्थित होती है?",
+    options: ["Plants", "Fungi", "Bacteria", "Animals (जानवर)"],
+    answer: 3,
+    explanation: "Animal cells only possess a flexible cell membrane. They do not have the rigid cell wall found in plants, fungi, and bacteria.",
+    hindi: "जंतु कोशिकाओं में केवल लचीली कोशिका झिल्ली होती है। उनमें पौधों, कवक और जीवाणुओं की तरह कठोर कोशिका भित्ति नहीं होती है।"
+  },
+  {
+    text: "What is the key functional nature of the cell membrane (plasma membrane)?",
+    hint: "कोशिका झिल्ली (प्लाज्मा झिल्ली) की प्रमुख कार्यात्मक प्रकृति क्या है?",
+    options: ["Fully impermeable", "Fully permeable", "Selectively permeable (चयनात्मक रूप से पारगम्य)", "Rigid and solid"],
+    answer: 2,
+    explanation: "The cell membrane allows only certain selective substances to pass in and out of the cell, making it selectively (or semi) permeable.",
+    hindi: "कोशिका झिल्ली केवल कुछ चुनिंदा पदार्थों को कोशिका के अंदर और बाहर जाने देती है, इसलिए यह चयनात्मक पारगम्य (Selectively permeable) है।"
+  },
+  {
+    text: "Which of the following is a significant agronomic advantage of intercropping?",
+    hint: "अंतर्फसल (Intercropping) का एक महत्वपूर्ण कृषि लाभ निम्नलिखित में से कौन सा है?",
+    options: ["It requires zero water", "It limits the spread of pests and diseases specific to one crop (यह किसी एक फसल के विशिष्ट कीटों और बीमारियों के प्रसार को रोकता है)", "It yields crops overnight", "It completely stops soil erosion automatically"],
+    answer: 1,
+    explanation: "Since different crops are planted in alternating patterns, pests or diseases attacking one crop have a harder time spreading across the entire field.",
+    hindi: "चूंकि विभिन्न फसलें बारी-बारी से लगाई जाती हैं, इसलिए एक फसल पर हमला करने वाले कीटों या बीमारियों का पूरे खेत में फैलना मुश्किल होता है।"
+  },
+  {
+    text: "What is the basic working principle of an electric motor?",
+    hint: "इलेक्ट्रिक मोटर का मूल कार्य सिद्धांत क्या है?",
+    options: ["Electromagnetic induction", "A current-carrying conductor in a magnetic field experiences a force (चुंबकीय क्षेत्र में धारावाही चालक एक बल का अनुभव करता है)", "Heating effect of electric current", "Chemical effect of electric current"],
+    answer: 1,
+    explanation: "An electric motor converts electrical energy into mechanical energy. It works on the principle that a current-carrying coil placed in a magnetic field experiences a rotational force (torque).",
+    hindi: "इलेक्ट्रिक मोटर विद्युत ऊर्जा को यांत्रिक ऊर्जा में बदलती है। जब चुंबकीय क्षेत्र में रखी कुंडली (coil) से धारा प्रवाहित होती है, तो उस पर एक बल लगता है जो उसे घुमाता है।"
+  },
+  {
+    text: "What differentiates Smooth Endoplasmic Reticulum (SER) from Rough Endoplasmic Reticulum (RER)?",
+    hint: "चिकने एंडोप्लाज्मिक रेटिकुलम (SER) को खुरदरे एंडोप्लाज्मिक रेटिकुलम (RER) से क्या अलग करता है?",
+    options: ["SER produces ATP", "SER is only found in plants", "SER lacks ribosomes on its surface (SER की सतह पर राइबोसोम नहीं होते हैं)", "SER is located inside the nucleus"],
+    answer: 2,
+    explanation: "The RER is 'rough' because it is studded with ribosomes. The SER appears smooth because it completely lacks these ribosomes and is mainly involved in lipid synthesis.",
+    hindi: "RER खुरदरा होता है क्योंकि इस पर राइबोसोम होते हैं। SER चिकना दिखाई देता है क्योंकि इस पर राइबोसोम नहीं होते और यह मुख्य रूप से लिपिड संश्लेषण में शामिल होता है।"
+  },
+  {
+    text: "Which parameter remains constant in uniform circular motion?",
+    hint: "एकसमान वृत्तीय गति (uniform circular motion) में कौन सा पैरामीटर स्थिर रहता है?",
+    options: ["Velocity", "Acceleration", "Direction", "Speed (चाल)"],
+    answer: 3,
+    explanation: "In uniform circular motion, the speed of the object is constant, but its velocity is constantly changing because its direction of motion changes at every point.",
+    hindi: "एकसमान वृत्तीय गति में, वस्तु की चाल स्थिर रहती है, लेकिन उसका वेग लगातार बदलता रहता है क्योंकि गति की दिशा हर बिंदु पर बदलती है।"
+  },
+  {
+    text: "If an object is moving with a constant velocity, what is its acceleration?",
+    hint: "यदि कोई वस्तु स्थिर वेग (constant velocity) से गति कर रही है, तो उसका त्वरण क्या होगा?",
+    options: ["Increasing", "Decreasing", "Zero (शून्य)", "9.8 m/s²"],
+    answer: 2,
+    explanation: "Acceleration is the rate of change of velocity. If the velocity is constant (unchanging), the acceleration is strictly zero.",
+    hindi: "त्वरण वेग में परिवर्तन की दर है। यदि वेग स्थिर (अपरिवर्तित) है, तो त्वरण शून्य होता है।"
+  },
+  {
+    text: "Which of the following does NOT represent a chemical reaction?",
+    hint: "निम्नलिखित में से कौन रासायनिक प्रतिक्रिया का प्रतिनिधित्व नहीं करता है?",
+    options: ["Burning of natural gas", "Rusting of iron", "Melting of ice (बर्फ का पिघलना)", "Digestion of food"],
+    answer: 2,
+    explanation: "Melting of ice is merely a physical change of state (from solid water to liquid water). No new chemical substance is formed.",
+    hindi: "बर्फ का पिघलना केवल अवस्था का एक भौतिक परिवर्तन (ठोस से द्रव) है। इसमें कोई नया रासायनिक पदार्थ नहीं बनता है।"
+  },
+  {
+    text: "What happens to the resistance of a metallic wire if its length is halved?",
+    hint: "यदि किसी धातु के तार की लंबाई आधी कर दी जाए, तो उसके प्रतिरोध का क्या होता है?",
+    options: ["It doubles", "It quadruples", "It becomes half (यह आधा हो जाता है)", "It remains the same"],
+    answer: 2,
+    explanation: "Resistance is directly proportional to the length of the conductor (R ∝ L). If length is halved, resistance also becomes half.",
+    hindi: "प्रतिरोध चालक की लंबाई के सीधे आनुपातिक होता है (R ∝ L)। यदि लंबाई आधी हो जाती है, तो प्रतिरोध भी आधा हो जाता है।"
+  },
+  {
+    text: "A solution of pure water is considered neutral. What is its approximate pH value?",
+    hint: "शुद्ध पानी के घोल को तटस्थ (neutral) माना जाता है। इसका अनुमानित pH मान क्या है?",
+    options: ["0", "7 (7)", "14", "10"],
+    answer: 1,
+    explanation: "The pH scale ranges from 0 to 14. A neutral substance like pure water has a pH of exactly 7 at standard room temperature.",
+    hindi: "pH पैमाना 0 से 14 तक होता है। शुद्ध पानी जैसे तटस्थ पदार्थ का pH ठीक 7 होता है।"
+  },
+  {
+    text: "In the chemical equation '2 C2H6 + 7 O2 -> 4 CO2 + 6 H2O', what does the number '4' represent?",
+    hint: "रासायनिक समीकरण '2 C2H6 + 7 O2 -> 4 CO2 + 6 H2O' में, संख्या '4' क्या दर्शाती है?",
+    options: ["The number of Carbon atoms", "The coefficient required to balance the Carbon dioxide molecules (कार्बन डाइऑक्साइड अणुओं को संतुलित करने के लिए आवश्यक गुणांक)", "The total mass of the products", "The volume of gas"],
+    answer: 1,
+    explanation: "In a balanced equation, the large numbers in front of the chemical formulas are stoichiometric coefficients indicating the relative number of molecules involved.",
+    hindi: "संतुलित समीकरण में, रासायनिक सूत्रों के सामने की बड़ी संख्याएँ गुणांक होती हैं जो शामिल अणुओं की सापेक्ष संख्या को दर्शाती हैं।"
+  },
+  {
+    text: "What is the principal active compound present in vinegar?",
+    hint: "सिरके (vinegar) में मौजूद प्रमुख सक्रिय यौगिक कौन सा है?",
+    options: ["Formic acid", "Acetic acid / Ethanoic acid (एसिटिक एसिड / एथेनोइक एसिड)", "Hydrochloric acid", "Citric acid"],
+    answer: 1,
+    explanation: "Vinegar is essentially a dilute aqueous solution consisting of 5-8% acetic acid (also systematically known as ethanoic acid).",
+    hindi: "सिरका मुख्य रूप से एक पतला जलीय घोल है जिसमें 5-8% एसिटिक एसिड (एथेनोइक एसिड) होता है।"
+  },
+  {
+    text: "What is the common name for Sodium Hydroxide (NaOH)?",
+    hint: "सोडियम हाइड्रोक्साइड (NaOH) का सामान्य नाम क्या है?",
+    options: ["Baking soda", "Washing soda", "Caustic soda (कास्टिक सोडा)", "Bleaching powder"],
+    answer: 2,
+    explanation: "Sodium hydroxide is a strong, highly corrosive metallic base widely known in industry and commerce as Caustic soda.",
+    hindi: "सोडियम हाइड्रोक्साइड एक मजबूत, अत्यधिक संक्षारक धातु क्षार है जिसे आमतौर पर कास्टिक सोडा कहा जाता है।"
+  },
+  {
+    text: "According to modern biological classification, organisms that do not have a defined nucleus are known as:",
+    hint: "आधुनिक जैविक वर्गीकरण के अनुसार, जिन जीवों में परिभाषित केंद्रक (nucleus) नहीं होता है, उन्हें क्या कहा जाता है?",
+    options: ["Eukaryotes", "Prokaryotes (प्रोकैरियोट्स)", "Multicellular", "Autotrophs"],
+    answer: 1,
+    explanation: "Prokaryotes (like bacteria) are single-celled organisms that lack membrane-bound organelles and a distinct nucleus.",
+    hindi: "प्रोकैरियोट्स (जैसे बैक्टीरिया) एकल-कोशिका वाले जीव हैं जिनमें झिल्ली-बद्ध अंगक और एक अलग केंद्रक की कमी होती है।"
+ },
+ 
+ 
+ 
   {
     text: "Which of the following metals reacts most vigorously with water?",
     hint: "निम्नलिखित में से कौन सी धातु जल के साथ बहुत तेजी से अभिक्रिया करती है?",
