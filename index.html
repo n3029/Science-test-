@@ -389,7 +389,408 @@ const QUESTIONS = [
 
 
 
-
+  {
+    text: "Which of the following is considered a chemical property of a substance?",
+    hint: "निम्नलिखित में से किसे पदार्थ का रासायनिक गुण माना जाता है?",
+    options: ["Boiling point (क्वथनांक)", "Melting point (गलनांक)", "Reaction with oxygen / Flammability (ऑक्सीजन के साथ अभिक्रिया / ज्वलनशीलता)", "Density (घनत्व)"],
+    answer: 2,
+    explanation: "A chemical property describes a substance's ability to undergo a specific chemical change or reaction, such as burning in oxygen. Boiling and melting points are physical properties.",
+    hindi: "रासायनिक गुण वह होता है जो यह बताता है कि कोई पदार्थ हवा, अम्ल या अन्य रसायनों के साथ कैसे प्रतिक्रिया करेगा, जैसे हवा में जलना।"
+  },
+  {
+    text: "What is the molecular mass of Glucose (C6H12O6)?",
+    hint: "ग्लूकोज (C6H12O6) का आणविक द्रव्यमान क्या है?",
+    options: ["160 amu", "180 amu", "120 amu", "90 amu"],
+    answer: 1,
+    explanation: "Carbon: 12 × 6 = 72. Hydrogen: 1 × 12 = 12. Oxygen: 16 × 6 = 96. Total = 72 + 12 + 96 = 180 amu.",
+    hindi: "कार्बन (12×6=72), हाइड्रोजन (1×12=12), और ऑक्सीजन (16×6=96) के परमाणु द्रव्यमानों को जोड़ने पर कुल 180 amu आता है।"
+  },
+  {
+    text: "A cube of side 'a' is made of a material with specific resistance (resistivity) 'ρ'. What is the resistance between two opposite faces of the cube?",
+    hint: "'a' भुजा वाला एक घन 'ρ' विशिष्ट प्रतिरोध (प्रतिरोधकता) वाले पदार्थ से बना है। घन के दो विपरीत फलकों (opposite faces) के बीच प्रतिरोध क्या होगा?",
+    options: ["ρ / a", "ρ × a", "ρ / a²", "a / ρ"],
+    answer: 0,
+    explanation: "Resistance R = ρ(L/A). For a cube, the length L between opposite faces is 'a', and the cross-sectional area A is a². Thus, R = ρ(a / a²) = ρ / a.",
+    hindi: "R = ρ(L/A)। घन के लिए, लंबाई L = a, और क्षेत्रफल A = a²। इसलिए, R = ρ(a / a²) = ρ / a।"
+  },
+  {
+    text: "Which food product is primarily obtained from apiculture (beekeeping)?",
+    hint: "मधुमक्खी पालन (apiculture) से मुख्य रूप से कौन सा खाद्य पदार्थ प्राप्त होता है?",
+    options: ["Milk (दूध)", "Eggs (अंडे)", "Honey (शहद)", "Meat (मांस)"],
+    answer: 2,
+    explanation: "Apiculture is the maintenance of bee colonies, commonly in man-made hives, primarily to collect honey and beeswax.",
+    hindi: "मधुमक्खी पालन से हमें मुख्य रूप से शहद (Honey) प्राप्त होता है।"
+  },
+  {
+    text: "What is the chemical formula for Baking Soda?",
+    hint: "बेकिंग सोडा का रासायनिक सूत्र क्या है?",
+    options: ["Na2CO3", "NaHCO3", "NaOH", "NaCl"],
+    answer: 1,
+    explanation: "The chemical formula for baking soda is NaHCO3, which is systematically named Sodium bicarbonate or Sodium hydrogen carbonate.",
+    hindi: "बेकिंग सोडा का रासायनिक सूत्र NaHCO3 (सोडियम हाइड्रोजन कार्बोनेट या सोडियम बाइकार्बोनेट) होता है।"
+  },
+  {
+    text: "Which type of reproduction strictly requires the involvement of both a male and a female parent?",
+    hint: "किस प्रकार के प्रजनन में नर (male) और मादा (female) दोनों जनकों (parents) की भागीदारी सख्त रूप से आवश्यक होती है?",
+    options: ["Sexual reproduction (लैंगिक प्रजनन)", "Asexual reproduction (अलैंगिक प्रजनन)", "Vegetative propagation (वानस्पतिक प्रसार)", "Binary fission (द्विखंडन)"],
+    answer: 0,
+    explanation: "Sexual reproduction requires the fusion of male and female gametes to create a new organism, bringing genetic variation.",
+    hindi: "लैंगिक प्रजनन में संतान पैदा करने के लिए नर और मादा दोनों की आवश्यकता होती है, जैसे इंसानों में।"
+  },
+  {
+    text: "Which of the following statements about 'Fragmentation' (खंडन) in Spirogyra is INCORRECT?",
+    hint: "स्पाइरोगाइरा में 'खंडन' (Fragmentation) के बारे में निम्नलिखित में से कौन सा कथन गलत है?",
+    options: ["It is a type of asexual reproduction (यह एक प्रकार का अलैंगिक प्रजनन है)", "It requires a male and female Spirogyra (इसके लिए नर और मादा स्पाइरोगाइरा की आवश्यकता होती है)", "It occurs in multicellular organisms (यह बहुकोशिकीय जीवों में होता है)", "The organism breaks into smaller pieces upon maturation (परिपक्व होने पर जीव छोटे टुकड़ों में टूट जाता है)"],
+    answer: 1,
+    explanation: "Fragmentation is an asexual reproduction method. It does not require male and female parents; a single mature organism breaks into pieces, each growing into a new individual.",
+    hindi: "खंडन एक अलैंगिक प्रजनन है, इसमें केवल एक ही जीव के टुकड़े होकर नए जीव बन जाते हैं। इसमें नर और मादा की जरूरत नहीं होती।"
+  },
+  {
+    text: "When an object moves along a circular path at a constant speed, its motion is specifically called:",
+    hint: "जब कोई वस्तु किसी वृत्ताकार पथ पर स्थिर गति (constant speed) से चलती है, तो उसकी गति को विशेष रूप से क्या कहा जाता है?",
+    options: ["Linear motion", "Uniform Circular Motion (समान वृत्तीय गति)", "Non-uniform motion", "Oscillatory motion"],
+    answer: 1,
+    explanation: "Motion in a circle with a constant speed is called Uniform Circular Motion. The velocity is continuously changing due to the constant change in direction.",
+    hindi: "लगातार एक ही चाल (Constant speed) से गोल पथ पर घूमने को एक समान वृत्तीय गति (Uniform Circular Motion) कहते हैं।"
+  },
+  {
+    text: "Over-secretion of Growth Hormone during adulthood leads to a condition characterized by enlarged body parts, known as:",
+    hint: "वयस्कता (adulthood) के दौरान ग्रोथ हार्मोन के अत्यधिक स्राव से शरीर के अंग बड़े हो जाते हैं, इस स्थिति को क्या कहा जाता है?",
+    options: ["Dwarfism", "Gigantism", "Acromegaly (एक्रोमेगली)", "Goiter"],
+    answer: 2,
+    explanation: "Hypersecretion of growth hormone in children causes Gigantism. In adults (after growth plates have closed), it causes Acromegaly, resulting in enlarged hands, feet, and facial features.",
+    hindi: "वयस्कों (Adults) में ग्रोथ हार्मोन ज्यादा निकलने पर हड्डियां चौड़ी होने लगती हैं, इस बीमारी को एक्रोमेगली (Acromegaly) कहते हैं।"
+  },
+  {
+    text: "Which of the following mixtures does NOT show the Tyndall effect?",
+    hint: "निम्नलिखित में से कौन सा मिश्रण टिंडल प्रभाव (Tyndall effect) नहीं दिखाता है?",
+    options: ["Milk", "Starch solution", "Copper sulphate dissolved in water (पानी में घुला हुआ कॉपर सल्फेट)", "Fog"],
+    answer: 2,
+    explanation: "The Tyndall effect (scattering of light) is shown by colloids and fine suspensions. Copper sulphate in water forms a true, homogeneous solution with particles too small to scatter light.",
+    hindi: "पानी में कॉपर सल्फेट एक समांगी (Homogeneous) मिश्रण बनाता है, जिसके कण इतने छोटे होते हैं कि वे प्रकाश को नहीं फैलाते।"
+  },
+  {
+    text: "Why is Ethanol considered a 'cleaner' fuel compared to petrol?",
+    hint: "पेट्रोल की तुलना में एथेनॉल को 'स्वच्छ' ईंधन (cleaner fuel) क्यों माना जाता है?",
+    options: ["It produces more carbon monoxide", "It burns with a clean, smokeless flame producing mainly carbon dioxide and water (यह एक स्वच्छ, धुआं रहित ज्वाला के साथ जलता है जिससे मुख्य रूप से कार्बन डाइऑक्साइड और पानी बनता है)", "It leaves solid ash behind", "It smells better"],
+    answer: 1,
+    explanation: "Ethanol undergoes complete combustion much easier than petrol, producing virtually no soot or harmful gases like carbon monoxide, making it a cleaner fuel.",
+    hindi: "एथेनॉल पूरी तरह से जलता है और कोई धुआं या हानिकारक गैस (जैसे कार्बन मोनोऑक्साइड) नहीं छोड़ता, केवल CO2 और पानी देता है।"
+  },
+  {
+    text: "Sulphide ores are converted into metal oxides by heating them strongly in the presence of excess air. This process is called:",
+    hint: "सल्फाइड अयस्कों को अतिरिक्त हवा की उपस्थिति में जोरदार गर्म करके धातु ऑक्साइड में बदला जाता है। इस प्रक्रिया को क्या कहा जाता है?",
+    options: ["Calcination (निस्तापन)", "Roasting (भर्जन)", "Electrolysis", "Smelting"],
+    answer: 1,
+    explanation: "Roasting is the metallurgical process specifically used to convert sulphide ores into oxides by heating in the presence of oxygen.",
+    hindi: "हवा (ऑक्सीजन) की उपस्थिति में सल्फाइड अयस्क को गर्म करके ऑक्साइड में बदलने की प्रक्रिया को भर्जन (Roasting) कहते हैं।"
+  },
+  {
+    text: "Which process is used to convert Carbonate ores into metal oxides?",
+    hint: "कार्बोनेट अयस्कों को धातु ऑक्साइड में बदलने के लिए किस प्रक्रिया का उपयोग किया जाता है?",
+    options: ["Roasting", "Calcination (निस्तापन)", "Distillation", "Sublimation"],
+    answer: 1,
+    explanation: "Calcination involves heating a carbonate ore strongly in the absence (or limited supply) of air to convert it into a metal oxide and release CO2.",
+    hindi: "हवा की अनुपस्थिति में कार्बोनेट अयस्कों को गर्म करके ऑक्साइड में बदलने की प्रक्रिया को निस्तापन (Calcination) कहते हैं।"
+  },
+  {
+    text: "When a white solid is reacted with dilute HCl, a gas is evolved which turns lime water milky. What type of compound could the white solid be?",
+    hint: "जब एक सफेद ठोस को तनु HCl के साथ प्रतिक्रिया कराई जाती है, तो एक गैस निकलती है जो चूने के पानी को दूधिया कर देती है। सफेद ठोस किस प्रकार का यौगिक हो सकता है?",
+    options: ["Metal chloride", "Metal sulphate", "Metal carbonate or bicarbonate (धातु कार्बोनेट या बाइकार्बोनेट)", "Metal oxide"],
+    answer: 2,
+    explanation: "The gas that turns lime water milky is Carbon Dioxide. Metal carbonates and bicarbonates react with acids to release CO2 gas.",
+    hindi: "कार्बोनेट और बाइकार्बोनेट यौगिक अम्ल (Acid) के साथ क्रिया करके कार्बन डाइऑक्साइड गैस निकालते हैं, जो चूने के पानी को दूधिया कर देती है।"
+  },
+  {
+    text: "An electrical appliance has a rating of 90 W at 120 V. What is the current flowing through it?",
+    hint: "एक विद्युत उपकरण की रेटिंग 120 V पर 90 W है। इसमें प्रवाहित होने वाली धारा (current) क्या है?",
+    options: ["1.33 A", "0.75 A", "10800 A", "30 A"],
+    answer: 1,
+    explanation: "Power (P) = Voltage (V) × Current (I). So, I = P / V = 90 / 120 = 3/4 = 0.75 Amperes.",
+    hindi: "सूत्र P = V × I का उपयोग करें। I = 90 / 120 = 0.75 एम्पीयर (A)।"
+  },
+  {
+    text: "Which group of people is generally at the highest risk of contracting an HIV infection?",
+    hint: "सामान्यतः लोगों के किस समूह को एचआईवी (HIV) संक्रमण होने का सबसे अधिक खतरा होता है?",
+    options: ["People who exercise daily", "People who share meals", "Individuals with multiple unsafe sexual partners (वे व्यक्ति जिनके कई असुरक्षित यौन साथी होते हैं)", "People who work in hospitals"],
+    answer: 2,
+    explanation: "HIV is a sexually transmitted virus. Engaging in unprotected sex with multiple partners significantly increases the risk of transmission.",
+    hindi: "एचआईवी मुख्य रूप से असुरक्षित यौन संबंधों के माध्यम से फैलता है, इसलिए यह जोखिम उन लोगों में सबसे ज्यादा होता है।"
+  },
+  {
+    text: "In a food chain, the various sequential steps where transfer of energy occurs are called:",
+    hint: "खाद्य श्रृंखला (Food chain) में, वे विभिन्न क्रमिक चरण जहां ऊर्जा का स्थानांतरण होता है, क्या कहलाते हैं?",
+    options: ["Energy levels", "Trophic levels (पोषक स्तर)", "Metabolic levels", "Consumer steps"],
+    answer: 1,
+    explanation: "Each step or level in a food chain or ecological pyramid is referred to as a trophic level (e.g., producers form the first trophic level).",
+    hindi: "खाद्य श्रृंखला के हर एक चरण को पोषक स्तर (Trophic level) कहा जाता है।"
+  },
+  {
+    text: "Why do covalent compounds generally have low melting and boiling points?",
+    hint: "सहसंयोजक यौगिकों (covalent compounds) का गलनांक और क्वथनांक सामान्यतः कम क्यों होता है?",
+    options: ["They have very strong ionic bonds", "The intermolecular forces holding the molecules together are weak (अणुओं को एक साथ बांधने वाले अंतर-आणविक बल कमजोर होते हैं)", "They do not contain carbon", "They are highly reactive"],
+    answer: 1,
+    explanation: "While the covalent bonds within the molecule are strong, the forces between separate molecules are weak, making it easy to separate them with little heat.",
+    hindi: "सहसंयोजक यौगिकों के अणुओं के बीच लगने वाला बल बहुत कमजोर होता है, इसलिए इन्हें पिघलाने या उबालने के लिए कम ऊर्जा चाहिए होती है।"
+  },
+  {
+    text: "When a person looks at an object placed very close to the eye, what happens to the ciliary muscles?",
+    hint: "जब कोई व्यक्ति आंख के बहुत पास रखी वस्तु को देखता है, तो सिलिअरी मांसपेशियों (ciliary muscles) का क्या होता है?",
+    options: ["They relax, making the lens thinner", "They contract, making the eye lens thicker and increasing its curvature (वे सिकुड़ती हैं, जिससे आंख का लेंस मोटा हो जाता है और उसकी वक्रता बढ़ जाती है)", "They disappear", "They push the retina back"],
+    answer: 1,
+    explanation: "To focus on nearby objects, the ciliary muscles contract. This decreases tension on the suspensory ligaments, allowing the flexible lens to become more spherical (thicker), increasing its refractive power.",
+    hindi: "पास की वस्तु को देखने के लिए सिलिअरी मांसपेशियां सिकुड़ती (Contract) हैं, जिससे लेंस मोटा हो जाता है और फोकस दूरी कम हो जाती है।"
+  },
+  {
+    text: "According to the Law of Universal Gravitation (F = G*m1*m2/r²), if the mass of the Moon is doubled while the Earth's mass and distance remain the same, the gravitational force will:",
+    hint: "सार्वत्रिक गुरुत्वाकर्षण के नियम के अनुसार, यदि पृथ्वी का द्रव्यमान और दूरी समान रखते हुए चंद्रमा का द्रव्यमान दोगुना कर दिया जाए, तो गुरुत्वाकर्षण बल:",
+    options: ["Become half", "Remain the same", "Double (दोगुना हो जाएगा)", "Become four times"],
+    answer: 2,
+    explanation: "The force of gravity is directly proportional to the product of the masses. If one mass is doubled, the force is also doubled.",
+    hindi: "गुरुत्वाकर्षण बल द्रव्यमान के सीधे आनुपातिक होता है। यदि चंद्रमा का द्रव्यमान दोगुना होगा, तो बल भी दोगुना (Double) हो जाएगा।"
+  },
+  {
+    text: "An object of mass 'm' moving with velocity 'v' has kinetic energy 'x'. If its velocity is increased to '4v', its new kinetic energy will be:",
+    hint: "'m' द्रव्यमान की एक वस्तु 'v' वेग से चलते हुए 'x' गतिज ऊर्जा रखती है। यदि इसका वेग '4v' कर दिया जाए, तो इसकी नई गतिज ऊर्जा क्या होगी?",
+    options: ["4x", "8x", "16x", "x/4"],
+    answer: 2,
+    explanation: "Kinetic energy = 1/2 mv². If velocity becomes 4v, KE = 1/2 m(4v)² = 1/2 m(16v²) = 16 * (1/2 mv²) = 16x.",
+    hindi: "गतिज ऊर्जा वेग के वर्ग (v²) पर निर्भर करती है। वेग 4 गुना करने पर 4 का वर्ग 16 होता है, इसलिए ऊर्जा 16 गुना (16x) हो जाएगी।"
+  },
+  {
+    text: "Which of the following is the most common and abundant simple permanent tissue in plants?",
+    hint: "पौधों में निम्नलिखित में से कौन सा सबसे सामान्य और प्रचुर मात्रा में पाया जाने वाला सरल स्थायी ऊतक (simple permanent tissue) है?",
+    options: ["Xylem", "Sclerenchyma", "Parenchyma (पैरेंकाइमा)", "Collenchyma"],
+    answer: 2,
+    explanation: "Parenchyma is the fundamental, most common, and unspecialized living tissue found in almost all parts of a plant.",
+    hindi: "पैरेंकाइमा सबसे आम और बहुतायत में पाया जाने वाला स्थायी ऊतक है, जो पौधे के लगभग हर हिस्से में होता है।"
+  },
+  {
+    text: "Which statement about living organisms and movement is INCORRECT?",
+    hint: "जीवित जीवों और गति (movement) के बारे में कौन सा कथन गलत है?",
+    options: ["Animals can move from one place to another", "Molecular movements occur inside all living cells", "Plants show movement in response to stimuli like light", "Molecular movement is found only in animals, not in plants (आणविक गति केवल जानवरों में पाई जाती है, पौधों में नहीं)"],
+    answer: 3,
+    explanation: "All living organisms, including plants, have continuous invisible molecular movements occurring within their cells to sustain life processes.",
+    hindi: "पौधे एक जगह से दूसरी जगह नहीं जा सकते, लेकिन उनके अंदर पानी और भोजन का प्रवाह होता है। इसलिए पौधों में भी आणविक गति होती है।"
+  },
+  {
+    text: "When balancing the chemical equation: Al + HCl → AlCl3 + H2, what is the balanced equation?",
+    hint: "रासायनिक समीकरण Al + HCl → AlCl3 + H2 को संतुलित करते समय, सही संतुलित समीकरण क्या होगा?",
+    options: ["Al + 3HCl → AlCl3 + H2", "2Al + 6HCl → 2AlCl3 + 3H2", "2Al + 3HCl → 2AlCl3 + H2", "Al + 2HCl → AlCl2 + H2"],
+    answer: 1,
+    explanation: "To balance Cl, we need 3 HCl. But that gives 3 H, which forms 1.5 H2 molecules. To avoid fractions, multiply everything by 2: 2Al + 6HCl → 2AlCl3 + 3H2.",
+    hindi: "दोनों तरफ परमाणु समान करने के लिए: 2 एल्युमीनियम, 6 हाइड्रोजन और 6 क्लोरीन चाहिए। इसलिए 2Al + 6HCl → 2AlCl3 + 3H2 सही है।"
+  },
+  {
+    text: "The functional group designated as '-OH' belongs to which category of organic compounds?",
+    hint: "'-OH' के रूप में निर्दिष्ट क्रियात्मक समूह (Functional group) कार्बनिक यौगिकों की किस श्रेणी से संबंधित है?",
+    options: ["Aldehydes", "Carboxylic Acids", "Ketones", "Alcohols (अल्कोहल)"],
+    answer: 3,
+    explanation: "The -OH group is the hydroxyl group, which is the characteristic functional group for all Alcohols.",
+    hindi: "'-OH' हाइड्रॉक्सिल समूह है, जो अल्कोहल (Alcohols) यौगिकों का विशिष्ट क्रियात्मक समूह है।"
+  },
+   {
+    text: "Which of the following is NOT classified as a tissue in the human body?",
+    hint: "निम्नलिखित में से किसे मानव शरीर में एक ऊतक (Tissue) के रूप में वर्गीकृत नहीं किया गया है?",
+    options: ["Blood", "Bone", "Muscle", "Neuron (न्यूरॉन)"],
+    answer: 3,
+    explanation: "A tissue is a structured group of cells. A neuron is a single, individual nerve cell, not a tissue. Blood, bone, and muscle are made up of many cells.",
+    hindi: "ऊतक कोशिकाओं का समूह होता है। न्यूरॉन केवल एक एकल कोशिका है, ऊतक नहीं।"
+  },
+  {
+    text: "In chemical terms, which of the following scenarios represents 'Oxidation'?",
+    hint: "रासायनिक दृष्टि से, निम्नलिखित में से कौन सा परिदृश्य 'ऑक्सीकरण' (Oxidation) का प्रतिनिधित्व करता है?",
+    options: ["Addition of hydrogen", "Loss of oxygen", "Loss of electrons (इलेक्ट्रॉनों का त्याग)", "Gain of electrons"],
+    answer: 2,
+    explanation: "Oxidation can be defined as the addition of oxygen, the removal of hydrogen, or the loss of electrons by an atom or molecule.",
+    hindi: "किसी पदार्थ से इलेक्ट्रॉनों का निकलना (Loss of electrons) ऑक्सीकरण कहलाता है।"
+  },
+  {
+    text: "What is the primary function of the 'Rough Endoplasmic Reticulum' (RER)?",
+    hint: "'खुरदरे एंडोप्लाज्मिक रेटिकुलम' (RER) का प्राथमिक कार्य क्या है?",
+    options: ["Synthesis of lipids and fats", "Synthesis of proteins (प्रोटीन का निर्माण)", "Producing energy", "Destroying waste"],
+    answer: 1,
+    explanation: "The RER is studded with ribosomes on its surface, which are the primary sites for protein synthesis in the cell.",
+    hindi: "RER की सतह पर राइबोसोम होते हैं, जो प्रोटीन (Proteins) बनाने का काम करते हैं।"
+  },
+  {
+    text: "Which cell organelle contains DNA that holds the information for making specific proteins?",
+    hint: "किस कोशिका अंगक (organelle) में वह DNA होता है जो विशिष्ट प्रोटीन बनाने की जानकारी रखता है?",
+    options: ["Ribosome", "Mitochondria", "Nucleus (केंद्रक / नाभिक)", "Lysosome"],
+    answer: 2,
+    explanation: "The nucleus houses the cell's genetic material (DNA), which dictates cell functions and provides the blueprints for synthesizing proteins.",
+    hindi: "केंद्रक (Nucleus) के अंदर DNA मौजूद होता है, जिसमें शरीर के लिए जरूरी प्रोटीन बनाने की सभी सूचनाएं होती हैं।"
+  },
+  {
+    text: "Which of the following statements about Concave Lenses is completely TRUE?",
+    hint: "अवतल लेंस (Concave Lenses) के बारे में निम्नलिखित में से कौन सा कथन पूर्णतः सत्य है?",
+    options: ["They always form real images", "They always form inverted images", "They always form virtual, erect images on the same side as the object (वे हमेशा वस्तु की तरफ आभासी और सीधा प्रतिबिंब बनाते हैं)", "They magnify the image greatly"],
+    answer: 2,
+    explanation: "No matter where the object is placed, a concave lens diverges light to form a virtual, erect, and diminished image on the same side as the object.",
+    hindi: "अवतल लेंस प्रकाश को फैला देता है, जिससे हमेशा वस्तु की ओर ही एक आभासी (Virtual), सीधा और छोटा प्रतिबिंब बनता है।"
+  },
+  {
+    text: "Which of the following properties is characteristic of a Metal?",
+    hint: "निम्नलिखित में से कौन सा गुण एक धातु (Metal) की विशेषता है?",
+    options: ["They are generally brittle and break easily", "They are poor conductors of heat", "They have very low melting points", "They are highly sonorous and produce a ringing sound (वे अत्यधिक ध्वन्यात्मक होते हैं और बजने वाली ध्वनि उत्पन्न करते हैं)"],
+    answer: 3,
+    explanation: "Metals are typically good conductors, malleable, ductile, and sonorous (produce a resonant sound when struck).",
+    hindi: "धातुओं को पीटने पर एक गूंजती हुई आवाज आती है, इस गुण को ध्वन्यात्मकता (Sonorous) कहते हैं।"
+  },
+  {
+    text: "When Lead Nitrate reacts with Potassium Iodide, a vivid yellow precipitate is formed. What is the chemical name of this precipitate?",
+    hint: "जब लेड नाइट्रेट पोटेशियम आयोडाइड के साथ प्रतिक्रिया करता है, तो एक चमकीला पीला अवक्षेप बनता है। इस अवक्षेप का रासायनिक नाम क्या है?",
+    options: ["Potassium Nitrate", "Lead Oxide", "Lead Iodide (लेड आयोडाइड)", "Potassium Oxide"],
+    answer: 2,
+    explanation: "This is a double displacement reaction forming soluble Potassium Nitrate and an insoluble yellow solid called Lead Iodide (PbI2).",
+    hindi: "इस अभिक्रिया में लेड आयोडाइड (PbI2) बनता है, जो पानी में घुलता नहीं है और नीचे पीले रंग के रूप में बैठ जाता है।"
+  },
+  {
+    text: "Why is Ethanol highly soluble in water?",
+    hint: "एथेनॉल पानी में अत्यधिक घुलनशील क्यों है?",
+    options: ["Because it contains a Ketone group", "Because it is an acid", "Due to the presence of the Hydroxyl (-OH) functional group (हाइड्रॉक्सिल (-OH) क्रियात्मक समूह की उपस्थिति के कारण)", "Because it is a non-polar gas"],
+    answer: 2,
+    explanation: "The -OH group in ethanol is polar and forms hydrogen bonds with water molecules, allowing it to dissolve uniformly in all proportions.",
+    hindi: "एथेनॉल में '-OH' (हाइड्रॉक्सिल) समूह होता है, जो इसे पानी के साथ मिलकर घुलने (घुलनशील बनने) में मदद करता है।"
+  },
+  {
+    text: "During an emergency 'fight or flight' situation, which hormone is rapidly secreted into the blood?",
+    hint: "आपातकालीन 'लड़ो या भागो' (fight or flight) स्थिति के दौरान, कौन सा हार्मोन रक्त में तेजी से स्रावित होता है?",
+    options: ["Insulin", "Thyroxine", "Testosterone", "Adrenaline (एड्रेनालाईन)"],
+    answer: 3,
+    explanation: "The adrenal glands secrete adrenaline to rapidly prepare the body for intense physical action by increasing heart rate and blood flow to muscles.",
+    hindi: "डर या खतरे के समय एड्रेनालाईन (Adrenaline) हार्मोन निकलता है, जो दिल की धड़कन बढ़ा देता है ताकि मांसपेशियों को ताकत मिले।"
+  },
+  {
+    text: "Which of the following represents an effective and biological method of protecting crops from pests?",
+    hint: "निम्नलिखित में से कौन फसलों को कीटों से बचाने के एक प्रभावी और जैविक (biological) तरीके का प्रतिनिधित्व करता है?",
+    options: ["Using heavy chemical pesticides", "Fumigating with poisonous gases", "Introducing natural predators (like frogs) to eat the pests (कीटों को खाने के लिए प्राकृतिक शिकारियों (जैसे मेंढक) को लाना)", "Burning the field"],
+    answer: 2,
+    explanation: "Biological pest control uses living organisms (predators, parasites) naturally hostile to the pest, reducing reliance on toxic chemicals.",
+    hindi: "फसलों को बचाने के लिए रसायनों के बजाय उन जीवों का उपयोग करना जो खुद हानिकारक कीड़ों को खा जाते हैं, यह एक जैविक विधि है।"
+  },
+  {
+    text: "In the central nervous system, the 'Cerebrum' is part of which major brain division?",
+    hint: "केंद्रीय तंत्रिका तंत्र में, 'प्रमस्तिष्क' (Cerebrum) मस्तिष्क के किस प्रमुख भाग का हिस्सा है?",
+    options: ["Midbrain", "Hindbrain", "Spinal Cord", "Forebrain (अग्र मस्तिष्क)"],
+    answer: 3,
+    explanation: "The cerebrum, which is responsible for reasoning, memory, and voluntary action, is the largest component of the forebrain.",
+    hindi: "प्रमस्तिष्क (Cerebrum) मस्तिष्क के आगे वाले और सबसे बड़े हिस्से, यानी अग्र मस्तिष्क (Forebrain) का भाग है।"
+  },
+  {
+    text: "The functional group '-CHO' belongs to which specific family of organic compounds?",
+    hint: "'-CHO' क्रियात्मक समूह कार्बनिक यौगिकों के किस विशिष्ट परिवार से संबंधित है?",
+    options: ["Carboxylic Acids", "Alcohols", "Aldehydes (एल्डिहाइड)", "Ketones"],
+    answer: 2,
+    explanation: "The -CHO group is the characteristic functional group of the Aldehyde family.",
+    hindi: "'-CHO' समूह हमेशा एल्डिहाइड (Aldehydes) यौगिकों में पाया जाता है।"
+  },
+  {
+    text: "What is the surgical sterilization procedure for males called, where the tube carrying sperm is cut?",
+    hint: "पुरुषों के लिए शल्य चिकित्सा नसबंदी प्रक्रिया को क्या कहा जाता है, जहां शुक्राणु ले जाने वाली नली को काटा जाता है?",
+    options: ["Tubectomy", "Castration", "Vasectomy (वैसेक्टोमी / नसबंदी)", "Appendectomy"],
+    answer: 2,
+    explanation: "Vasectomy involves cutting and sealing the vas deferens tubes to prevent sperm from entering the seminal fluid.",
+    hindi: "पुरुषों में शुक्रवाहिका नली (Vas deferens) को काटने की प्रक्रिया को वैसेक्टोमी (नसबंदी) कहा जाता है।"
+  },
+  {
+    text: "According to the Cartesian sign convention for spherical mirrors, how is the height of an erect image formed ABOVE the principal axis measured?",
+    hint: "गोलीय दर्पणों के लिए कार्टेशियन चिन्ह परिपाटी के अनुसार, मुख्य अक्ष के ऊपर (ABOVE) बने सीधे प्रतिबिंब की ऊंचाई कैसे मापी जाती है?",
+    options: ["Negative", "Zero", "Positive (धनात्मक)", "It depends on the mirror"],
+    answer: 2,
+    explanation: "Any height measured vertically upwards from the principal axis is considered positive.",
+    hindi: "मुख्य अक्ष से ऊपर की ओर मापी जाने वाली सभी ऊंचाइयां धनात्मक (Positive) होती हैं।"
+  },
+  {
+    text: "Which of the following is a true 'Homogeneous Mixture'?",
+    hint: "निम्नलिखित में से कौन सा एक सच्चा 'समांगी मिश्रण' (Homogeneous Mixture) है?",
+    options: ["Muddy water", "Oil and water", "Sugar dissolved completely in water (पानी में पूरी तरह घुली हुई चीनी)", "Sand and salt"],
+    answer: 2,
+    explanation: "A homogeneous mixture has a uniform composition throughout. Dissolved sugar water looks and tastes the same from top to bottom.",
+    hindi: "पानी में घुली चीनी एक समांगी मिश्रण है, क्योंकि इसमें चीनी के कण पानी में पूरी तरह और एक समान रूप से मिल जाते हैं।"
+  },
+  {
+    text: "The Stethoscope, a common medical tool, works primarily on the principle of:",
+    hint: "एक सामान्य चिकित्सा उपकरण, स्टेथोस्कोप, मुख्य रूप से किस सिद्धांत पर काम करता है?",
+    options: ["Refraction of sound", "Absorption of sound", "Diffraction of sound", "Multiple reflection of sound (ध्वनि का बहु-परावर्तन)"],
+    answer: 3,
+    explanation: "A stethoscope captures body sounds (like heartbeats) and channels them to the earpieces via multiple internal reflections inside its tubing.",
+    hindi: "स्टेथोस्कोप की नली के अंदर ध्वनि बार-बार टकराकर (परावर्तित होकर) डॉक्टर के कानों तक पहुँचती है।"
+  },
+  {
+    text: "Which of the following physical factors does NOT affect the buoyant force acting on an object immersed in a liquid?",
+    hint: "निम्नलिखित में से कौन सा भौतिक कारक किसी तरल में डूबी हुई वस्तु पर कार्य करने वाले उत्प्लावन बल (Buoyant force) को प्रभावित नहीं करता है?",
+    options: ["The density of the liquid", "The volume of the displaced liquid", "The local gravity", "The density of the solid object itself (ठोस वस्तु का अपना घनत्व)"],
+    answer: 3,
+    explanation: "Buoyant force depends entirely on the fluid displaced (Density of fluid × Volume displaced × g). The intrinsic density of the submerged object does not change this force.",
+    hindi: "उत्प्लावन बल वस्तु द्वारा हटाए गए तरल के भार पर निर्भर करता है, वस्तु के अपने घनत्व पर नहीं।"
+  },
+  {
+    text: "When a force does work on a stationary object and causes it to move, what does the work done equate to?",
+    hint: "जब कोई बल किसी स्थिर वस्तु पर कार्य करता है और उसे गतिमान कर देता है, तो किया गया कार्य किसके बराबर होता है?",
+    options: ["Its weight", "Its change in potential energy", "Its change in kinetic energy (उसकी गतिज ऊर्जा में परिवर्तन)", "Zero"],
+    answer: 2,
+    explanation: "According to the Work-Energy theorem, the net work done on an object equals the change in its kinetic energy.",
+    hindi: "कार्य-ऊर्जा प्रमेय के अनुसार, वस्तु पर किया गया कार्य उसकी गतिज ऊर्जा (Kinetic energy) में वृद्धि या परिवर्तन के बराबर होता है।"
+  },
+  {
+    text: "Which of the following is defined as the rate of flow of electric charge?",
+    hint: "निम्नलिखित में से किसे विद्युत आवेश के प्रवाह की दर के रूप में परिभाषित किया गया है?",
+    options: ["Voltage", "Resistance", "Power", "Electric Current (विद्युत धारा)"],
+    answer: 3,
+    explanation: "Electric current is the amount of electric charge flowing past a specified circuit point per unit time (I = Q/t).",
+    hindi: "एक सेकंड में तार से कितना आवेश (Charge) बहता है, उसे ही विद्युत धारा (Electric Current) कहते हैं।"
+  },
+  {
+    text: "What is the chemical name for the compound NaHCO3, commonly used in kitchens?",
+    hint: "रसोई में आमतौर पर उपयोग किए जाने वाले यौगिक NaHCO3 का रासायनिक नाम क्या है?",
+    options: ["Sodium Carbonate", "Sodium Chloride", "Sodium Hydroxide", "Sodium Hydrogen Carbonate / Sodium Bicarbonate (सोडियम हाइड्रोजन कार्बोनेट)"],
+    answer: 3,
+    explanation: "NaHCO3 is Sodium Hydrogen Carbonate, widely known as Baking Soda.",
+    hindi: "NaHCO3 को बेकिंग सोडा या सोडियम बाइकार्बोनेट कहा जाता है।"
+  },
+  {
+    text: "Which of the following represents an inorganic carbon compound?",
+    hint: "निम्नलिखित में से कौन एक अकार्बनिक कार्बन यौगिक (inorganic carbon compound) का प्रतिनिधित्व करता है?",
+    options: ["Methane", "Ethanol", "Glucose", "Calcium Carbide (कैल्शियम कार्बाइड)"],
+    answer: 3,
+    explanation: "Carbides, Carbonates, and Oxides of carbon are classified as inorganic compounds despite containing carbon atoms.",
+    hindi: "कार्बाइड, कार्बोनेट और कार्बन डाइऑक्साइड जैसे सरल यौगिकों को रसायन विज्ञान में अकार्बनिक (Inorganic) माना जाता है।"
+  },
+  {
+    text: "During the electrolytic refining of copper, the impure copper block is made the:",
+    hint: "तांबे के विद्युत अपघटनी शोधन (electrolytic refining) के दौरान, अशुद्ध तांबे के ब्लॉक को क्या बनाया जाता है?",
+    options: ["Cathode", "Electrolyte", "Salt bridge", "Anode (एनोड)"],
+    answer: 3,
+    explanation: "In electrolytic refining, the thick block of impure metal acts as the positive Anode, which dissolves into the solution during the process.",
+    hindi: "अशुद्ध धातु को हमेशा एनोड (Anode) बनाया जाता है, ताकि वह पानी में घुलकर शुद्ध रूप में कैथोड पर जा सके।"
+  },
+  {
+    text: "Which synthetic indicator remains colorless in acidic solutions but turns pink in basic solutions?",
+    hint: "कौन सा सिंथेटिक सूचक अम्लीय विलयन में रंगहीन रहता है लेकिन क्षारीय विलयन में गुलाबी हो जाता है?",
+    options: ["Methyl Orange", "Litmus", "Turmeric", "Phenolphthalein (फिनोलफ्थेलिन)"],
+    answer: 3,
+    explanation: "Phenolphthalein is a classic acid-base indicator that is clear/colorless in acids and neutral liquids, but turns a bright pink/fuchsia in bases.",
+    hindi: "फिनोलफ्थेलिन (Phenolphthalein) अम्ल में रंगहीन (बिना रंग का) रहता है और क्षार (Base) में डालते ही गुलाबी (Pink) हो जाता है।"
+  },
+  {
+    text: "What determines the specific electrical resistivity of a metallic wire?",
+    hint: "किसी धातु के तार की विशिष्ट विद्युत प्रतिरोधकता (resistivity) क्या निर्धारित करती है?",
+    options: ["Its length", "Its thickness", "Its shape", "The nature of the material and its temperature (पदार्थ की प्रकृति और उसका तापमान)"],
+    answer: 3,
+    explanation: "Resistivity is an intrinsic property. It does not depend on the dimensions (length/area) of the wire, only on what material it is made of and the ambient temperature.",
+    hindi: "प्रतिरोधकता (Resistivity) केवल इस बात पर निर्भर करती है कि तार किस धातु का बना है (जैसे कॉपर) और उसका तापमान क्या है।"
+  },
+  {
+    text: "Which of the following is considered a 'macronutrient' essential for plant growth?",
+    hint: "निम्नलिखित में से किसे पौधों के विकास के लिए आवश्यक 'मैक्रोन्यूट्रिएंट' माना जाता है?",
+    options: ["Zinc", "Iron", "Copper", "Nitrogen (नाइट्रोजन)"],
+    answer: 3,
+    explanation: "Plants require Nitrogen, Phosphorus, and Potassium (NPK) in large, primary quantities, making them macronutrients.",
+    hindi: "पौधों को अपनी वृद्धि के लिए मिट्टी से नाइट्रोजन (N), फास्फोरस (P) और पोटेशियम (K) सबसे अधिक मात्रा में चाहिए होते हैं।"
+ },
+ 
+ 
   {
     text: "When the temperature of a substance increases, what generally happens to its density?",
     hint: "जब किसी पदार्थ का तापमान बढ़ता है, तो उसके घनत्व (Density) पर क्या प्रभाव पड़ता है?",
