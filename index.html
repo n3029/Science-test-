@@ -392,7 +392,407 @@ const QUESTIONS = [
 
 
 
-
+  {
+    text: "Which of the following is NOT an example of a tissue?",
+    hint: "निम्नलिखित में से कौन सा ऊतक (Tissue) का उदाहरण नहीं है?",
+    options: ["Blood (रक्त)", "Muscle (मांसपेशी)", "Neuron (न्यूरॉन)", "Bone (अस्थि)"],
+    answer: 2,
+    explanation: "A tissue is a group of cells. A neuron is a single nerve cell, not a tissue. Blood, muscle, and bone are made up of a group of cells, hence they are tissues.",
+    hindi: "ऊतक कोशिकाओं का एक समूह है। न्यूरॉन एक एकल तंत्रिका कोशिका है, ऊतक नहीं। रक्त, मांसपेशी और अस्थि ऊतक के उदाहरण हैं।"
+  },
+  {
+    text: "Blood and bone are examples of which type of animal tissue?",
+    hint: "रक्त और अस्थि किस प्रकार के जंतु ऊतक के उदाहरण हैं?",
+    options: ["Epithelial tissue (उपकला ऊतक)", "Connective tissue (संयोजी ऊतक)", "Muscular tissue (पेशी ऊतक)", "Nervous tissue (तंत्रिका ऊतक)"],
+    answer: 1,
+    explanation: "Blood and bone connect different parts of the body and provide support, making them classic examples of connective tissue.",
+    hindi: "रक्त और अस्थि शरीर के विभिन्न हिस्सों को जोड़ते हैं, इसलिए ये संयोजी ऊतक (Connective tissue) के उदाहरण हैं।"
+  },
+  {
+    text: "According to chemistry, which of the following processes defines 'Oxidation'?",
+    hint: "रसायन विज्ञान के अनुसार, निम्नलिखित में से कौन सी प्रक्रिया 'ऑक्सीकरण' (Oxidation) को परिभाषित करती है?",
+    options: ["Loss of oxygen (ऑक्सीजन का हटना)", "Gain of electrons (इलेक्ट्रॉनों का ग्रहण)", "Loss of electrons (इलेक्ट्रॉनों का त्याग)", "Addition of hydrogen (हाइड्रोजन का जुड़ना)"],
+    answer: 2,
+    explanation: "Oxidation can be defined in two ways: the addition of oxygen to an element, or the loss of electrons from an atom/molecule (e.g., Na -> Na+ + e-).",
+    hindi: "ऑक्सीकरण को दो तरह से परिभाषित किया जा सकता है: ऑक्सीजन का जुड़ना या इलेक्ट्रॉनों का त्याग (Loss of electrons)।"
+  },
+  {
+    text: "A car is moving at a speed of 720 km/h. Brakes are applied, bringing it to a stop in 4 seconds. If the mass of the car is 80 kg, what is the force applied by the brakes?",
+    hint: "एक कार 720 किमी/घंटा की गति से चल रही है। ब्रेक लगाने पर यह 4 सेकंड में रुक जाती है। यदि कार का द्रव्यमान 80 किलोग्राम है, तो ब्रेक द्वारा लगाया गया बल क्या है?",
+    options: ["-2000 N", "-4000 N", "4000 N", "2000 N"],
+    answer: 1,
+    explanation: "First, convert 720 km/h to m/s: 720 × (5/18) = 200 m/s. Initial velocity (u) = 200, final (v) = 0, time (t) = 4s. Acceleration (a) = (0 - 200) / 4 = -50 m/s². Force (F) = m × a = 80 × (-50) = -4000 N.",
+    hindi: "v = u + at से त्वरण (a) निकालें, जो -50 m/s² आएगा। फिर बल F = ma से, 80 × (-50) = -4000 न्यूटन।"
+  },
+  {
+    text: "Which of the following statements about spherical lenses is INCORRECT?",
+    hint: "गोलीय लेंस के बारे में निम्नलिखित में से कौन सा कथन गलत है?",
+    options: ["They have two centers of curvature", "The optical center and center of curvature are the exact same point", "A convex lens is thicker at the center", "A concave lens is thinner at the center"],
+    answer: 1,
+    explanation: "The optical center is the midpoint of the lens, whereas the centers of curvature belong to the two imaginary spheres that form the lens. They are distinct points.",
+    hindi: "प्रकाशीय केंद्र (Optical center) लेंस का मध्य बिंदु है, जबकि वक्रता केंद्र (Center of curvature) उन गोलों का केंद्र है जिनसे लेंस बना है। ये दोनों एक बिंदु नहीं होते।"
+  },
+  {
+    text: "If the speed of sound in air is 340 m/s and a reflecting surface is 17 meters away, how much time will it take to hear the echo?",
+    hint: "यदि हवा में ध्वनि की गति 340 मीटर/सेकंड है और परावर्तक सतह 17 मीटर दूर है, तो गूंज (Echo) सुनने में कितना समय लगेगा?",
+    options: ["0.1 seconds", "0.2 seconds", "1.0 seconds", "0.05 seconds"],
+    answer: 0,
+    explanation: "An echo requires sound to travel to the surface and back. Total distance = 17 + 17 = 34 m. Time = Distance / Speed = 34 / 340 = 0.1 seconds.",
+    hindi: "गूंज के लिए ध्वनि जाती है और वापस आती है। कुल दूरी = 17 + 17 = 34 मीटर। समय = दूरी/गति = 34 / 340 = 0.1 सेकंड।"
+  },
+  {
+    text: "When a swimmer pushes the water backward, which force propels the swimmer forward?",
+    hint: "जब कोई तैराक पानी को पीछे की ओर धकेलता है, तो कौन सा बल तैराक को आगे बढ़ाता है?",
+    options: ["Gravitational force", "Frictional force", "The reaction force exerted by the water on the swimmer", "Buoyant force"],
+    answer: 2,
+    explanation: "According to Newton's Third Law of Motion, pushing water backward is the action, and the water pushing the swimmer forward is the equal and opposite reaction.",
+    hindi: "न्यूटन के तीसरे नियम के अनुसार, पानी को पीछे धकेलना क्रिया है, और पानी द्वारा तैराक को आगे धकेलना प्रतिक्रिया (Reaction) है।"
+  },
+  {
+    text: "Which of the following statements is true regarding the mass and weight of an object?",
+    hint: "किसी वस्तु के द्रव्यमान (Mass) और भार (Weight) के संबंध में कौन सा कथन सत्य है?",
+    options: ["Both mass and weight remain constant everywhere", "Weight is constant, but mass changes", "Mass is constant everywhere, but weight is variable", "Both mass and weight are variable"],
+    answer: 2,
+    explanation: "Mass is the amount of matter in an object and is constant everywhere in the universe. Weight is the force of gravity (W = mg) and varies depending on the local gravity.",
+    hindi: "द्रव्यमान (Mass) हर जगह समान रहता है, लेकिन भार (Weight) गुरुत्वाकर्षण (g) पर निर्भर करता है, इसलिए यह बदलता रहता है।"
+  },
+  {
+    text: "If the velocity of a moving object is doubled, what happens to its Kinetic Energy?",
+    hint: "यदि किसी गतिमान वस्तु का वेग दोगुना कर दिया जाए, तो उसकी गतिज ऊर्जा (Kinetic Energy) पर क्या प्रभाव पड़ेगा?",
+    options: ["It becomes half", "It doubles", "It remains the same", "It becomes four times"],
+    answer: 3,
+    explanation: "Kinetic energy is calculated as 1/2 mv². If velocity 'v' is doubled (2v), the square of velocity becomes 4v², making the kinetic energy four times its original value.",
+    hindi: "गतिज ऊर्जा 1/2 mv² होती है। यदि वेग को दोगुना (2v) किया जाए, तो उसका वर्ग 4v² हो जाता है, जिससे गतिज ऊर्जा चार गुना हो जाएगी।"
+  },
+  {
+    text: "In a neutralization reaction, an acid and a base react to form salt and water. Where does the water come from?",
+    hint: "उदासीनीकरण अभिक्रिया में, अम्ल और क्षार प्रतिक्रिया करके लवण और जल बनाते हैं। जल (Water) का निर्माण कैसे होता है?",
+    options: ["H+ ions from the acid combine with OH- ions from the base", "OH- ions from the acid combine with H+ ions from the base", "Hydrogen from the acid and Hydrogen from the base", "Oxygen from the air combines with Hydrogen from the base"],
+    answer: 0,
+    explanation: "Acids release H+ ions and bases release OH- ions in a solution. In a neutralization reaction, these ions combine to form H2O (water).",
+    hindi: "अम्ल से निकलने वाले H+ आयन और क्षार से निकलने वाले OH- आयन मिलकर जल (H2O) का निर्माण करते हैं।"
+  },
+  {
+    text: "Why is genetic variation important within a population of organisms?",
+    hint: "जीवों की आबादी में आनुवंशिक विविधता (Variation) क्यों महत्वपूर्ण है?",
+    options: ["It ensures that all organisms look exactly the same", "It increases the chances of survival under changing environmental conditions", "It stops the process of evolution", "It guarantees equal food for all"],
+    answer: 1,
+    explanation: "Variation provides diverse traits within a population. If environmental conditions change drastically, organisms with favorable variations are more likely to survive and prevent the extinction of the species.",
+    hindi: "विविधता प्रजातियों को बदलते पर्यावरण के अनुकूल ढलने में मदद करती है, जिससे उनके जीवित रहने की संभावना बढ़ जाती है।"
+  },
+  {
+    text: "Nucleons are the subatomic particles located inside the nucleus of an atom. Which particles constitute the nucleons?",
+    hint: "न्यूक्लियॉन परमाणु के नाभिक के अंदर स्थित उपपरमाण्विक कण हैं। न्यूक्लियॉन किन कणों से बने होते हैं?",
+    options: ["Protons and Neutrons", "Electrons and Protons", "Electrons and Neutrons", "Only Protons"],
+    answer: 0,
+    explanation: "The nucleus of an atom contains protons and neutrons. Because they reside in the nucleus, they are collectively referred to as nucleons.",
+    hindi: "परमाणु के नाभिक में प्रोटॉन और न्यूट्रॉन होते हैं, इसलिए इन्हें सामूहिक रूप से न्यूक्लियॉन (Nucleons) कहा जाता है।"
+  },
+  {
+    text: "How is the 'Formula Unit Mass' of an ionic compound calculated?",
+    hint: "किसी आयनिक यौगिक का 'सूत्र इकाई द्रव्यमान' (Formula Unit Mass) कैसे निकाला जाता है?",
+    options: ["By multiplying the atomic masses", "By adding the atomic masses of all the atoms present in the formula unit", "By subtracting the atomic number from atomic mass", "By dividing the mass of the metal by the non-metal"],
+    answer: 1,
+    explanation: "Formula unit mass is calculated exactly like molecular mass: by taking the sum of the atomic masses of all atoms present in the empirical formula of the ionic compound.",
+    hindi: "किसी आयनिक यौगिक के सूत्र में मौजूद सभी परमाणुओं के द्रव्यमान के योग (Sum) को ही सूत्र इकाई द्रव्यमान कहा जाता है।"
+  },
+  {
+    text: "An ionic bond is typically formed between which two types of elements?",
+    hint: "एक आयनिक बंध (Ionic bond) आमतौर पर किन दो प्रकार के तत्वों के बीच बनता है?",
+    options: ["Two non-metals", "Two metals", "A metal and a non-metal", "Two noble gases"],
+    answer: 2,
+    explanation: "Ionic bonds are formed through the transfer of electrons from a metal (which forms positive ions) to a non-metal (which forms negative ions).",
+    hindi: "आयनिक बंध हमेशा एक धातु (Metal) और एक अधातु (Non-metal) के बीच इलेक्ट्रॉनों के स्थानांतरण से बनता है।"
+  },
+  {
+    text: "Where are the kidneys located in the human body?",
+    hint: "मानव शरीर में गुर्दे (Kidneys) कहाँ स्थित होते हैं?",
+    options: ["In the chest cavity near the lungs", "In the abdomen, on either side of the backbone", "In the brain", "Just below the neck"],
+    answer: 1,
+    explanation: "The kidneys are two bean-shaped organs located in the abdominal cavity, towards the back, with one on each side of the spine (backbone).",
+    hindi: "गुर्दे उदर गुहा (Abdomen) में रीढ़ की हड्डी के दोनों ओर (पीछे की तरफ) स्थित होते हैं।"
+  },
+  {
+    text: "Growing two or more crops simultaneously in the same field in a definite row pattern is known as:",
+    hint: "एक ही खेत में एक निश्चित कतार पैटर्न में एक साथ दो या अधिक फसलें उगाने को क्या कहा जाता है?",
+    options: ["Crop rotation", "Mixed cropping", "Intercropping", "Monoculture"],
+    answer: 2,
+    explanation: "Intercropping involves cultivating two or more crops in a specific pattern (e.g., 2 rows of wheat, 1 row of gram) to maximize nutrient use and prevent pests from spreading.",
+    hindi: "खेत में एक निश्चित पैटर्न (कतारों में) दो या अधिक फसलें उगाने को इंटरक्रॉपिंग (Intercropping) कहते हैं।"
+  },
+  {
+    text: "What is a major advantage of intercropping?",
+    hint: "इंटरक्रॉपिंग का एक प्रमुख लाभ क्या है?",
+    options: ["It requires zero water", "It limits the spread of specific pests and maximizes nutrient utilization", "It turns weeds into useful plants", "It completely stops soil erosion automatically"],
+    answer: 1,
+    explanation: "Different crops use different nutrients, optimizing soil resources. Additionally, the patterned rows act as physical barriers that stop pests specific to one crop from spreading across the entire field.",
+    hindi: "इससे मिट्टी के पोषक तत्वों का सही इस्तेमाल होता है और एक फसल के कीड़े पूरे खेत में नहीं फैल पाते।"
+  },
+  {
+    text: "Under a microscope, why does the Rough Endoplasmic Reticulum (RER) appear rough?",
+    hint: "माइक्रोस्कोप के नीचे, रफ एंडोप्लाज्मिक रेटिकुलम (RER) खुरदरा क्यों दिखाई देता है?",
+    options: ["Due to the presence of Lysosomes", "Due to the presence of Ribosomes on its surface", "Because it is damaged", "Due to lipid accumulation"],
+    answer: 1,
+    explanation: "The surface of the Rough Endoplasmic Reticulum is studded with Ribosomes, which are the sites of protein synthesis, giving it a bumpy or 'rough' texture.",
+    hindi: "इसकी सतह पर राइबोसोम (Ribosomes) चिपके होते हैं, जो इसे खुरदरा बनाते हैं और प्रोटीन निर्माण का काम करते हैं।"
+  },
+  {
+    text: "In a chemistry lab, when is a liquid solution considered to be 'stable'?",
+    hint: "रसायन विज्ञान प्रयोगशाला में, किसी तरल विलयन (Solution) को 'स्थिर' कब माना जाता है?",
+    options: ["When it boils rapidly", "When the solute particles do not settle down at the bottom if left undisturbed", "When it changes color", "When it easily evaporates"],
+    answer: 1,
+    explanation: "A true solution is highly stable. The dissolved solute particles (like salt in water) are so small and thoroughly mixed that they do not settle down by gravity over time.",
+    hindi: "एक विलयन स्थिर तब होता है जब उसे बिना हिलाए छोड़ने पर भी विलेय (Solute) के कण नीचे नहीं बैठते।"
+  },
+  {
+    text: "Which of the following is considered an unwanted weed that should be removed from agricultural fields?",
+    hint: "निम्नलिखित में से किसे अवांछित खरपतवार (Weed) माना जाता है जिसे कृषि क्षेत्रों से हटा दिया जाना चाहिए?",
+    options: ["Wheat", "Parthenium (Carrot grass) / Xanthium", "Sugarcane", "Mustard"],
+    answer: 1,
+    explanation: "Parthenium and Xanthium are highly invasive weeds that compete with the main crop for essential nutrients, water, and sunlight, hindering crop growth.",
+    hindi: "पार्थेनियम (गाजर घास) और जैंथियम (गोखरू) खरपतवार हैं जो मुख्य फसल के पोषक तत्वों को सोख लेते हैं।"
+  },
+  {
+    text: "What is the common Indian name for the weed 'Xanthium'?",
+    hint: "'जैंथियम' (Xanthium) खरपतवार का सामान्य भारतीय नाम क्या है?",
+    options: ["Gajar Ghas", "Gokhru (गोखरू)", "Bathua", "Neem"],
+    answer: 1,
+    explanation: "Xanthium is locally known as 'Gokhru' in India, known for its thorny burrs.",
+    hindi: "जैंथियम को भारत में गोखरू कहा जाता है।"
+  },
+  {
+    text: "In Fleming's Left-Hand Rule used for electric motors, what does the thumb indicate?",
+    hint: "इलेक्ट्रिक मोटर्स के लिए उपयोग किए जाने वाले फ्लेमिंग के बाएं हाथ के नियम में, अंगूठा (Thumb) क्या दर्शाता है?",
+    options: ["Direction of magnetic field", "Direction of current", "Direction of Force / Motion on the conductor", "Voltage"],
+    answer: 2,
+    explanation: "According to Fleming's Left-Hand Rule, the Thumb points in the direction of the magnetic Force (or resulting Motion), the index finger indicates Magnetic Field, and the middle finger indicates Current.",
+    hindi: "फ्लेमिंग के बाएं हाथ के नियम में, अंगूठा चालक पर लगने वाले बल (Force) या गति की दिशा को दर्शाता है।"
+  },
+  {
+    text: "If two sound waves have the exact same frequency, but one sounds much louder than the other, what is the difference between them?",
+    hint: "यदि दो ध्वनि तरंगों की आवृत्ति बिल्कुल समान है, लेकिन एक की आवाज़ दूसरे से बहुत अधिक तेज है, तो उनमें क्या अंतर है?",
+    options: ["The louder sound has a higher speed", "The louder sound has a larger Amplitude", "The louder sound has a longer wavelength", "The louder sound has a different pitch"],
+    answer: 1,
+    explanation: "Loudness is primarily determined by the amplitude of the sound wave. A wave with a larger amplitude carries more energy and sounds louder.",
+    hindi: "ध्वनि की प्रबलता (Loudness) उसके आयाम (Amplitude) पर निर्भर करती है। बड़ा आयाम अधिक तेज आवाज पैदा करता है।"
+  },
+  {
+    text: "Which plant is known to reproduce vegetatively through its roots?",
+    hint: "कौन सा पौधा अपनी जड़ों के माध्यम से वानस्पतिक रूप से प्रजनन करने के लिए जाना जाता है?",
+    options: ["Potato", "Bryophyllum", "Sweet Potato (शकरकंद)", "Onion"],
+    answer: 2,
+    explanation: "Sweet potato is a modified root (tuberous root) that can develop adventitious buds, which grow into completely new plants.",
+    hindi: "शकरकंद (Sweet potato) की जड़ से नया पौधा उग सकता है, जो जड़ द्वारा कायिक प्रवर्धन का एक उदाहरण है।"
+  },
+  {
+    text: "A passenger standing in a moving bus falls forward when the bus stops suddenly. This phenomenon is best explained by:",
+    hint: "चलती बस में खड़ा एक यात्री बस के अचानक रुकने पर आगे की ओर गिर जाता है। इस घटना को किसके द्वारा सबसे अच्छी तरह समझाया जा सकता है?",
+    options: ["Newton's Third Law", "Law of Gravitation", "Newton's First Law / Law of Inertia", "Conservation of Momentum"],
+    answer: 2,
+    explanation: "Due to the inertia of motion, the passenger's upper body tends to keep moving forward at the bus's original speed even after the lower body stops along with the bus.",
+    hindi: "न्यूटन के पहले नियम (जड़त्व का नियम) के अनुसार, गति का जड़त्व यात्री के शरीर को आगे की ओर गतिमान रखने का प्रयास करता है।"
+  },
+   {
+    text: "The fundamental biological process of taking in food from the outside and using it to obtain energy and raw materials for life processes is called:",
+    hint: "बाहर से भोजन ग्रहण करने और जीवन प्रक्रियाओं के लिए ऊर्जा और कच्चा माल प्राप्त करने के लिए उसका उपयोग करने की मूलभूत जैविक प्रक्रिया क्या कहलाती है?",
+    options: ["Respiration (श्वसन)", "Excretion (उत्सर्जन)", "Nutrition (पोषण)", "Digestion (पाचन)"],
+    answer: 2,
+    explanation: "Nutrition is the overarching process by which living organisms acquire the necessary food and nutrients from their environment to sustain life.",
+    hindi: "भोजन ग्रहण करने और शरीर के लिए उसका उपयोग करने की संपूर्ण प्रक्रिया को पोषण (Nutrition) कहा जाता है।"
+  },
+  {
+    text: "If 10 identical resistors, each with a resistance of 'R', are connected in a series combination, what is the total equivalent resistance?",
+    hint: "यदि 'R' प्रतिरोध वाले 10 समान प्रतिरोधक एक श्रेणी (Series) क्रम में जुड़े हैं, तो कुल समतुल्य प्रतिरोध क्या होगा?",
+    options: ["10/R", "R/10", "10 + R", "10R"],
+    answer: 3,
+    explanation: "In a series circuit, resistances add up algebraically (R_eq = R1 + R2 + ...). Adding 'R' ten times results in 10R.",
+    hindi: "श्रेणी क्रम में प्रतिरोध जुड़ जाते हैं। 10 बार 'R' जोड़ने पर कुल प्रतिरोध 10R हो जाएगा।"
+  },
+  {
+    text: "Where should an object be placed in front of a Convex Lens to obtain a real, inverted image that is the EXACT same size as the object?",
+    hint: "वस्तु के बिल्कुल समान आकार का वास्तविक और उल्टा प्रतिबिंब प्राप्त करने के लिए वस्तु को उत्तल लेंस (Convex Lens) के सामने कहाँ रखा जाना चाहिए?",
+    options: ["At the focus (F)", "At twice the focal length (2F)", "Between F and the optical center", "At infinity"],
+    answer: 1,
+    explanation: "When an object is placed at 2F (center of curvature) of a convex lens, its image is formed at 2F on the other side, and it is real, inverted, and identically sized.",
+    hindi: "उत्तल लेंस में, जब वस्तु को 2F (फोकस दूरी के दोगुने) पर रखा जाता है, तो समान आकार का वास्तविक और उल्टा प्रतिबिंब 2F पर ही बनता है।"
+  },
+  {
+    text: "Corrosion of a metal, such as the rusting of iron, is an example of which type of change?",
+    hint: "किसी धातु का संक्षारण, जैसे लोहे में जंग लगना, किस प्रकार के परिवर्तन का एक उदाहरण है?",
+    options: ["Physical change", "Chemical change (रासायनिक परिवर्तन)", "No change occurs", "Reversible change"],
+    answer: 1,
+    explanation: "Corrosion involves the metal reacting with oxygen and moisture to form an entirely new compound (e.g., iron oxide). Creating a new substance is a chemical change.",
+    hindi: "संक्षारण में धातु हवा और नमी से क्रिया करके एक नया पदार्थ (जंग) बनाती है, इसलिए यह एक रासायनिक परिवर्तन (Chemical change) है।"
+  },
+  {
+    text: "Why is the melting of ice considered a physical change rather than a chemical change?",
+    hint: "बर्फ के पिघलने को रासायनिक परिवर्तन के बजाय भौतिक परिवर्तन क्यों माना जाता है?",
+    options: ["It happens naturally", "The state changes, but no new chemical substance is formed", "It requires heat", "It is an irreversible process"],
+    answer: 1,
+    explanation: "Ice (solid H2O) melting into water (liquid H2O) involves only a change in physical state. The chemical composition remains H2O.",
+    hindi: "बर्फ के पिघलने पर कोई नया पदार्थ नहीं बनता, केवल अवस्था (ठोस से द्रव) बदलती है, इसलिए यह भौतिक परिवर्तन है।"
+  },
+  {
+    text: "A person travels 100 meters in a straight line from point O to point A. They then turn around and travel 30 meters back towards O, stopping at point B. What are the Distance and Displacement respectively?",
+    hint: "एक व्यक्ति बिंदु O से A तक सीधी रेखा में 100 मीटर चलता है, फिर मुड़कर O की ओर 30 मीटर वापस आकर बिंदु B पर रुकता है। क्रमशः दूरी (Distance) और विस्थापन (Displacement) क्या हैं?",
+    options: ["Distance: 70m, Displacement: 130m", "Distance: 100m, Displacement: 30m", "Distance: 130m, Displacement: 70m", "Distance: 130m, Displacement: 130m"],
+    answer: 2,
+    explanation: "Distance is the total path length (100 + 30 = 130m). Displacement is the shortest straight-line distance from start to end (100 - 30 = 70m).",
+    hindi: "दूरी (कुल चला गया रास्ता) = 100 + 30 = 130 मीटर। विस्थापन (शुरुआती बिंदु O और अंतिम बिंदु B के बीच की न्यूनतम दूरी) = 100 - 30 = 70 मीटर।"
+  },
+  {
+    text: "How many rectangular lateral surfaces does a standard triangular glass prism have?",
+    hint: "एक मानक त्रिभुजाकार कांच के प्रिज्म में कितनी आयताकार पार्श्व सतहें (Rectangular lateral surfaces) होती हैं?",
+    options: ["2", "3", "4", "5"],
+    answer: 1,
+    explanation: "A standard triangular prism is made up of 2 triangular bases and 3 rectangular lateral surfaces that connect them.",
+    hindi: "एक त्रिभुजाकार प्रिज्म में 3 आयताकार सतहें (जो किनारों को बनाती हैं) और 2 त्रिभुजाकार आधार (Bases) होते हैं।"
+  },
+  {
+    text: "What is the geometric shape of the two bases of a standard triangular glass prism?",
+    hint: "मानक त्रिभुजाकार कांच के प्रिज्म के दो आधारों (Bases) का ज्यामितीय आकार क्या होता है?",
+    options: ["Square", "Circular", "Rectangular", "Triangular (त्रिभुजाकार)"],
+    answer: 3,
+    explanation: "The parallel, opposite ends of a triangular prism are shaped as triangles, which serve as its foundational bases.",
+    hindi: "प्रिज्म के दोनों सिरे (आधार) त्रिभुज (Triangle) के आकार के होते हैं।"
+  },
+  {
+    text: "A runner completes exactly one full round of a circular track of radius 175m in 35 seconds. What is the runner's average velocity?",
+    hint: "एक धावक 175 मीटर त्रिज्या वाले वृत्ताकार ट्रैक का ठीक एक पूरा चक्कर 35 सेकंड में पूरा करता है। धावक का औसत वेग (Average velocity) क्या है?",
+    options: ["10 m/s", "5 m/s", "Zero (शून्य)", "35 m/s"],
+    answer: 2,
+    explanation: "Average velocity is calculated as Total Displacement / Total Time. Since the runner returns to the exact starting point, the displacement is zero, making the average velocity zero.",
+    hindi: "चक्कर पूरा करने पर विस्थापन (Displacement) शून्य हो जाता है। औसत वेग = विस्थापन/समय, इसलिए औसत वेग भी शून्य होगा।"
+  },
+  {
+    text: "According to Niels Bohr's model of the atom, how do electrons behave?",
+    hint: "नील्स बोर के परमाणु मॉडल के अनुसार, इलेक्ट्रॉन कैसे व्यवहार करते हैं?",
+    options: ["They move chaotically anywhere inside the nucleus", "They revolve around the nucleus in discrete, specific orbits or shells", "They remain stationary outside the nucleus", "They share spaces with protons inside the nucleus"],
+    answer: 1,
+    explanation: "Bohr postulated that electrons do not radiate energy as they revolve because they travel in fixed, discrete circular orbits (energy levels) around the nucleus.",
+    hindi: "बोर के अनुसार, इलेक्ट्रॉन नाभिक के चारों ओर कुछ निश्चित, अनुमत कक्षाओं (Orbits) में ही चक्कर लगाते हैं।"
+  },
+  {
+    text: "What are the small, highly branched structures extending from the cell body of a neuron called?",
+    hint: "न्यूरॉन के कोशिका काय (Cell body) से फैली हुई छोटी, अत्यधिक शाखित संरचनाओं को क्या कहा जाता है?",
+    options: ["Axon", "Synapse", "Dendrites (ध्रुमिका / डेंड्राइट्स)", "Myelin sheath"],
+    answer: 2,
+    explanation: "Dendrites are tree-like extensions that receive chemical/electrical signals from neighboring neurons and transmit them to the cell body.",
+    hindi: "कोशिका काय से निकलने वाली शाखाओं को डेंड्राइट्स (Dendrites) कहते हैं, जो दूसरे न्यूरॉन्स से संदेश ग्रहण करते हैं।"
+  },
+  {
+    text: "Which of the following correctly describes a substance in the Liquid state?",
+    hint: "निम्नलिखित में से कौन द्रव (Liquid) अवस्था में किसी पदार्थ का सही वर्णन करता है?",
+    options: ["It has a fixed shape and fixed volume", "It has neither a fixed shape nor a fixed volume", "It has a fixed volume but takes the shape of its container", "It can be easily compressed like a gas"],
+    answer: 2,
+    explanation: "Liquids have a definite volume (they cannot be easily compressed), but they flow and assume the shape of whatever vessel holds them.",
+    hindi: "द्रव का आयतन निश्चित होता है (जैसे 1 लीटर पानी), लेकिन इसका आकार निश्चित नहीं होता, यह बर्तन का आकार ले लेता है।"
+  },
+  {
+    text: "In agriculture, chemicals that are specifically formulated to kill pests and insects are called:",
+    hint: "कृषि में, विशेष रूप से कीटों और कीड़ों को मारने के लिए तैयार किए गए रसायनों को क्या कहा जाता है?",
+    options: ["Fertilizers", "Fungicides", "Insecticides (कीटनाशक)", "Weedicides"],
+    answer: 2,
+    explanation: "Insecticides are a specific type of pesticide used globally in agriculture to eliminate insects that harm crops.",
+    hindi: "फसलों को नुकसान पहुंचाने वाले कीड़ों को मारने के लिए उपयोग किए जाने वाले रसायनों को कीटनाशक (Insecticides) कहते हैं।"
+  },
+  {
+    text: "The chest cavity (thoracic cavity) of the human body safely houses which vital organs?",
+    hint: "मानव शरीर की छाती गुहा (Chest cavity) में कौन से महत्वपूर्ण अंग सुरक्षित रूप से स्थित होते हैं?",
+    options: ["Stomach and Liver", "Kidneys and Intestines", "Lungs and Heart", "Brain and Spinal cord"],
+    answer: 2,
+    explanation: "The ribcage surrounds the thoracic (chest) cavity, acting as a bony armor that protects the highly sensitive lungs and heart.",
+    hindi: "छाती गुहा (Chest cavity) में हमारे फेफड़े (Lungs) और हृदय (Heart) मौजूद होते हैं, जिनकी पसलियां रक्षा करती हैं।"
+  },
+  {
+    text: "Which part of the human brain is the primary center for thinking, intelligence, and voluntary actions?",
+    hint: "मानव मस्तिष्क का कौन सा भाग सोचने, बुद्धिमत्ता और स्वैच्छिक कार्यों का प्राथमिक केंद्र है?",
+    options: ["Cerebellum", "Medulla", "Cerebrum (प्रमस्तिष्क)", "Spinal cord"],
+    answer: 2,
+    explanation: "The cerebrum is the largest part of the brain (located in the forebrain) and is responsible for reasoning, memory, thought, and sensory processing.",
+    hindi: "प्रमस्तिष्क (Cerebrum) मस्तिष्क का मुख्य सोचने वाला भाग है, जो याददाश्त और बुद्धिमत्ता (Intelligence) को नियंत्रित करता है।"
+  },
+  {
+    text: "The Cerebrum, Thalamus, and Hypothalamus are all integral parts of which major brain division?",
+    hint: "प्रमस्तिष्क, थैलेमस और हाइपोथैलेमस मस्तिष्क के किस प्रमुख भाग के अभिन्न अंग हैं?",
+    options: ["Forebrain (अग्र मस्तिष्क)", "Midbrain (मध्य मस्तिष्क)", "Hindbrain (पश्च मस्तिष्क)", "Spinal cord"],
+    answer: 0,
+    explanation: "The forebrain is the largest brain division, anatomically comprised of the cerebrum, thalamus, and hypothalamus.",
+    hindi: "ये तीनों संरचनाएं मस्तिष्क के सबसे बड़े हिस्से, अग्र मस्तिष्क (Forebrain) के भाग हैं।"
+  },
+  {
+    text: "If an object is kept stationary on a table, the net force acting on it is:",
+    hint: "यदि किसी वस्तु को मेज पर स्थिर रखा जाता है, तो उस पर लगने वाला कुल बल (Net force) क्या है?",
+    options: ["Maximum", "Equal to its weight", "Zero (शून्य)", "Infinite"],
+    answer: 2,
+    explanation: "According to Newton's first law, a stationary object has zero acceleration, meaning all forces (gravity pulling down, table pushing up) are perfectly balanced, making the net force zero.",
+    hindi: "स्थिर वस्तु पर बल संतुलित होते हैं (गुरुत्वाकर्षण बल नीचे और मेज की प्रतिक्रिया ऊपर)। इसलिए कुल बल शून्य (Zero) होता है।"
+  },
+  {
+    text: "Which plant is famous for vegetative propagation through adventitious buds that grow on its leaves?",
+    hint: "कौन सा पौधा अपनी पत्तियों पर उगने वाली कलियों के माध्यम से वानस्पतिक प्रजनन (Vegetative propagation) के लिए प्रसिद्ध है?",
+    options: ["Potato", "Sweet potato", "Bryophyllum (पत्थरचट्टा)", "Rose"],
+    answer: 2,
+    explanation: "Bryophyllum leaves develop small plantlets along their margins. When these drop to the soil, they grow into new independent plants.",
+    hindi: "ब्रायोफाइलम (पत्थरचट्टा) की पत्तियों के किनारों पर कलियां उगती हैं, जिनसे नए पौधे बनते हैं।"
+  },
+  {
+    text: "In the context of the human brain, which part is specifically responsible for maintaining posture and balance?",
+    hint: "मानव मस्तिष्क के संदर्भ में, कौन सा भाग विशेष रूप से मुद्रा (posture) और संतुलन बनाए रखने के लिए जिम्मेदार है?",
+    options: ["Cerebrum", "Hypothalamus", "Cerebellum (अनुमस्तिष्क)", "Pons"],
+    answer: 2,
+    explanation: "The cerebellum, located at the back of the brain (hindbrain), coordinates voluntary movements, posture, and bodily balance.",
+    hindi: "अनुमस्तिष्क (Cerebellum) हमारे शरीर का संतुलन और चलने-फिरने की मुद्रा को नियंत्रित करता है।"
+  },
+  {
+    text: "When passing through a glass prism, which color of the visible light spectrum undergoes the maximum deviation?",
+    hint: "कांच के प्रिज्म से गुजरते समय, दृश्य प्रकाश स्पेक्ट्रम का कौन सा रंग सबसे अधिक विचलित (मुड़ता) होता है?",
+    options: ["Red", "Green", "Yellow", "Violet (बैंगनी)"],
+    answer: 3,
+    explanation: "Violet light has the shortest wavelength in the visible spectrum. Consequently, it slows down the most in glass and bends (deviates) the maximum.",
+    hindi: "बैंगनी रंग की तरंगदैर्ध्य सबसे कम होती है, इसलिए प्रिज्म में यह सबसे अधिक मुड़ता (Deviation) है।"
+  },
+  {
+    text: "When an atom LOSES an electron to form a positive ion (cation), the process is chemically defined as:",
+    hint: "जब कोई परमाणु धनात्मक आयन (कैटायन) बनाने के लिए एक इलेक्ट्रॉन खोता है, तो इस प्रक्रिया को रासायनिक रूप से क्या कहा जाता है?",
+    options: ["Reduction", "Oxidation (ऑक्सीकरण)", "Neutralization", "Displacement"],
+    answer: 1,
+    explanation: "In chemistry, 'LEO' (Loss of Electrons is Oxidation) applies. Removing an electron from an atom increases its oxidation state.",
+    hindi: "इलेक्ट्रॉनों का निकलना (त्याग) ऑक्सीकरण (Oxidation) कहलाता है।"
+  },
+  {
+    text: "Which of the following describes 'Reduction' in terms of electrons?",
+    hint: "इलेक्ट्रॉनों के संदर्भ में 'अपचयन' (Reduction) का वर्णन निम्नलिखित में से कौन करता है?",
+    options: ["Loss of electrons", "Gain of electrons (इलेक्ट्रॉनों का ग्रहण)", "Sharing of electrons", "Destruction of electrons"],
+    answer: 1,
+    explanation: "In chemistry, 'GER' (Gain of Electrons is Reduction) applies. Adding an electron to an atom reduces its overall oxidation state.",
+    hindi: "इलेक्ट्रॉनों को ग्रहण करना अपचयन (Reduction) कहलाता है।"
+  },
+  {
+    text: "A 100 kg car accelerates from rest to 20 m/s in 5 seconds. What is the net force acting on the car?",
+    hint: "एक 100 किलोग्राम की कार विराम अवस्था से 5 सेकंड में 20 मीटर/सेकंड तक त्वरित होती है। कार पर लगने वाला कुल बल क्या है?",
+    options: ["200 N", "400 N", "500 N", "1000 N"],
+    answer: 1,
+    explanation: "First, find acceleration: a = (v - u) / t = (20 - 0) / 5 = 4 m/s². Then, calculate force: F = m × a = 100 × 4 = 400 Newtons.",
+    hindi: "त्वरण a = (20 - 0) / 5 = 4 m/s²। बल F = m × a = 100 × 4 = 400 न्यूटन।"
+  },
+  {
+    text: "Why do athletes often wear spiked shoes while running on the field?",
+    hint: "एथलीट अक्सर मैदान पर दौड़ते समय स्पाइक्ड (कील वाले) जूते क्यों पहनते हैं?",
+    options: ["To look fashionable", "To increase friction with the ground and prevent slipping (जमीन के साथ घर्षण बढ़ाने और फिसलने से रोकने के लिए)", "To decrease friction", "To reduce their mass"],
+    answer: 1,
+    explanation: "Spikes dig into the ground, significantly increasing the interlocking (friction) between the shoe and the surface, providing a strong grip.",
+    hindi: "कीलें जमीन में धंस जाती हैं, जिससे घर्षण (Friction) बढ़ता है और एथलीट फिसलने से बच जाते हैं।"
+  },
+  {
+    text: "What happens to the pressure exerted by a liquid when the depth of the liquid increases?",
+    hint: "जब तरल की गहराई बढ़ती है तो तरल द्वारा लगाए गए दबाव का क्या होता है?",
+    options: ["It decreases", "It remains constant", "It becomes zero", "It increases (यह बढ़ता है)"],
+    answer: 3,
+    explanation: "Liquid pressure is given by P = hρg (height × density × gravity). As depth (height of the liquid column above) increases, the pressure increases.",
+    hindi: "गहराई बढ़ने पर तरल का दबाव (Pressure) बढ़ता है, क्योंकि ऊपर मौजूद तरल का वजन (भार) बढ़ जाता है।"
+   },
+ 
 
    {
     text: "According to Bohr's model of the atom, where do electrons revolve?",
