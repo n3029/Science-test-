@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5-Day Study Timetable (6 Chapters/Day)</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: #1a1a2e;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 6px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+  .subtitle {
+    color: #aac4ff;
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .progress-bar-wrap {
+    max-width: 960px;
+    width: 100%;
+    margin-bottom: 20px;
+    background: #162d4a;
+    border-radius: 8px;
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .progress-label { color: #aac4ff; font-weight: 700; font-size: 0.85rem; white-space: nowrap; }
+  .bar-bg { flex: 1; height: 12px; background: #1e3a5f; border-radius: 6px; overflow: hidden; }
+  .bar-fill { height: 100%; background: linear-gradient(90deg, #2ecc71, #27ae60); border-radius: 6px; transition: width 0.4s ease; }
+  .progress-pct { color: #2ecc71; font-weight: 800; font-size: 0.9rem; }
+
+  .day-section {
+    max-width: 960px;
+    width: 100%;
+    margin-bottom: 22px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+  }
+
+  .day-header {
+    background: #1e3a5f;
+    color: #fff;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Oswald', sans-serif;
+  }
+  .day-header .day-title {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .day-header .day-progress {
+    font-size: 0.8rem;
+    color: #2ecc71;
+    font-weight: 700;
+  }
+
+  .chapter-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: #d0d8ec;
+  }
+  @media (max-width: 700px) {
+    .chapter-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .chapter-card {
+    background: #f0f4ff;
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: background 0.2s;
+  }
+  .chapter-card:hover { background: #e0e9ff; }
+
+  .chapter-top { display: flex; align-items: center; gap: 10px; }
+  .chapter-icon { font-size: 1.6rem; flex-shrink: 0; }
+  .chapter-name { font-weight: 800; font-size: 0.9rem; line-height: 1.15; }
+  .chapter-sub { font-size: 0.7rem; font-weight: 700; color: #555; }
+
+  .bio  .chapter-name { color: #2a7a2a; }
+  .phy  .chapter-name { color: #1a5fa0; }
+  .chem .chapter-name { color: #7a2a9a; }
+
+  .diff-badge {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 10px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    width: fit-content;
+  }
+  .diff-easy   { background: #d4f4dd; color: #1e7a34; }
+  .diff-medium { background: #fdecc8; color: #a5680a; }
+  .diff-hard   { background: #fbd6d6; color: #b5261f; }
+
+  .chapter-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+  .chapter-status input[type="checkbox"] { width: 15px; height: 15px; cursor: pointer; }
+  .chapter-status label { cursor: pointer; }
+  .status-complete   { color: #2a7a2a; }
+  .status-incomplete { color: #c0392b; }
+</style>
+</head>
+<body>
+
+<h1>📅 5-Day Study Timetable</h1>
+<div class="subtitle">6 chapters/day &middot; mix of easy, medium &amp; hard topics</div>
+
+<div class="progress-bar-wrap">
+  <span class="progress-label">Overall Progress:</span>
+  <div class="bar-bg"><div class="bar-fill" id="bar" style="width:0%"></div></div>
+  <span class="progress-pct" id="pct">0%</span>
+</div>
+
+<div id="plan"></div>
+
+<script>
+// ── Chapter data: subject class = bio | phy | chem, diff = easy | medium | hard ──
+const planData = [
+  { day: 1, chapters: [
+    { key:"d1c1", icon:"🍎", name:"Nutrition", subj:"Biology", cls:"bio", diff:"easy" },
+    { key:"d1c2", icon:"🧪", name:"Matter", subj:"Chemistry", cls:"chem", diff:"easy" },
+    { key:"d1c3", icon:"📐", name:"Unit and Measurement", subj:"Physics", cls:"phy", diff:"medium" },
+    { key:"d1c4", icon:"❤️", name:"Blood Circulatory System", subj:"Biology", cls:"bio", diff:"medium" },
+    { key:"d1c5", icon:"👁️", name:"Human Eye", subj:"Physics", cls:"phy", diff:"hard" },
+    { key:"d1c6", icon:"🏃", name:"Motion", subj:"Physics", cls:"phy", diff:"hard" },
+  ]},
+  { day: 2, chapters: [
+    { key:"d2c1", icon:"🧫", name:"Classification of Matter", subj:"Chemistry", cls:"chem", diff:"easy" },
+    { key:"d2c2", icon:"🫀", name:"Digestive System", subj:"Biology", cls:"bio", diff:"easy" },
+    { key:"d2c3", icon:"🔬", name:"Atomic Structure", subj:"Chemistry", cls:"chem", diff:"medium" },
+    { key:"d2c4", icon:"⚗️", name:"Chemical Reactions", subj:"Chemistry", cls:"chem", diff:"medium" },
+    { key:"d2c5", icon:"⚛️", name:"Atoms and Molecules", subj:"Chemistry", cls:"chem", diff:"hard" },
+    { key:"d2c6", icon:"💪", name:"Force and Laws of Motion", subj:"Physics", cls:"phy", diff:"hard" },
+  ]},
+  { day: 3, chapters: [
+    { key:"d3c1", icon:"🫘", name:"Excretory System", subj:"Biology", cls:"bio", diff:"easy" },
+    { key:"d3c2", icon:"🫁", name:"Endocrine System", subj:"Biology", cls:"bio", diff:"easy" },
+    { key:"d3c3", icon:"🧠", name:"Nervous System", subj:"Biology", cls:"bio", diff:"medium" },
+    { key:"d3c4", icon:"🧴", name:"Acids, Bases & Salts", subj:"Chemistry", cls:"chem", diff:"medium" },
+    { key:"d3c5", icon:"🌍", name:"Gravitation", subj:"Physics", cls:"phy", diff:"hard" },
+    { key:"d3c6", icon:"⚡", name:"Work, Energy and Power", subj:"Physics", cls:"phy", diff:"hard" },
+  ]},
+  { day: 4, chapters: [
+    { key:"d4c1", icon:"🌿", name:"Botany", subj:"Biology", cls:"bio", diff:"easy" },
+    { key:"d4c2", icon:"🧲", name:"Metals and Non-Metals", subj:"Chemistry", cls:"chem", diff:"medium" },
+    { key:"d4c3", icon:"🔭", name:"Cell + Tissue", subj:"Biology", cls:"bio", diff:"medium" },
+    { key:"d4c4", icon:"💡", name:"Light", subj:"Physics", cls:"phy", diff:"hard" },
+    { key:"d4c5", icon:"🔗", name:"Carbon and Compounds", subj:"Chemistry", cls:"chem", diff:"hard" },
+    { key:"d4c6", icon:"🔌", name:"Electricity", subj:"Physics", cls:"phy", diff:"hard" },
+  ]},
+  { day: 5, chapters: [
+    { key:"d5c1", icon:"🧬", name:"Reproduction in Organisms", subj:"Biology", cls:"bio", diff:"medium" },
+    { key:"d5c2", icon:"🔊", name:"Sound", subj:"Physics", cls:"phy", diff:"medium" },
+    { key:"d5c3", icon:"🧲", name:"Magnetic Effect of Electric Current", subj:"Physics", cls:"phy", diff:"hard" },
+    { key:"d5c4", icon:"🧬", name:"Heredity", subj:"Biology", cls:"bio", diff:"hard" },
+    { key:"d5c5", icon:"🌎", name:"Our Environment", subj:"Biology", cls:"bio", diff:"easy" },
+    { key:"d5c6", icon:"🔋", name:"Sources of Energy", subj:"Physics", cls:"phy", diff:"easy" },
+  ]},
+];
+
+// ── Completion state — edit true/false here to mark chapters done ──
+const completionData = {
+  d1c1:false, d1c2:false, d1c3:false, d1c4:false, d1c5:false, d1c6:false,
+  d2c1:false, d2c2:false, d2c3:false, d2c4:false, d2c5:false, d2c6:false,
+  d3c1:false, d3c2:false, d3c3:false, d3c4:false, d3c5:false, d3c6:false,
+  d4c1:false, d4c2:false, d4c3:false, d4c4:false, d4c5:false, d4c6:false,
+  d5c1:false, d5c2:false, d5c3:false, d5c4:false, d5c5:false, d5c6:false,
+};
+
+const diffLabel = { easy:"Easy", medium:"Medium", hard:"Hard" };
+
+function buildPlan() {
+  const wrap = document.getElementById('plan');
+  wrap.innerHTML = planData.map(day => {
+    const cards = day.chapters.map(ch => {
+      const done = completionData[ch.key];
+      return `
+        <div class="chapter-card ${ch.cls}">
+          <div class="chapter-top">
+            <span class="chapter-icon">${ch.icon}</span>
+            <div>
+              <div class="chapter-name">${ch.name}</div>
+              <div class="chapter-sub">${ch.subj}</div>
+            </div>
+          </div>
+          <span class="diff-badge diff-${ch.diff}">${diffLabel[ch.diff]}</span>
+          <div class="chapter-status">
+            <input type="checkbox" id="chk_${ch.key}" ${done ? 'checked' : ''} onchange="toggleStatus('${ch.key}', this.checked)">
+            <label for="chk_${ch.key}" id="lbl_${ch.key}" class="${done ? 'status-complete' : 'status-incomplete'}">
+              ${done ? '✅ Complete' : '❌ Incomplete'}
+            </label>
+          </div>
+        </div>`;
+    }).join('');
+
+    return `
+      <div class="day-section">
+        <div class="day-header">
+          <span class="day-title">📅 Day ${day.day}</span>
+          <span class="day-progress" id="dayprog_${day.day}"></span>
+        </div>
+        <div class="chapter-grid">${cards}</div>
+      </div>`;
+  }).join('');
+
+  planData.forEach(day => updateDayProgress(day.day));
+  updateProgress();
+}
+
+function toggleStatus(key, checked) {
+  completionData[key] = checked;
+  const label = document.getElementById(`lbl_${key}`);
+  if (label) {
+    label.className = checked ? 'status-complete' : 'status-incomplete';
+    label.textContent = checked ? '✅ Complete' : '❌ Incomplete';
+  }
+  const dayNum = parseInt(key.match(/^d(\d+)/)[1], 10);
+  updateDayProgress(dayNum);
+  updateProgress();
+}
+
+function updateDayProgress(dayNum) {
+  const day = planData.find(d => d.day === dayNum);
+  const total = day.chapters.length;
+  const done = day.chapters.filter(ch => completionData[ch.key]).length;
+  const el = document.getElementById(`dayprog_${dayNum}`);
+  if (el) el.textContent = `${done}/${total} done`;
+}
+
+function updateProgress() {
+  const total = Object.keys(completionData).length;
+  const done  = Object.values(completionData).filter(Boolean).length;
+  const pct   = Math.round((done / total) * 100);
+  document.getElementById('bar').style.width = pct + '%';
+  document.getElementById('pct').textContent  = `${pct}% (${done}/${total})`;
+}
+
+buildPlan();
+</script>
+</body>
+</html>
